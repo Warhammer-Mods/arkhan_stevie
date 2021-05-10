@@ -13,11 +13,11 @@ mod.activated = 0; -- To run or not to run?
 -- To be expanded to cover modded units
 mod.units_to_add_globally = {
 	["vanilla"] = {
-		{ ["name"] = "wh2_dlc09_tmb_mon_dire_wolves",           ["count"] = 2, ["replenishment_chance"] = 1,    ["max_count"] = 4, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
-		{ ["name"] = "wh2_dlc09_tmb_mon_fell_bats",             ["count"] = 2, ["replenishment_chance"] = 1,    ["max_count"] = 4, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
-		{ ["name"] = "wh2_dlc09_tmb_inf_crypt_ghouls",             ["count"] = 2, ["replenishment_chance"] = 1,    ["max_count"] = 4, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
-		{ ["name"] = "wh2_dlc09_tmb_inf_skeleton_warriors_0",   ["count"] = 2, ["replenishment_chance"] = 1,  ["max_count"] = 5,  ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
-		{ ["name"] = "wh2_dlc09_tmb_inf_skeleton_spearmen_0",   ["count"] = 1, ["replenishment_chance"] = 1, ["max_count"] = 3,  ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false }
+		{ ["name"] = "wh2_dlc09_tmb_mon_dire_wolves",         ["count"] = 2, ["replenishment_chance"] = 1, ["max_count"] = 4, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
+		{ ["name"] = "wh2_dlc09_tmb_mon_fell_bats",           ["count"] = 2, ["replenishment_chance"] = 1, ["max_count"] = 4, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
+		{ ["name"] = "wh2_dlc09_tmb_inf_crypt_ghouls",        ["count"] = 2, ["replenishment_chance"] = 1, ["max_count"] = 4, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
+		{ ["name"] = "wh2_dlc09_tmb_inf_skeleton_warriors_0", ["count"] = 2, ["replenishment_chance"] = 1, ["max_count"] = 5, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false },
+		{ ["name"] = "wh2_dlc09_tmb_inf_skeleton_spearmen_0", ["count"] = 1, ["replenishment_chance"] = 1, ["max_count"] = 3, ["max_replenishment"] = 1, ["level"] = 0, ["technology_required"] = "", ["partial_replenishment"] = false }
 	}
 };
 

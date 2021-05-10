@@ -1,11 +1,8 @@
-local dout = _G.dout or function(...) end
-
 STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC or {}
 local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 mod.name = "Arkhan Raise Dead Mechanic"
 
 out(mod.name .. " script file loaded");
-dout(mod.name .. " script file loaded");
 
 mod.activated = 0; -- To run or not to run?
 
@@ -37,7 +34,6 @@ function mod:arkhan_populate_mercenary_pools()
 			for i2 in pairs(domain) do
 				local unit = domain[i2];
 				out(mod.name .. ": adding " .. unit.name .. " to " .. region:name() );
-				dout(mod.name .. ": adding " .. unit.name .. " to " .. region:name() );
 				cm:add_unit_to_province_mercenary_pool(
 					region,                     -- REGION_SCRIPT_INTERFACE
 					unit.name,                  -- unit
@@ -61,10 +57,8 @@ end
 cm:add_first_tick_callback(
 	function()
 		out(mod.name .. ": FIRST TICK REGISTERED");
-		dout(mod.name .. ": FIRST TICK REGISTERED");
 		if ( cm:is_new_game() == true or mod.activated == 0 ) then
 			out(mod.name .. ": populating mercenary pools for Followers of Nagash");
-			dout(mod.name .. ": populating mercenary pools for Followers of Nagash");
 			mod:arkhan_populate_mercenary_pools();
 			mod.activated = 1;
 		end
@@ -77,7 +71,6 @@ cm:add_first_tick_callback(
 cm:add_saving_game_callback(
 	function(context)
 		out(mod.name .. ": SAVING");
-		dout(mod.name .. ": SAVING");
 		cm:save_named_value("stephen_arkhan_raise_dead_mechanic", mod.activated, context);
 	end
 );
@@ -85,7 +78,6 @@ cm:add_saving_game_callback(
 cm:add_loading_game_callback(
 	function(context)
 		out(mod.name .. ": LOADING")
-		dout(mod.name .. ": LOADING");
 		mod.activated = cm:load_named_value("stephen_arkhan_raise_dead_mechanic", mod.activated, context);
 	end
 );

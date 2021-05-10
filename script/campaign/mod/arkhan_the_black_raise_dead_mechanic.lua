@@ -62,8 +62,6 @@ cm:add_first_tick_callback(
 	function()
 		out(mod.name .. ": FIRST TICK REGISTERED");
 		dout(mod.name .. ": FIRST TICK REGISTERED");
-		-- WTF is going on?
-		--mod:stephen_arkhan_populate_mercenary_pools(); -- should work unconditionally
 		if ( cm:is_new_game() == true or mod.activated == 0 ) then
 			out(mod.name .. ": populating mercenary pools for Followers of Nagash");
 			dout(mod.name .. ": populating mercenary pools for Followers of Nagash");

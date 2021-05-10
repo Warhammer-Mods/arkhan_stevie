@@ -24,20 +24,20 @@ function mod:arkhan_populate_mercenary_pools()
 	function mod:add_unit_to_province_mercenary_pool(region, unit)
 		if region:cqi() >= 0 then
 			out( "Proceeding with region " .. region:name() );
-			cm:add_unit_to_province_mercenary_pool(
-			region,                     -- REGION_SCRIPT_INTERFACE
-			unit.name,                  -- unit
-			unit.count,                 -- count
-			unit.replenishment_chance,  -- replenishment chance
-			unit.max_count,             -- max units
-			unit.max_replenishment,     -- max per turn
-			unit.level,                 -- xp
-			faction_name,               -- faction restriction (is it really needed?)
-			"",                         -- subculture restriction
-			unit.technology_required,   -- tech restriction
-			unit.partial_replenishment  -- partial replenishment
-		);
-		out( mod.name .. ": added unit " .. unit.name .. " to region " .. region:name() );
+				cm:add_unit_to_province_mercenary_pool(
+				region,                     -- REGION_SCRIPT_INTERFACE
+				unit.name,                  -- unit
+				unit.count,                 -- count
+				unit.replenishment_chance,  -- replenishment chance
+				unit.max_count,             -- max units
+				unit.max_replenishment,     -- max per turn
+				unit.level,                 -- xp
+				faction_name,               -- faction restriction (is it really needed?)
+				"",                         -- subculture restriction
+				unit.technology_required,   -- tech restriction
+				unit.partial_replenishment  -- partial replenishment
+			);
+			out( mod.name .. ": added unit " .. unit.name .. " to region " .. region:name() );
 		else
 			return false;
 		end

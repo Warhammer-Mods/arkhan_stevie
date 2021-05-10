@@ -24,13 +24,12 @@ function mod:arkhan_populate_mercenary_pools()
 	-- Main action
 	-- Iterating through all regions (provinces) first
 	local all_regions = cm:model():world():region_manager():region_list();
-	local t = mod.units_to_add_globally
 
 	for i = 0, all_regions:num_items() - 1 do
 		local region = all_regions:item_at(i);
 
 		-- Populating province mercenary pool
-		for i1, domain in pairs(t) do
+		for i1, domain in pairs(mod.units_to_add_globally) do
 			for i2 in pairs(domain) do
 				local unit = domain[i2];
 				out(mod.name .. ": adding " .. unit.name .. " to " .. region:name() );

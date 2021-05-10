@@ -35,7 +35,7 @@ function mod:arkhan_populate_global_mercenary_pools()
 		for _, domain in pairs(mod.units_to_add_globally) do
 			for i2 in pairs(domain) do
 				local unit = domain[i2];
-				out(mod.name .. ": adding " .. unit.name .. " to " .. region:name() );
+				out(mod.name .. ": adding unit " .. unit.name .. " to region " .. region:name() );
 				cm:add_unit_to_province_mercenary_pool(
 					region,                     -- REGION_SCRIPT_INTERFACE
 					unit.name,                  -- unit

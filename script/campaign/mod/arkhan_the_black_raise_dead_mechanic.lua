@@ -23,7 +23,7 @@ function mod:arkhan_populate_mercenary_pools()
 
 	function mod:add_unit_to_province_mercenary_pool(region, unit)
 		if region:cqi() >= 0 then
-			out( "Proceeding with region " .. region:name() );
+			out( mod.name .. ": proceeding with region " .. region:name() );
 				cm:add_unit_to_province_mercenary_pool(
 				region,                     -- REGION_SCRIPT_INTERFACE
 				unit.name,                  -- unit

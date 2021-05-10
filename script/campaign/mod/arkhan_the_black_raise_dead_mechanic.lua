@@ -2,7 +2,7 @@ local dout = _G.dout or function(...) end
 
 STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC or {}
 local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
-mod.name = "Arkhan Raising Dead Mechanic"
+mod.name = "Arkhan Raise Dead Mechanic"
 
 out(mod.name .. " script file loaded");
 dout(mod.name .. " script file loaded");

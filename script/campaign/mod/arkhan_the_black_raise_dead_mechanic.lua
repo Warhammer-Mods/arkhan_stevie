@@ -29,7 +29,7 @@ function mod:arkhan_populate_mercenary_pools()
 		local region = all_regions:item_at(i);
 
 		-- Populating province mercenary pool
-		for i1, domain in pairs(mod.units_to_add_globally) do
+		for _, domain in pairs(mod.units_to_add_globally) do
 			for i2 in pairs(domain) do
 				local unit = domain[i2];
 				out(mod.name .. ": adding " .. unit.name .. " to " .. region:name() );

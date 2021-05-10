@@ -4,7 +4,11 @@ mod.name = "Arkhan Raise Dead Mechanic Stevie"
 
 out(mod.name .. " script file loaded");
 
--- Increment build number each time a change to mercenary pools is made
+--[[ Increment build number each time a change to mercenary pools is made.
+		 Mercenary pool entries are additive, meaning any existing entries
+		 will be overridden and their pool fully replenished, and old entries
+		 no longer presented in the table below will continue to exist as usual.
+]]
 mod.build = 1;
 
 -- Define dictionary containing units and properties to populate Raising Dead mercenary pool with
@@ -19,6 +23,7 @@ mod.units_to_add_globally = {
 	}
 };
 
+-- Defaults
 mod.build_stored = 0;
 
 function mod:arkhan_populate_global_mercenary_pools()

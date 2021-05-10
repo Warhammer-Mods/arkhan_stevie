@@ -21,7 +21,7 @@ mod.units_to_add_globally = {
 	}
 };
 
-function mod:stephen_arkhan_populate_mercenary_pools()
+function mod:arkhan_populate_mercenary_pools()
 	local faction_name = "wh2_dlc09_tmb_followers_of_nagash";
 
 	-- Main action
@@ -67,7 +67,7 @@ cm:add_first_tick_callback(
 		if ( cm:is_new_game() == true or mod.activated == 0 ) then
 			out(mod.name .. ": populating mercenary pools for Followers of Nagash");
 			dout(mod.name .. ": populating mercenary pools for Followers of Nagash");
-			mod:stephen_arkhan_populate_mercenary_pools();
+			mod:arkhan_populate_mercenary_pools();
 			mod.activated = 1;
 		end
 	end

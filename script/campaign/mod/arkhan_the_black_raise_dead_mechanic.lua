@@ -4,7 +4,8 @@ mod.name = "Arkhan Raise Dead Mechanic Stevie"
 
 out(mod.name .. " script file loaded");
 
-mod.activated = 0; -- To run or not to run?
+-- Increment build number each time a change to mercenary pools is made
+mod.build = 1;
 
 -- Define dictionary containing units and properties to populate Raising Dead mercenary pool with
 -- To be expanded to cover modded units
@@ -18,7 +19,9 @@ mod.units_to_add_globally = {
 	}
 };
 
-function mod:arkhan_populate_mercenary_pools()
+mod.build_stored = 0;
+
+function mod:arkhan_populate_global_mercenary_pools()
 	local faction_name = "wh2_dlc09_tmb_followers_of_nagash";
 
 	-- Main action
@@ -56,10 +59,9 @@ end
 cm:add_first_tick_callback(
 	function()
 		out(mod.name .. ": FIRST TICK REGISTERED");
-		if ( cm:is_new_game() == true or mod.activated == 0 ) then
+		if ( cm:is_new_game() == true or mod.build > mod.build_stored ) then
 			out(mod.name .. ": populating mercenary pools for Followers of Nagash");
-			mod:arkhan_populate_mercenary_pools();
-			mod.activated = 1;
+			mod:arkhan_populate_global_mercenary_pools();
 		end
 	end
 )
@@ -70,13 +72,13 @@ cm:add_first_tick_callback(
 cm:add_saving_game_callback(
 	function(context)
 		out(mod.name .. ": SAVING");
-		cm:save_named_value("stephen_arkhan_raise_dead_mechanic", mod.activated, context);
+		cm:save_named_value("stephen_arkhan_raise_dead_mechanic_build", mod.build, context);
 	end
 );
 
 cm:add_loading_game_callback(
 	function(context)
 		out(mod.name .. ": LOADING")
-		mod.activated = cm:load_named_value("stephen_arkhan_raise_dead_mechanic", mod.activated, context);
+		mod.build_stored = cm:load_named_value("stephen_arkhan_raise_dead_mechanic_build", mod.build_stored, context);
 	end
 );

@@ -1,6 +1,6 @@
 STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC or {}
 local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
-mod.name = "Arkhan Raise Dead Mechanic"
+mod.name = "Arkhan Raise Dead Mechanic Stevie"
 
 out(mod.name .. " script file loaded");
 

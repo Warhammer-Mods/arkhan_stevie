@@ -5,9 +5,9 @@ mod.name = "Arkhan Raise Dead Mechanic Stevie"
 out(mod.name .. " script file loaded");
 
 --[[ Increment build number each time a change to mercenary pools is made.
-		 Mercenary pool entries are additive, meaning any existing entries
-		 will be overridden and their pool fully replenished, and old entries
-		 no longer presented in the table below will continue to exist as usual.
+		 Mercenary pool entries are additive, meaning any existing entries within
+		 a save file will be overridden and their pool fully replenished, and old
+		 entries no longer presented in the table below will continue to exist as usual.
 ]]
 mod.build = 1;
 

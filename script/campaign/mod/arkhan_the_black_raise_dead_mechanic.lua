@@ -21,7 +21,8 @@ function mod:arkhan_populate_mercenary_pools()
 	-- Main action
 	-- Iterating through all regions first
 	-- Each province gets its own pool shared by all regions within its boundaries
-	local all_regions = cm:model():world():region_manager():region_list();
+	local region_manager = cm:model():world():region_manager();
+	local all_regions = region_manager:region_list();
 
 	function mod:add_unit_to_province_mercenary_pool(region, unit)
 		if region:is_null_interface() == false then
@@ -62,7 +63,7 @@ function mod:arkhan_populate_mercenary_pools()
 					mod:add_unit_to_province_mercenary_pool(region, unit);
 				elseif type(unit.region) == "table" then
 					for _, region in pairs(unit.region) do
-						region = cm:model():world():region_manager():region_by_key(region);
+						region = region_manager:region_by_key(region);
 						mod:add_unit_to_province_mercenary_pool(region, unit);
 					end
 				end

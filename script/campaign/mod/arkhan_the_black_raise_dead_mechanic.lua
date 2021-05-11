@@ -16,13 +16,14 @@ mod.build_stored = 0;
 
 function mod:arkhan_populate_mercenary_pools()
 	local faction_name = "wh2_dlc09_tmb_followers_of_nagash";
+	local subculture_name = "";
 
 	-- Main action
 	-- Iterating through all regions (provinces) first
 	local all_regions = cm:model():world():region_manager():region_list();
 
 	function mod:add_unit_to_province_mercenary_pool(region, unit)
-		if region:cqi() >= 0 then
+		if region:is_null_interface() == false then
 			out( mod.name .. ": proceeding with region " .. region:name() );
 			cm:add_unit_to_province_mercenary_pool(
 				region,                     -- REGION_SCRIPT_INTERFACE
@@ -33,11 +34,12 @@ function mod:arkhan_populate_mercenary_pools()
 				unit.max_replenishment,     -- max per turn
 				unit.level,                 -- xp
 				faction_name,               -- faction restriction (is it really needed?)
-				"",                         -- subculture restriction
+				subculture_name,            -- subculture restriction
 				unit.technology_required,   -- tech restriction
 				unit.partial_replenishment  -- partial replenishment
 			);
 			out( mod.name .. ": added unit " .. unit.name .. " to region " .. region:name() );
+			return true;
 		else
 			return false;
 		end

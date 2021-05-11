@@ -54,9 +54,8 @@ function mod:arkhan_populate_mercenary_pools()
 			for i2 in pairs(domain) do
 				local unit = domain[i2];
 				if ( unit.regions == "global" or
-						 unit.regions == "all" or
-						 unit.regions == "any"
-						)
+				     unit.regions == "all" or
+				     unit.regions == "any" )
 				then
 					region = all_regions:item_at(i);
 					mod:add_unit_to_province_mercenary_pool(region, unit);

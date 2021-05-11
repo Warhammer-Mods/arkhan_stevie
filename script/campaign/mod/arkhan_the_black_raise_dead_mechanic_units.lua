@@ -1,6 +1,13 @@
 STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC or {}
 local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 
+--[[ Increment build number each time a change to mercenary pools below is made.
+     Mercenary pool entries are additive, meaning any existing entries within a
+     save file will be overridden and their pool fully replenished, and old entries
+     no longer presented in the table below will continue to exist as usual.
+]]
+mod.build = 1;
+
 -- Define dictionary containing units and properties to populate Raising Dead mercenary pool with
 -- To be expanded to cover modded units
 mod.units_table = {

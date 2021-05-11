@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"debug.node.autoAttach": "on",
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false,
+		"editor.acceptSuggestionOnEnter": "off",
+		"perforce.editOnFileModified": true,
+		"perforce.addOnFileCreate": true,
+		"editor.suggest.localityBonus": true,
+		"editor.suggestSelection": "first",
+		"editor.tabCompletion": "onlySnippets",
+		"editor.wordBasedSuggestions": false,
+		"editor.parameterHints.enabled": true,
+		"workbench.tree.indent": 20,
+		"lua.targetVersion": "5.1",
+		"window.title": "${rootPath} : ${activeFolderMedium}\\${activeEditorShort} ${dirty}"
+    },
+    "launch": {
+        "configurations": [
+            {
+                "type": "lrdb",
+                "request": "attach",
+                "name": "Attach",
+                "host": "localhost",
+                "port": 21110,
+				"sourceRoot": "${workspaceRoot}/.."
+            }
+        ]
+    }
+}

@@ -7,8 +7,8 @@
 	"settings": {
 		"debug.node.autoAttach": "on",
 		"editor.insertSpaces": false,
-		"editor.detectIndentation": false,
-		"editor.acceptSuggestionOnEnter": "off",
+		"editor.detectIndentation": true,
+		"editor.acceptSuggestionOnEnter": "on",
 		"perforce.editOnFileModified": true,
 		"perforce.addOnFileCreate": true,
 		"editor.suggest.localityBonus": true,
@@ -28,7 +28,7 @@
                 "name": "Attach",
                 "host": "localhost",
                 "port": 21110,
-				"sourceRoot": "${workspaceRoot}/.."
+                "sourceRoot": "${workspaceRoot}/.."
             }
         ]
     }

@@ -48,10 +48,10 @@ function mod:arkhan_populate_mercenary_pools()
 
 	for i = 0, all_regions:num_items() - 1 do
 		local region;
-		mod.units = mod.units or {};
+		mod.units_table = mod.units_table or {};
 
 		-- Populating province mercenary pool
-		for _, domain in pairs(mod.units) do
+		for _, domain in pairs(mod.units_table) do
 			for i2 in pairs(domain) do
 				local unit = domain[i2];
 				if ( unit.regions == "global" or

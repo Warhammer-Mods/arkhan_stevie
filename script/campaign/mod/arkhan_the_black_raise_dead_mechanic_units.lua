@@ -3,7 +3,7 @@ local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 
 -- Define dictionary containing units and properties to populate Raising Dead mercenary pool with
 -- To be expanded to cover modded units
-mod.units = {
+mod.units_table = {
 	["vanilla"] = {
 		{
 			["name"] = "wh2_dlc09_tmb_mon_dire_wolves",

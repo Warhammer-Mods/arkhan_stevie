@@ -19,7 +19,8 @@ function mod:arkhan_populate_mercenary_pools()
 	local subculture_name = "";
 
 	-- Main action
-	-- Iterating through all regions (provinces) first
+	-- Iterating through all regions first
+	-- Each province gets its own pool shared by all regions within its boundaries
 	local all_regions = cm:model():world():region_manager():region_list();
 
 	function mod:add_unit_to_province_mercenary_pool(region, unit)

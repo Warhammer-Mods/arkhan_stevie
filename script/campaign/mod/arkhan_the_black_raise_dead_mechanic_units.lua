@@ -4,9 +4,8 @@ local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 -- Define dictionary containing units and properties to populate Raising Dead mercenary pool with
 -- To be expanded to cover modded units
 mod.units_table = {
-	["vanilla"] = {
-		{
-			["name"] = "wh2_dlc09_tmb_mon_dire_wolves",
+	vanilla = {
+		wh2_dlc09_tmb_mon_dire_wolves = {
 			["count"] = 2,
 			["replenishment_chance"] = 100,
 			["max_count"] = 4,
@@ -16,8 +15,7 @@ mod.units_table = {
 			["partial_replenishment"] = false,
 			["regions"] = "global"
 		},
-		{
-			["name"] = "wh2_dlc09_tmb_mon_fell_bats",
+		wh2_dlc09_tmb_mon_fell_bats = {
 			["count"] = 2,
 			["replenishment_chance"] = 100,
 			["max_count"] = 4,
@@ -27,8 +25,7 @@ mod.units_table = {
 			["partial_replenishment"] = false,
 			["regions"] = "global"
 		},
-		{
-			["name"] = "wh2_dlc09_tmb_inf_crypt_ghouls",
+		wh2_dlc09_tmb_inf_crypt_ghouls = {
 			["count"] = 2,
 			["replenishment_chance"] = 100,
 			["max_count"] = 4,
@@ -38,8 +35,7 @@ mod.units_table = {
 			["partial_replenishment"] = false,
 			["regions"] = "global"
 		},
-		{
-			["name"] = "wh2_dlc09_tmb_inf_skeleton_warriors_0",
+		wh2_dlc09_tmb_inf_skeleton_warriors_0 = {
 			["count"] = 2,
 			["replenishment_chance"] = 100,
 			["max_count"] = 5,
@@ -49,8 +45,7 @@ mod.units_table = {
 			["partial_replenishment"] = false,
 			["regions"] = "global"
 		},
-		{
-			["name"] = "wh2_dlc09_tmb_inf_skeleton_spearmen_0",
+		wh2_dlc09_tmb_inf_skeleton_spearmen_0 = {
 			["count"] = 1,
 			["replenishment_chance"] = 100,
 			["max_count"] = 3,
@@ -61,7 +56,7 @@ mod.units_table = {
 			["regions"] = "global"
 		}
 	},
-	["modded"] = {
+	modded = {
 		-- TODO: add modded units
 		-- rename "modded" to actual mod name
 		-- each mod goes into its separate subtable

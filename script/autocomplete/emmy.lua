@@ -9,7 +9,7 @@ ddump = function(...) end
 
 ---@param faction_key string
 ---@param start_x number
----@param start_y numberu
+---@param start_y number
 ---@param in_same_region boolean
 ---@param OPT_preferred_spawn_distance number
 function CM:find_valid_spawn_location_for_character_from_position(faction_key, start_x, start_y, in_same_region, OPT_preferred_spawn_distance) end

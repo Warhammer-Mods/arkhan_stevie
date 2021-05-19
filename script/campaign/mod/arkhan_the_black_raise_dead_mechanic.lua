@@ -1,3 +1,7 @@
+--- Arkhan the Black Raise Dead mechanic
+---@author Stephen Ducker, im-mortal <im.mortal@me.com>
+---@version 0.3.0-dev
+
 STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC or {}
 local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 mod.name = "Arkhan Raise Dead Mechanic Stevie"

@@ -30,7 +30,7 @@ TBA
   units = {
     main_units_table_unit_key = {        -- unit key from "main_units_tables"
       count = number,                      -- how many units to initially spawn
-      replenishment_chance = 1number00,    -- replenishment chance per turn in percent
+      replenishment_chance = number,    -- replenishment chance per turn in percent
       max_count = number,                  -- number of units in a pool before they stop replenish
       max_replenishment = number,          -- how many units may possibly be replenished per turn
       level = number,                      -- unit experience (rank), from 0 to 9

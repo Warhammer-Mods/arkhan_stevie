@@ -2,8 +2,8 @@
 A mod for Total War: Warhammer 2 that enables Raise Dead campaign mechanic for the Followers of Nagash faction (Arkhan the Black).
 
 ## Features
-- Enables Raising Dead Feature for the Followers of Nagash on campaign map
-  - Raise Dead is available for all in-game land regions with varying units available in each
+- Enables Raising Dead Feature for the Followers of Nagash for campaign map
+  - Raise Dead is available for all provinces with varying units available in each
 - Carefully picked list of units for lore-friendly experience
   - Vanilla units are fully covered, submods for modded units are also available
 - With Arkhan the Black growing more powerful with his mastery of the Dark Arts, he gets more potent undead monsters at his disposal

@@ -1595,29 +1595,3 @@ d_to_r = function(degrees) end
 
 ---@param fun function
 function CM:add_first_tick_callback(fun) end
-
-----------------------------------------
------------CUSTOM ADDITIONS-------------
-----------------------------------------
-
--- Game APIs not covered by PJ
-
--- Province and Faction Mechanics
-
----@param region CA_REGION
----@param unitkey string
----@param count number
----@param replenishment_chance number
----@param max_count number
----@param max_replenishment_per_turn number
----@param level number
----@param faction_restriction string
----@param subculture_restriction string
----@param tech_restriction string
----@param partial_replenishment boolean
-function CM:add_unit_to_province_mercenary_pool(region, unitkey, count, replenishment_chance, max_count, max_replenishment_per_turn, level, faction_restriction, subculture_restriction, tech_restriction, partial_replenishment) end
-
----@param region_key string
----@param unitkey string
----@param count number
-function CM:add_units_to_province_mercenary_pool_by_region(region_key, unitkey, count) end

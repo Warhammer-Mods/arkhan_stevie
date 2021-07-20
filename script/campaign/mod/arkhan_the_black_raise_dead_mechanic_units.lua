@@ -42,7 +42,7 @@ mod.units_table = {
 			["partial_replenishment"] = false,
 			["regions"] = "global"
 		},
-		steve_ark_skeleton_warriors = {
+		wh2_dlc09_tmb_inf_skeleton_warriors_0 = {
 			["count"] = 2,
 			["replenishment_chance"] = 100,
 			["max_count"] = 5,
@@ -52,7 +52,7 @@ mod.units_table = {
 			["partial_replenishment"] = false,
 			["regions"] = "global"
 		},
-		steve_ark_skeleton_spearmen = {
+		wh2_dlc09_tmb_inf_skeleton_spearmen_0 = {
 			["count"] = 1,
 			["replenishment_chance"] = 100,
 			["max_count"] = 3,

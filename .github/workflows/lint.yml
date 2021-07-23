@@ -4,14 +4,16 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   lint:
-    name: Lint
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          repository: 'ps-wow/action-test-repo'
-      - name: WoW Lua Lint
-        uses: davidcraig/action-wow-lint@v1.0.1
-        with:
-            path-to-files: 'script/_lib/mod/*.lua script/campaign/mod/*.lua'
+    - uses: actions/checkout@master
+
+    - uses: leafo/gh-actions-lua@v8.0.0
+      with:
+        luaVersion: "5.1.5"
+
+    - name: lint
+      run: |
+        luac script/_lib/mod/*.lua \
+             script/campaign/mod/*.lua

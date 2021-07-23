@@ -14,4 +14,4 @@ jobs:
       - name: WoW Lua Lint
         uses: davidcraig/action-wow-lint@v1.0.1
         with:
-            path-to-files: 'script/'
+            path-to-files: 'script/_lib/mod/*.lua script/campaign/mod/*.lua'

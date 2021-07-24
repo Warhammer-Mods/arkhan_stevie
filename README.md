@@ -63,8 +63,8 @@ Please use [this link](https://github.com/Warhammer-Mods/arkhan_stevie/releases)
 Bugfixing and Submods
 
 ## Credits
-- I could not have done this mod without the help of other amazing modders from [C&C Modding Den](https://steamcommunity.com/linkfilter/?url=https://discord.gg/jgVFtUJ)! Come join me and chat with other modders.
-- Taste of Capitalism:  [Grave Guard Halberd Unit Card](https://steamcommunity.com/sharedfiles/filedetails/?id=1892173814&searchtext=grave+guard)
+- I could not have done this mod without the help of other amazing modders from [C&C Modding Den](https://discord.gg/jgVFtUJ)! Come join me and chat with other modders.
+- Taste of Capitalism: [Grave Guard Halberd Unit Card](https://steamcommunity.com/sharedfiles/filedetails/?id=1892173814)
 - [Guv](https://steamcommunity.com/id/Guvenoren/myworkshopfiles/) for allowing me to use his Cairn Wraith and Mortis Engine unit cards.
 - [Prop Joe](https://steamcommunity.com/workshop/filedetails/?id=2155060363) for the Bloodline Unlock script.
 - [smOkin](https://steamcommunity.com/profiles/76561197971867345/myworkshopfiles/?appid=594570) for the script to enable the horde mechanic on two of my agents.

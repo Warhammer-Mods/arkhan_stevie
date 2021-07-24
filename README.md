@@ -1,7 +1,81 @@
-# Arkhan Raise Dead Mechanic Stevie
+# Arhkan the Black: Expanded
+This mod makes changes to Arkhan's faction by giving him access to The Lore of Vampires. It also adds additional units with unique unit cards, over 20 new technologies and access to Bloodline Lords & Scrap Upgrades via the submods listed below.
+
+## New units
+![Cairn Wraiths](https://i.imgur.com/nGXVUyO.png)![Vargheists](https://i.imgur.com/nochTg6.png)![Crypt Horrors](https://i.imgur.com/atwlGnT.png)![Grave Guard — Great Weapons](https://i.imgur.com/LWHpQsO.png)![Grave Guard](https://i.imgur.com/NoucyV5.png)![Terrorgheist](https://i.imgur.com/etptZLi.png)![Mortis Engine](https://i.imgur.com/buCVsot.png)![Mournguls](https://i.imgur.com/WCZw1Gd.png)![Rotting Leviathan](https://i.imgur.com/sjGzXol.png)![Rotting Prometheans Gunnery Mob](https://i.imgur.com/L2oXuQE.png)![Zombie Pirate Deckhands Mob (Polearms)](https://i.imgur.com/qbr5rDu.png)![Zombie Pirate Deckhands Mob](https://i.imgur.com/C0uDsSl.png)![Zombie Pirate Gunnery Mob (Handguns)](https://i.imgur.com/srCoU8A.png)![Zombie Pirate Gunnery Mob](https://i.imgur.com/LLCQha7.png)
+
+## New Lords
+![](https://i.imgur.com/osOD5Sg.png?1)![](https://i.imgur.com/4nn7CdM.png?1)![](https://i.imgur.com/8NXd1iC.png?1)![](https://i.imgur.com/883gsrB.png?1)![](https://i.imgur.com/AbOC3Vj.png?1)![](https://i.imgur.com/WEmKnU8.png?1)
+
+## New Heroes
+![](https://i.imgur.com/VmjUvZp.png?1)![](https://i.imgur.com/iymsunk.png?1)
+
+## New Abilities
+![Raise Zombies for Liche Priest (Vampires)](https://i.imgur.com/1lrmSca.png)![Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra](https://i.imgur.com/iWFYVNo.png)![Army Ability - Raise Skeleton Warriors](https://i.imgur.com/Aq5f7bp.png)![Army Ability - Rain of Souls](https://i.imgur.com/1V1eOLp.png)
+
+Raise Zombies for Liche Priest (Vampires)
+Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra
+Army Ability - Raise Skeleton Warriors
+Army Ability - Rain of Souls
+
+## New Buildings
+![Major Garrison](https://i.imgur.com/Q3a0vIw.png)![Minor Garrison](https://i.imgur.com/sfqWdTr.png)![Dark nexus](https://i.imgur.com/zqeNiLL.png)![Vampire Beasts](https://i.imgur.com/S4bJtuJ.png)
+
+Major Garrison
+Minor Garrison
+Dark nexus
+Vampire Beasts
+
+## Updated Landmarks
+![Black Tower of Arkhan](https://i.imgur.com/pFMX73M.png)
+### Black Tower of Arkhan
+- Winds of Magic +20 [all armies faction wide]
+- Vampiric Corruption +1
+- Magic Resistance +5 [all armies faction wide]
+
+![The Great Boneyard](https://i.imgur.com/iVcgVh9.png)
+### The Great Boneyard
+
+- Crypt Ghoul Unit Capacity +8
+- Vargheist Unit Capacity +2
+- Crypt Horror Unit Capacity +2
+- Vampiric Corruption +1
+
+![Lost Necropolis of Mourkain](https://i.imgur.com/GKY8zRU.png)
+### Lost Necropolis of Mourkain
+
+- Crypt Ghoul Unit Capacity +8
+- Vargheist Unit Capacity +2
+- Crypt Horror Unit Capacity +2
+- Vampiric Corruption +1
+
+## Submods
+- [Bloodline Lords](https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=2547581228)
+- [Scrap Upgrades](https://steamcommunity.com/sharedfiles/filedetails/?id=2546743100)
+- [Tomb Kings: Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=2112852508)
+
+## Bugs
+Please report bugs [here](https://github.com/Warhammer-Mods/arkhan_stevie/issues/new).
+
+Please use [this link](https://github.com/Warhammer-Mods/arkhan_stevie/releases) to download the previous version of the mod if you need to complete campaigns.
+
+## Future Plans
+Bugfixing and Submods
+
+## Credits
+- I could not have done this mod without the help of other amazing modders from [C&C Modding Den](https://steamcommunity.com/linkfilter/?url=https://discord.gg/jgVFtUJ)! Come join me and chat with other modders.
+- Taste of Capitalism:  [Grave Guard Halberd Unit Card](https://steamcommunity.com/sharedfiles/filedetails/?id=1892173814&searchtext=grave+guard)
+- [Guv](https://steamcommunity.com/id/Guvenoren/myworkshopfiles/) for allowing me to use his Cairn Wraith and Mortis Engine unit cards.
+- [Prop Joe](https://steamcommunity.com/workshop/filedetails/?id=2155060363) for the Bloodline Unlock script.
+- [smOkin](https://steamcommunity.com/profiles/76561197971867345/myworkshopfiles/?appid=594570) for the script to enable the horde mechanic on two of my agents.
+- All images and assets used on this page are property of Creative Assembly.
+
+---
+# Included in Arhkan the Black: Expanded
+## Arkhan Raise Dead Mechanic Stevie
 A mod for Total War: Warhammer 2 that enables Raise Dead campaign mechanic for the Followers of Nagash faction (Arkhan the Black).
 
-## Features
+### Features
 - Enables Raising Dead Feature for the Followers of Nagash for campaign map
   - Raise Dead is available for all provinces with varying units available in each
 - Carefully picked list of units for lore-friendly experience
@@ -9,17 +83,17 @@ A mod for Total War: Warhammer 2 that enables Raise Dead campaign mechanic for t
 - With Arkhan the Black growing more powerful with his mastery of the Dark Arts, he gets more potent undead monsters at his disposal
   - As Followers of Nagash prepare for their Master to return by taking the world piece by piece, the corrupted ground under Arkhan's feet itself awakens more powerful hordes imbued with Nagash's power to surge the world of the living and treacherous undead
 
-## Notes
+### Notes
 - Province mercenary pools for Arkhan will be populated upon new game start or loading an existing save
 - Additionally, an extended set of units will be added to conquered provinces
   - The mod will keep mercenary pools of respective provinces up to date even if loaded mid-game or after (sub)mod updates.
 - Just like Raise Dead mechanic feature of other factions, you may have to wait a few turns for new units to appear
   - This includes units that require certain buildings/technologies to unlock first
 
-## Submods
+### Submods
 TBA
 
-## Public API
+### Public API
 - `ardm:register_table(table)`
   - `table`:
 ```lua
@@ -60,7 +134,7 @@ Where:
 
 Other options are quite self-explanatory.
 
-## Example submod
+### Example submod
 `script/campaign/mod/my_example_submod.lua`:
 ```lua
 local ardm = ardm

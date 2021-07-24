@@ -13,18 +13,18 @@ This mod makes changes to Arkhan's faction by giving him access to The Lore of V
 ## New Abilities
 ![Raise Zombies for Liche Priest (Vampires)](https://i.imgur.com/1lrmSca.png)![Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra](https://i.imgur.com/iWFYVNo.png)![Army Ability - Raise Skeleton Warriors](https://i.imgur.com/Aq5f7bp.png)![Army Ability - Rain of Souls](https://i.imgur.com/1V1eOLp.png)
 
-Raise Zombies for Liche Priest (Vampires)
-Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra
-Army Ability - Raise Skeleton Warriors
-Army Ability - Rain of Souls
+- Raise Zombies for Liche Priest (Vampires)
+- Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra
+- Army Ability - Raise Skeleton Warriors
+- Army Ability - Rain of Souls
 
 ## New Buildings
 ![Major Garrison](https://i.imgur.com/Q3a0vIw.png)![Minor Garrison](https://i.imgur.com/sfqWdTr.png)![Dark nexus](https://i.imgur.com/zqeNiLL.png)![Vampire Beasts](https://i.imgur.com/S4bJtuJ.png)
 
-Major Garrison
-Minor Garrison
-Dark nexus
-Vampire Beasts
+- Major Garrison
+- Minor Garrison
+- Dark nexus
+- Vampire Beasts
 
 ## Updated Landmarks
 ![Black Tower of Arkhan](https://i.imgur.com/pFMX73M.png)

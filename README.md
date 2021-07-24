@@ -7,8 +7,12 @@ This mod makes changes to Arkhan's faction by giving him access to The Lore of V
 ## New Lords
 ![](https://i.imgur.com/osOD5Sg.png?1)![](https://i.imgur.com/4nn7CdM.png?1)![](https://i.imgur.com/8NXd1iC.png?1)![](https://i.imgur.com/883gsrB.png?1)![](https://i.imgur.com/AbOC3Vj.png?1)![](https://i.imgur.com/WEmKnU8.png?1)
 
+Bloodline Lords are unlocked via technology and spending Canopic Jars. **SUBMOD REQUIRED**
+
 ## New Heroes
-![](https://i.imgur.com/VmjUvZp.png?1)![](https://i.imgur.com/iymsunk.png?1)
+![Liche Priest (Vampires)](https://i.imgur.com/VmjUvZp.png?1)![Wight King](https://i.imgur.com/iymsunk.png?1)
+
+Liche Priest (Vampires) - available at the start of the campaign and shares the same unit capacity as the Liche Priests. Can be increased with Liche Priests events or capacity.
 
 ## New Abilities
 ![Raise Zombies for Liche Priest (Vampires)](https://i.imgur.com/1lrmSca.png)![Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra](https://i.imgur.com/iWFYVNo.png)![Army Ability - Raise Skeleton Warriors](https://i.imgur.com/Aq5f7bp.png)![Army Ability - Rain of Souls](https://i.imgur.com/1V1eOLp.png)

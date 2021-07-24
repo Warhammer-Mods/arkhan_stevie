@@ -1,4 +1,4 @@
-# Arhkan the Black: Expanded
+# Arkhan the Black: Expanded
 This mod makes changes to Arkhan's faction by giving him access to The Lore of Vampires. It also adds additional units with unique unit cards, over 20 new technologies and access to Bloodline Lords & Scrap Upgrades via the submods listed below.
 
 ## New units

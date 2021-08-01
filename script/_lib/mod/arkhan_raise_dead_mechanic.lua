@@ -1,5 +1,5 @@
 --- Arkhan Raise Dead mechanic
----@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
+---@author Stephen Ducker, im-mortal <im.mortal@me.com>
 ---@version 0.3.0-dev
 ---@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 ---@alias ardm STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC

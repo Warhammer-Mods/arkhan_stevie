@@ -37,6 +37,8 @@ function CM:add_pre_first_tick_callback(callback) end
 
 -- Province and Faction Mechanics
 
+--- Adds one or more units of a specified type to the mercenary pool in a province.
+--- These units can then be recruitable by that faction (or potentially other factions) using gameplay mechanics such as Raising Dead.
 ---@param region CA_REGION
 ---@param unitkey string
 ---@param count number
@@ -50,6 +52,9 @@ function CM:add_pre_first_tick_callback(callback) end
 ---@param partial_replenishment boolean
 function CM:add_unit_to_province_mercenary_pool(region, unitkey, count, replenishment_chance, max_count, max_replenishment_per_turn, level, faction_restriction, subculture_restriction, tech_restriction, partial_replenishment) end
 
+--- Adds one or more of a specified unit to the specified province mercenary pool.
+--- The province is specified by a region within it.
+--- Unlike with cm:add_unit_to_province_mercenary_pool, the unit type must already be represented in the pool.
 ---@param region_key string
 ---@param unitkey string
 ---@param count number

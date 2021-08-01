@@ -4,10 +4,28 @@
 This mod makes changes to Arkhan's faction by giving him access to The Lore of Vampires. It also adds additional units with unique unit cards, over 20 new technologies and access to Bloodline Lords & Scrap Upgrades via the submods listed below.
 
 ## New units
-![Cairn Wraiths](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_cairn_wraith.png)![Vargheists](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_vargheist.png)![Crypt Horrors](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_crypt_horror.png)![Grave Guard — Great Weapons](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard_great.png)![Grave Guard](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard.png)![Terrorgheist](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_terrorgheist.png)![Mortis Engine](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_mortis_engine.png)![Mournguls](https://i.imgur.com/WCZw1Gd.png)![Rotting Leviathan](https://i.imgur.com/sjGzXol.png)![Rotting Prometheans Gunnery Mob](https://i.imgur.com/L2oXuQE.png)![Zombie Pirate Deckhands Mob (Polearms)](https://i.imgur.com/qbr5rDu.png)![Zombie Pirate Deckhands Mob](https://i.imgur.com/C0uDsSl.png)![Zombie Pirate Gunnery Mob (Handguns)](https://i.imgur.com/srCoU8A.png)![Zombie Pirate Gunnery Mob](https://i.imgur.com/LLCQha7.png)
+![Cairn Wraiths](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_cairn_wraith.png)
+![Vargheists](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_vargheist.png)
+![Crypt Horrors](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_crypt_horror.png)
+![Grave Guard — Great Weapons](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard_great.png)
+![Grave Guard](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard.png)
+![Terrorgheist](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_terrorgheist.png)
+![Mortis Engine](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_mortis_engine.png)
+![Mournguls](https://i.imgur.com/WCZw1Gd.png)
+![Rotting Leviathan](https://i.imgur.com/sjGzXol.png)
+![Rotting Prometheans Gunnery Mob](https://i.imgur.com/L2oXuQE.png)
+![Zombie Pirate Deckhands Mob (Polearms)](https://i.imgur.com/qbr5rDu.png)
+![Zombie Pirate Deckhands Mob](https://i.imgur.com/C0uDsSl.png)
+![Zombie Pirate Gunnery Mob (Handguns)](https://i.imgur.com/srCoU8A.png)
+![Zombie Pirate Gunnery Mob](https://i.imgur.com/LLCQha7.png)
 
 ## New Lords
-![](https://i.imgur.com/osOD5Sg.png?1)![](https://i.imgur.com/4nn7CdM.png?1)![](https://i.imgur.com/8NXd1iC.png?1)![](https://i.imgur.com/883gsrB.png?1)![](https://i.imgur.com/AbOC3Vj.png?1)![](https://i.imgur.com/WEmKnU8.png?1)
+![](https://i.imgur.com/osOD5Sg.png?1)
+![](https://i.imgur.com/4nn7CdM.png?1)
+![](https://i.imgur.com/8NXd1iC.png?1)
+![](https://i.imgur.com/883gsrB.png?1)
+![](https://i.imgur.com/AbOC3Vj.png?1)
+![](https://i.imgur.com/WEmKnU8.png?1)
 
 Bloodline Lords are unlocked via technology and spending Canopic Jars. **SUBMOD REQUIRED**
 
@@ -17,7 +35,10 @@ Bloodline Lords are unlocked via technology and spending Canopic Jars. **SUBMOD 
 Liche Priest (Vampires) - available at the start of the campaign and shares the same unit capacity as the Liche Priests. Can be increased with Liche Priests events or capacity.
 
 ## New Abilities
-![Raise Zombies for Liche Priest (Vampires)](https://i.imgur.com/1lrmSca.png)![Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra](https://i.imgur.com/iWFYVNo.png)![Army Ability - Raise Skeleton Warriors](https://i.imgur.com/Aq5f7bp.png)![Army Ability - Rain of Souls](https://i.imgur.com/1V1eOLp.png)
+![Raise Zombies for Liche Priest (Vampires)](https://i.imgur.com/1lrmSca.png)
+![Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra](https://i.imgur.com/iWFYVNo.png)
+![Army Ability - Raise Skeleton Warriors](https://i.imgur.com/Aq5f7bp.png)
+![Army Ability - Rain of Souls](https://i.imgur.com/1V1eOLp.png)
 
 - Raise Zombies for Liche Priest (Vampires)
 - Eldritch Blast for Arkhan and acts similar to Venom Wave and Wrath of Ptra
@@ -25,7 +46,10 @@ Liche Priest (Vampires) - available at the start of the campaign and shares the 
 - Army Ability - Rain of Souls
 
 ## New Buildings
-![Major Garrison](https://i.imgur.com/Q3a0vIw.png)![Minor Garrison](https://i.imgur.com/sfqWdTr.png)![Dark nexus](https://i.imgur.com/zqeNiLL.png)![Vampire Beasts](https://i.imgur.com/S4bJtuJ.png)
+![Major Garrison](https://github.com/Warhammer-Mods/assets/blob/master/modpage/buildings/arkhan_major_walls.png)
+![Minor Garrison](https://github.com/Warhammer-Mods/assets/blob/master/modpage/buildings/arkhan_minor_walls.png)
+![Dark nexus](https://github.com/Warhammer-Mods/assets/blob/master/modpage/buildings/arkhan_vmp_halls_dead.png)
+![Vampire Beasts](https://github.com/Warhammer-Mods/assets/blob/master/modpage/buildings/arkhan_vmp_fell_tree.png)
 
 - Major Garrison
 - Minor Garrison
@@ -33,13 +57,13 @@ Liche Priest (Vampires) - available at the start of the campaign and shares the 
 - Vampire Beasts
 
 ## Updated Landmarks
-![Black Tower of Arkhan](https://i.imgur.com/pFMX73M.png)
+![Black Tower of Arkhan](https://github.com/Warhammer-Mods/assets/blob/master/modpage/buildings/tmb_black_tower_of_arkhan.png)
 ### Black Tower of Arkhan
 - Winds of Magic +20 [all armies faction wide]
 - Vampiric Corruption +1
 - Magic Resistance +5 [all armies faction wide]
 
-![The Great Boneyard](https://i.imgur.com/iVcgVh9.png)
+![The Great Boneyard](https://github.com/Warhammer-Mods/assets/blob/master/modpage/buildings/wh2_dlc15_special_boneyard.png)
 ### The Great Boneyard
 
 - Crypt Ghoul Unit Capacity +8
@@ -47,7 +71,7 @@ Liche Priest (Vampires) - available at the start of the campaign and shares the 
 - Crypt Horror Unit Capacity +2
 - Vampiric Corruption +1
 
-![Lost Necropolis of Mourkain](https://i.imgur.com/GKY8zRU.png)
+![Lost Necropolis of Mourkain](https://github.com/Warhammer-Mods/assets/blob/master/modpage/buildings/vmp_tmb_mourkain.png)
 ### Lost Necropolis of Mourkain
 
 - Crypt Ghoul Unit Capacity +8

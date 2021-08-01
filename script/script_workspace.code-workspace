@@ -17,7 +17,8 @@
 		"editor.wordBasedSuggestions": false,
 		"editor.parameterHints.enabled": true,
 		"workbench.tree.indent": 20,
-		"lua.targetVersion": "5.1",
+		"Lua.telemetry.enable": false,
+		"Lua.runtime.version": "Lua 5.1",
 		"window.title": "${rootPath} : ${activeFolderMedium}\\${activeEditorShort} ${dirty}"
     },
     "launch": {

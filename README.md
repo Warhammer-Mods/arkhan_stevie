@@ -1,5 +1,5 @@
 # Arkhan the Black: Expanded
-![arkhan_stevie](https://user-images.githubusercontent.com/1835021/127759920-7f6ae79e-f427-43e0-bc67-5ac9bd825d9a.png)
+![Arlhan the Black: Expanded – Logo](https://github.com/Warhammer-Mods/assets/blob/master/mods/arkhan_stevie/steam_workshop.png)
 
 This mod makes changes to Arkhan's faction by giving him access to The Lore of Vampires. It also adds additional units with unique unit cards, over 20 new technologies and access to Bloodline Lords & Scrap Upgrades via the submods listed below.
 

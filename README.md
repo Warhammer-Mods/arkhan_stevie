@@ -4,21 +4,23 @@
 This mod makes changes to Arkhan's faction by giving him access to The Lore of Vampires. It also adds additional units with unique unit cards, over 20 new technologies and access to Bloodline Lords & Scrap Upgrades via the submods listed below.
 
 ## New units
-![Cairn Wraiths](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_cairn_wraith.png)
-![Vargheists](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_vargheist.png)
-![Crypt Horrors](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_crypt_horror.png)
-![Grave Guard — Great Weapons](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard_great.png)
+![Crypt Ghouls](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/wh2_dlc09_tmb_crypt_ghouls.png)
+![Dire Wolves](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/wh2_dlc09_tmb_mon_dire_wolves.png)
+![Fell Bats](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/wh2_dlc09_tmb_mon_fell_bats.png)
+![Skeleton Warriors](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_skeleton_warriors.png)
+![Skeleton Spearmen](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_skeleton_spearmen.png)
+![Skeleton Archers](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_skeleton_archers.png)
 ![Grave Guard](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard.png)
+![Grave Guard (Great Weapons)](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard_great.png)
+![Nagashizzar Guard](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_nagashizzar_guard.png)
+![Cairn Wraiths](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_cairn_wraith.png)
+![Hexwraiths](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/wh2_dlc09_tmb_cav_hexwraiths.png)
+![Mortis Engine](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_mortis_engine.png)
+![Crypt Horrors](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_crypt_horror.png)
+![Vargheists](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_vargheist.png)
 ![Terrorgheist](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_terrorgheist.png)
 ![Zombie Dragon](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_zombie_dragon.png)
-![Mortis Engine](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_mortis_engine.png)
-![Mournguls](https://i.imgur.com/WCZw1Gd.png)
-![Rotting Leviathan](https://i.imgur.com/sjGzXol.png)
-![Rotting Prometheans Gunnery Mob](https://i.imgur.com/L2oXuQE.png)
-![Zombie Pirate Deckhands Mob (Polearms)](https://i.imgur.com/qbr5rDu.png)
-![Zombie Pirate Deckhands Mob](https://i.imgur.com/C0uDsSl.png)
-![Zombie Pirate Gunnery Mob (Handguns)](https://i.imgur.com/srCoU8A.png)
-![Zombie Pirate Gunnery Mob](https://i.imgur.com/LLCQha7.png)
+
 
 ## New Lords
 ![](https://i.imgur.com/osOD5Sg.png?1)

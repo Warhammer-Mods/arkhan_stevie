@@ -10,6 +10,7 @@ This mod makes changes to Arkhan's faction by giving him access to The Lore of V
 ![Grave Guard — Great Weapons](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard_great.png)
 ![Grave Guard](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_grave_guard.png)
 ![Terrorgheist](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_terrorgheist.png)
+![Zombie Dragon](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_zombie_dragon.png)
 ![Mortis Engine](https://github.com/Warhammer-Mods/assets/blob/master/modpage/units/steve_ark_mortis_engine.png)
 ![Mournguls](https://i.imgur.com/WCZw1Gd.png)
 ![Rotting Leviathan](https://i.imgur.com/sjGzXol.png)

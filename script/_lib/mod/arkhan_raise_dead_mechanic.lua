@@ -1,6 +1,6 @@
 --- Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.4.0-dev
+---@version 0.4.1-dev
 ---@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 ---@alias ardm STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 
@@ -228,11 +228,10 @@ function mod:uniqueRegionList()
 	-- Traversing through world regions list and building the province list
 	for i = 0, all_regions:num_items() - 1 do
 		local region = all_regions:item_at(i);
-		local region_name = region:name();
 		local province = region:province_name();
 
 		provinces[province] = provinces[province] or {regions = {}};
-		table.insert(provinces[province]["regions"], region_name);
+		table.insert(provinces[province]["regions"], region:name());
 	end
 
 	self:deepPrint(provinces);

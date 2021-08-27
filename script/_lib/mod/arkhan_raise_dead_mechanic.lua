@@ -1,6 +1,6 @@
 --- Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.3.0-dev
+---@version 0.4.0-dev
 ---@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 ---@alias ardm STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 
@@ -216,6 +216,36 @@ function mod:register_table(units_table)
 
 end
 
+--- Builds a list of regions, one from each province.
+--- Since cm:add_unit_to_province_mercenary_pool() takes region object as an input,
+--- passing all regions from a province is suboptimal.
+function mod:uniqueRegionList()
+	local region_manager = cm:model():world():region_manager();
+	local all_regions = region_manager:region_list();
+	local provinces = {};
+	self.unique_regions = {};
+
+	-- Traversing through world regions list and building the province list
+	for i = 0, all_regions:num_items() - 1 do
+		local region = all_regions:item_at(i);
+		local region_name = region:name();
+		local province = region:province_name();
+
+		provinces[province] = provinces[province] or {regions = {}};
+		table.insert(provinces[province]["regions"], region_name);
+	end
+
+	self:deepPrint(provinces);
+
+	-- Extracting just one region from each province and inserting into self.unique_regions
+	for _, province in pairs(provinces) do
+		table.insert(self.unique_regions, province["regions"][1])
+	end
+
+	-- Sanity check
+	self:deepPrint(self.unique_regions);
+
+end
 
 ---@param units_table table
 ---@param region_restriction CA_REGION
@@ -241,7 +271,6 @@ function mod:populateMercenaryPools(units_table, --[[optional]] region_restricti
 	end
 
 	local region_manager = cm:model():world():region_manager();
-	local all_regions = region_manager:region_list();
 	local region = region_restriction or nil;
 
 	--- Wrapper function for CA's cm:add_unit_to_province_mercenary_pool()
@@ -284,8 +313,8 @@ function mod:populateMercenaryPools(units_table, --[[optional]] region_restricti
 		self:log( "Adding [", unit.name, "] to mercenary pools globally…" );
 
 		-- Traversing through world regions list
-		for i = 0, all_regions:num_items() - 1 do
-			local region = all_regions:item_at(i);
+		for _, region in pairs(self.unique_regions) do
+			local region = region_manager:region_by_key(region);
 			addUnitToProvinceMercenaryPool(region, unit);
 		end
 
@@ -444,6 +473,13 @@ function mod:populateMercenaryPools(units_table, --[[optional]] region_restricti
 
 end
 
+function mod:init()
+	mod:log( "FIRST TICK REGISTERED" );
+	mod:log( "Caching region list…" );
+	self:uniqueRegionList();
+	mod:setmetatable(mod.units_table, "units_table");
+end
+
 ---@diagnostic disable-next-line: lowercase-global
 function get_ardm()
 	return core:get_static_object("ardm");
@@ -461,10 +497,9 @@ _G.ardm = get_ardm();
 cm:add_first_tick_callback(
 	function(context)
 
-		mod:log( "FIRST TICK REGISTERED" );
-		mod:setmetatable(mod.units_table, "units_table");
-		mod:log( "populating default/global mercenary pools for ", s.faction_key );
+		mod:init();
 
+		mod:log( "populating default/global mercenary pools for ", s.faction_key );
 		mod:populateMercenaryPools(mod.units_table.default);
 
 		local arkhan = context:world():faction_by_key(s.faction_key);

@@ -1444,14 +1444,14 @@ invasion = INVASION
 INVASION_MANAGER = {}
 invasion_manager = INVASION_MANAGER
 
---- @section Creating Invasions
---- @function new_invasion
---- @desc Adds a new invasion to the invasion manager
---- @p string key, The key of this invasion
---- @p string faction_key, The key of the faction that this invasion belongs to
---- @p string force_list, The units that will be part of this invasion
---- @p object spawn_location, Pass either a table of x/y coordinates or a string for the key of a preset location
---- @return INVASION
+---Creating Invasions
+
+---Adds a new invasion to the invasion manager
+---@param key string The key of this invasion
+---@param faction_key string The key of the faction that this invasion belongs to
+---@param force_list string The units that will be part of this invasion
+---@param spawn_location object Pass either a table of x/y coordinates or a string for the key of a preset location
+---@return INVASION
 function INVASION_MANAGER:new_invasion(key, faction_key, force_list, spawn_location) end
 
 function INVASION_MANAGER:new_invasion_from_existing_force(key, force) end
@@ -1483,7 +1483,7 @@ function INVASION:add_character_experience(quanity) end
 ---@param quantity number
 function INVASION:add_unit_experience(quantity) end
 
----@param callback fun()
+---@param callback function
 ---@param declare_war boolean?
 ---@param invite_attacker_allies boolean?
 ---@param invite_defender_allies boolean?
@@ -1502,7 +1502,7 @@ find_uicomponent = function(parent, ...) end
 UIComponent = function(pointer) end
 
 ---@param root CA_UIC
----@param findtable string[]
+---@param findtable string
 ---@return CA_UIC
 find_uicomponent_from_table = function(root, findtable) end
 

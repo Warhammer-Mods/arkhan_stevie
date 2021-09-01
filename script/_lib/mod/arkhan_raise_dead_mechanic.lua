@@ -228,7 +228,7 @@ function mod:uniqueRegionList()
 	-- Traversing through world regions list and building the province list
 	for i = 0, all_regions:num_items() - 1 do
 		local region = all_regions:item_at(i);
-		local province = region:province_name();
+		local province = region:province_name(); 
 
 		provinces[province] = provinces[province] or {regions = {}};
 		table.insert(provinces[province]["regions"], region:name());
@@ -493,46 +493,50 @@ _G.ardm = get_ardm();
 --------------EVENTS--------------
 ----------------------------------
 
-cm:add_first_tick_callback(
-	function(context)
+if core:is_campaign() then
 
-		mod:init();
+	cm:add_first_tick_callback(
+		function(context)
 
-		mod:log( "populating default/global mercenary pools for ", s.faction_key );
-		mod:populateMercenaryPools(mod.units_table.default);
+			mod:init();
 
-		local arkhan = context:world():faction_by_key(s.faction_key);
-		local faction_regions = arkhan:region_list();
+			mod:log( "populating default/global mercenary pools for ", s.faction_key );
+			mod:populateMercenaryPools(mod.units_table.default);
 
-		for i = 0, faction_regions:num_items() - 1 do
-			local region = faction_regions:item_at(i);
-			if arkhan:holds_entire_province(region:province_name(), false) then
-				mod:populateMercenaryPools(mod.units_table.own_provinces, region);
+			local arkhan = context:world():faction_by_key(s.faction_key);
+			local faction_regions = arkhan:region_list();
+
+			for i = 0, faction_regions:num_items() - 1 do
+				local region = faction_regions:item_at(i);
+				if arkhan:holds_entire_province(region:province_name(), false) then
+					mod:populateMercenaryPools(mod.units_table.own_provinces, region);
+				end
 			end
+
 		end
+	)
 
-	end
-)
-
-core:add_listener(
-	tostring(mod) .. "_ProvinceTaken",
-	"RegionFactionChangeEvent",
-	function(context)
-		local region = context:region();
-		local owner = region:owning_faction();
-		local province = region:province_name();
-		if owner:name() == s.faction_key then
-			mod:log("Region [", region:name(), "] taken!")
-			if owner:holds_entire_province(province, false) then
-				mod:log("Province [", province, "] is under control!")
+	core:add_listener(
+		tostring(mod) .. "_ProvinceTaken",
+		"RegionFactionChangeEvent",
+		function(context)
+			local region = context:region();
+			local owner = region:owning_faction();
+			local province = region:province_name();
+			if owner:name() == s.faction_key then
+				mod:log("Region [", region:name(), "] taken!")
+				if owner:holds_entire_province(province, false) then
+					mod:log("Province [", province, "] is under control!")
+				end
 			end
-		end
-		return owner:name() == s.faction_key and owner:holds_entire_province(province, false);
-	end,
-	function(context)
-		local region = context:region();
-		mod:log( "Fired [", tostring(mod), "_ProvinceTaken] event!" );
-		mod:populateMercenaryPools(mod.units_table.own_provinces, region);
-	end,
-	true
-);
+			return owner:name() == s.faction_key and owner:holds_entire_province(province, false);
+		end,
+		function(context)
+			local region = context:region();
+			mod:log( "Fired [", tostring(mod), "_ProvinceTaken] event!" );
+			mod:populateMercenaryPools(mod.units_table.own_provinces, region);
+		end,
+		true
+	);
+
+end

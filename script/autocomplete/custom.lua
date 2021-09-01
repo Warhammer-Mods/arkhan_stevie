@@ -8,6 +8,10 @@
 -----------------CORE-------------------
 ----------------------------------------
 
+---Returns whether the game is currently in campaign mode
+---@return boolean
+function CORE:is_campaign() end
+
 ---Retrieves a unique integer number. Each number is 1 higher than the previous unique number, with the sequence starting at 1.
 ---This functionality is useful for scripts that need to generate unique identifiers. The ascending sequence is not saved into a campaign savegame.
 ---An optional string classification may be provided. For each classification a new ascending integer is created and maintained.

@@ -169,9 +169,11 @@ function mod:register_table(units_table)
 		return false;
 	end
 
+	-- Make sure values are uniform
 	local domain = string.lower(tostring(units_table.name));
 	local dep    = string.lower(tostring(units_table.deployment_mode));
 	local build  = math.floor( math.abs(units_table.build_number)) or 0;
+
 	local units  = units_table.units;
 
 	-- Check for mandatory parameters
@@ -209,7 +211,6 @@ function mod:register_table(units_table)
 			units = units
 		};
 
-		--self:setmetatable(self.units_table[dep][domain], domain);
 		self:log("Successfully registered [", domain, "] table with deployment mode [", dep, "]!");
 
 	end
@@ -228,21 +229,16 @@ function mod:uniqueRegionList()
 	-- Traversing through world regions list and building the province list
 	for i = 0, all_regions:num_items() - 1 do
 		local region = all_regions:item_at(i);
-		local province = region:province_name(); 
+		local province = region:province_name();
 
 		provinces[province] = provinces[province] or {regions = {}};
 		table.insert(provinces[province]["regions"], region:name());
 	end
 
-	self:deepPrint(provinces);
-
-	-- Extracting just one region from each province and inserting into self.unique_regions
+	-- Caching the first region from each province
 	for _, province in pairs(provinces) do
 		table.insert(self.unique_regions, province["regions"][1])
 	end
-
-	-- Sanity check
-	self:deepPrint(self.unique_regions);
 
 end
 
@@ -493,6 +489,7 @@ _G.ardm = get_ardm();
 --------------EVENTS--------------
 ----------------------------------
 
+-- Run only in a campaign
 if core:is_campaign() then
 
 	cm:add_first_tick_callback(

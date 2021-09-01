@@ -256,7 +256,7 @@ function CM:disable_shortcut(button, action, opt) end
 ---@param opt boolean
 function CM:override_ui(override, opt) end
 
----@param opt bool
+---@param opt boolean
 function CM:steal_user_input(opt) end
 
 ---@return number, number, number, number
@@ -278,9 +278,9 @@ function CM:remove_callback(name) end
 ---@param context_str string?
 function CM:add_turn_countdown_event(faction_name, turn_offset, event_name, context_str) end
 
----@param num number | int
+---@param num number | integer
 ---@param max number?
----@return int
+---@return integer
 function CM:random_number(num, max) end
 
 ---@param lookup string
@@ -311,7 +311,7 @@ function CM:force_add_skill(lookup, skill_key) end
 function CM:force_add_and_equip_ancillary(lookup, ancillary) end
 
 ---@param char_lookup_str string
----@param level int
+---@param level integer
 function CM:award_experience_level(char_lookup_str, level) end
 
 ---@param lookup CA_CQI
@@ -455,11 +455,11 @@ function CM:force_confederation(confederator, confederated) end
 ---@param unknown_bool boolean
 function CM:force_alliance(faction, other_faction, unknown_bool) end
 
----@param pos int) --> (CA_CQI
+---@param pos integer) --> (CA_CQI
 ---@return CA_CQI, CA_CQI, string
 function CM:pending_battle_cache_get_defender(pos) end
 
----@param pos int) --> (CA_CQI
+---@param pos integer) --> (CA_CQI
 ---@return CA_CQI, CA_CQI, string
 function CM:pending_battle_cache_get_attacker(pos) end
 
@@ -474,10 +474,10 @@ function CM:pending_battle_cache_attacker_victory() end
 ---@return boolean
 function CM:pending_battle_cache_faction_is_involved(faction_key) end
 
----@return int
+---@return integer
 function CM:pending_battle_cache_num_attackers() end
 
----@return int
+---@return integer
 function CM:pending_battle_cache_num_defenders() end
 
 ---@param key string
@@ -616,7 +616,7 @@ function CUIM:stop_scripted_sequence() end
 ---@class CUIM_OVERRIDE
 CUIM_OVERRIDE = {}
 
----@param allowed bool
+---@param allowed boolean
 function CUIM_OVERRIDE:set_allowed(allowed) end
 
 ---@class CA_GAME
@@ -996,7 +996,7 @@ function CA_MODEL:turn_number() end
 ---@return CA_PENDING_BATTLE
 function CA_MODEL:pending_battle() end
 
----@return int
+---@return integer
 function CA_MODEL:combined_difficulty_level() end
 
 ---@param campaign_name string
@@ -1201,7 +1201,7 @@ function CORE:get_ui_root() end
 ---@param eventName string
 ---@param predicate function
 ---@param callback function
----@param is_repeating bool
+---@param is_repeating boolean
 function CORE:add_listener(listenerName, eventName, predicate, callback, is_repeating) end
 
 ---@param listenerName string
@@ -1270,14 +1270,14 @@ function CA_RITUAL:ritual_category() end
 ---@class CA_RITUAL_LIST
 CA_RITUAL_LIST = {}
 
----@param i int
+---@param i integer
 ---@return CA_RITUAL
 function CA_RITUAL_LIST:item_at(i) end
 
 ---@return boolean
 function CA_RITUAL_LIST:is_empty() end
 
----@return int
+---@return integer
 function CA_RITUAL_LIST:num_items() end
 
 ---@class RITE_UNLOCK
@@ -1296,6 +1296,10 @@ function RITE_UNLOCK:start(human_faction_name) end
 
 ---@class MISSION_MANAGER
 MISSION_MANAGER = {}
+
+---@class CA_MISSION_OBJECTIVE
+---@type "CAPTURE_REGIONS" | "SCRIPTED" | "RAZE_OR_SACK_N_DIFFERENT_SETTLEMENTS_INCLUDING" | "ELIMINATE_CHARACTER_IN_BATTLE" | "MOVE_TO_REGION" | "DEFEAT_N_ARMIES_OF_FACTION"
+CA_MISSION_OBJECTIVE = {}
 
 ---@param faction_key string
 ---@param mission_key string
@@ -1431,6 +1435,11 @@ function LL_UNLOCK:new(faction_key, startpos_id, forename_key, event, condition)
 
 function LL_UNLOCK:start() end
 
+---@class INVASION
+---@type object The new invasion object created by INVASION_MANAGER()
+INVASION = {}
+invasion = INVASION
+
 ---@class INVASION_MANAGER
 INVASION_MANAGER = {}
 invasion_manager = INVASION_MANAGER
@@ -1442,7 +1451,7 @@ invasion_manager = INVASION_MANAGER
 --- @p string faction_key, The key of the faction that this invasion belongs to
 --- @p string force_list, The units that will be part of this invasion
 --- @p object spawn_location, Pass either a table of x/y coordinates or a string for the key of a preset location
---- @return invasion The new invasion object created by this function
+--- @return INVASION
 function INVASION_MANAGER:new_invasion(key, faction_key, force_list, spawn_location) end
 
 function INVASION_MANAGER:new_invasion_from_existing_force(key, force) end
@@ -1456,9 +1465,8 @@ function INVASION_MANAGER:remove_invasion(key) end
 function INVASION_MANAGER:remove_invasion(key) end
 function INVASION_MANAGER:remove_invasion(key) end
 
----@class INVASION
-INVASION = {}
-invasion = INVASION
+---@class INVASION_TARGETS
+INVASION_TARGETS = {}
 
 ---@param target_type INVASION_TARGETS
 ---@param target WHATEVER
@@ -1481,8 +1489,9 @@ function INVASION:add_unit_experience(quantity) end
 ---@param invite_defender_allies boolean?
 function INVASION:start_invasion(callback, declare_war, invite_attacker_allies, invite_defender_allies) end
 
----@class _G
-_G = {}
+---@class BATTLE_SIDE
+---@type "Attacker" | "Defender"
+BATTLE_SIDE = {}
 
 ---@param parent CA_UIC
 ---@return CA_UIC

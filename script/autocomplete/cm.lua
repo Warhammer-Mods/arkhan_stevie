@@ -1,3 +1,5 @@
+---@diagnostic disable: lowercase-global
+
 ---@class CA_SETTLEMENT_CONTEXT
 CA_SETTLEMENT_CONTEXT = {}
 

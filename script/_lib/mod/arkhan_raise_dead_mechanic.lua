@@ -1,6 +1,6 @@
 --- Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.4.1-dev
+---@version 0.4.2-dev
 ---@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 ---@alias ardm STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 
@@ -162,7 +162,7 @@ end
 function mod:register_table(units_table)
 
 	local debug_info = debug.getinfo(2, "S"); -- TODO: No other way to get filename?
-  local file_path = debug_info.source;
+	local file_path = debug_info.source;
 
 	if not is_table(units_table) then
 		self:log( 1, "Invalid arguments for ardm:register_table() were passed in [", file_path, "]" );

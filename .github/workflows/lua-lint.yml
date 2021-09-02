@@ -34,4 +34,4 @@ jobs:
       with:
         files: script/{_lib,campaign}
         args: --globals ${{ env.globals }}
-        annotate: warnings
+        annotate: warning

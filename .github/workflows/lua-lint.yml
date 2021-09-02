@@ -9,6 +9,7 @@ on:
       - 'script/**'
   workflow_dispatch:
 
+env:
   globals: >
     core
     cm

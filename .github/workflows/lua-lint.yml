@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  globals: >
+  globals: >-
     core
     cm
     out
@@ -29,31 +29,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-
-    - uses: leafo/gh-actions-lua@v8.0.0
+    
+    - uses: nebularg/actions-luacheck@v1.1.0
       with:
-        luaVersion: "5.1"
-        
-    - uses: leafo/gh-actions-luarocks@v4.1.0
-      with:
-        luarocksVersion: "3.7.0"
-        
-    - name: Install luacheck
-      run: luarocks install luacheck
-
-    - name: Lint
-      shell: bash --noprofile --norc {0}
-      run: >
-        luacheck script/{_lib,campaign}
-        --std lua51c
-        --formatter plain
-        --codes --ranges
-        --globals ${{ env.globals }}
-
-        status=$?
-
-        if [ "$status" -gt 1 ]; then
-        exit $status;
-        else
-        exit 0;
-        fi 
+        files: script/{_lib,campaign}
+        args: --globals ${{ env.globals }}
+        annotate: warnings

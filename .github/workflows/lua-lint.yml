@@ -21,7 +21,7 @@ jobs:
       with:
         luaVersion: "5.1"
 
-    - name: lint
-      run: |
-        luac script/_lib/mod/*.lua \
-             script/campaign/mod/*.lua
+    - name: Lint
+      run: >
+        find script/ -type f -iname "*.lua"
+        -exec luac {} \;

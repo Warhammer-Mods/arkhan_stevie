@@ -7,15 +7,16 @@ local table_name = "vanilla"
 --[[ Please use only whole (integer) numbers.
 		 Increment build number each time a change to mercenary pools below is made.
 		 This defines if the game should update pools records for existing savegames.
-     Mercenary pool entries are additive, meaning any existing entries within a
-     save file will be overridden and their pool fully replenished, and old entries
-     no longer presented in the table below will continue to exist as usual.
+		 Mercenary pool entries are additive, meaning any existing entries within a
+		 save file will be overridden and their pool fully replenished, and old entries
+		 no longer presented in the table below will continue to exist as usual.
 ]]
 local table_build_number = 2
 
 --[[ Deployment mode of units. Following modes are supported:
-		 "default": spawn units globally upon game start
-		 "own_provinces": spawn units for own provinces only once fully conquered. Note: units will stay even if the province is lost.
+			"default": spawn units globally upon game start
+			"own_provinces": spawn units for own provinces only once fully conquered.
+				Note: units will stay even if the province is lost.
 ]]
 local table_deployment_mode = "default"
 
@@ -77,7 +78,7 @@ ardm:register_table({
 			technology_required = "",
 			partial_replenishment = false,
 			regions = "global"
-		},	
+		},
 		steve_ark_skeleton_spearmen = {
 			count = 2,
 			replenishment_chance = 80,

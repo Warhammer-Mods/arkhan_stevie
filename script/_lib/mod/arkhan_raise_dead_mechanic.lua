@@ -76,10 +76,11 @@ setmetatable(mod, mod);
 
 local s = mod.settings;
 
---- Mod logger function
---- If 1 passed as the first parameter, output as script_error()
---- Actually handy
----@param e number|any
+--- Mod logger function.
+--- If `1` passed as the first parameter, output using `script_error()`.
+---@param e any
+---@vararg any
+---@return nil
 function mod:log(e, ...)
 	local message = self.name .. ": ";
 	if e ~= 1 then
@@ -98,6 +99,7 @@ end
 
 --- Recursive table logger
 ---@param e any
+---@return nil
 function mod:deepPrint(e)
 	if e == nil then
 		self:log( 1, "passed nil to deepPrint()" );
@@ -229,9 +231,10 @@ function mod:register_table(units_table)
 
 end
 
---- Builds a list of regions, one from each province.
---- Since cm:add_unit_to_province_mercenary_pool() takes region object as an input,
---- passing all regions from a province is suboptimal.
+---Builds a list of regions, one from each province.
+---Since `cm:add_unit_to_province_mercenary_pool()` takes region object as an input,
+---passing all regions from a province is suboptimal.
+---@return nil
 function mod:uniqueRegionList()
 	local region_manager = cm:model():world():region_manager();
 	local all_regions = region_manager:region_list();
@@ -292,7 +295,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 			--self:log( "proceeding with region [", region:name(), "]" );
 			cm:add_unit_to_province_mercenary_pool(
-				region_to_add,                      -- REGION_SCRIPT_INTERFACE
+				region_to_add,               -- REGION_SCRIPT_INTERFACE
 				unit.name,                   -- unit
 				unit.count,                  -- count
 				unit.replenishment_chance,   -- replenishment chance
@@ -347,7 +350,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 		for i, unit in pairs(units) do
 
-				-- Set unit defaults
+			-- Set unit defaults
 			getmetatable(unit).__index = function(key) return self._unit.prototype[key] end;
 			getmetatable(unit).__tostring = function() return getmetatable(unit).name end;
 			unit.name = tostring(unit) or i; -- Make sure unit.name is set
@@ -415,13 +418,12 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 	end
 
-	-- Traversing through units table
-	-- "domain" represents semantic grouping of units into base game units, "vanilla",
-	-- and any other 3rd-party units possibly added by modules
-
 	self:log( "Processing [", deployment_mode, "] units table…");
 
-	for _, domain in pairs(units_table) do -- DOMAIN
+	--Traversing through units table.
+	--`domain` represents semantic grouping of units into base game units, `vanilla`,
+	--and any other 3rd-party units possibly added by modules
+	for _, domain in pairs(units_table) do
 
 		if is_table(domain) then
 

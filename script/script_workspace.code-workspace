@@ -19,7 +19,9 @@
 		"workbench.tree.indent": 20,
 		"Lua.telemetry.enable": false,
 		"Lua.runtime.version": "Lua 5.1",
-		"window.title": "${rootPath} : ${activeFolderMedium}\\${activeEditorShort} ${dirty}"
+		"window.title": "${rootPath} : ${activeFolderMedium}\\${activeEditorShort} ${dirty}",
+		"Lua.workspace.ignoreDir": [],
+		"Lua.workspace.preloadFileSize": 10000
     },
     "launch": {
         "configurations": [

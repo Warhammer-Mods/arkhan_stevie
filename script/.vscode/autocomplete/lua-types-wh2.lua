@@ -1698,9 +1698,22 @@ function INVASION:add_unit_experience(unit_experience_amount) end
 ---@param invite_defender_allies? boolean
 function INVASION:start_invasion(callback, declare_war, invite_attacker_allies, invite_defender_allies) end
 
+---------------------------
+-------BATTLE_MANAGER------
+---------------------------
+
+---@class BATTLE_MANAGER
+BATTLE_MANAGER = {}
+battle_manager = BATTLE_MANAGER
+
 ---@class BATTLE_SIDE
 ---@type "Attacker" | "Defender"
 BATTLE_SIDE = {}
+
+---Global function to get a battle manager from anywhere (battle only, obviously).
+---@return BATTLE_MANAGER
+get_bm = function() end
+
 
 ---@param parent CA_UIC
 ---@return CA_UIC

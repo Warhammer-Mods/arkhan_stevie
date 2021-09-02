@@ -9,6 +9,18 @@ on:
       - 'script/**'
   workflow_dispatch:
 
+  globals: >
+    core
+    cm
+    out
+    script_error
+    is_table
+    is_string
+    is_number
+    is_function
+    is_boolean
+    ardm
+
 jobs:
 
   lint:
@@ -22,6 +34,17 @@ jobs:
         luaVersion: "5.1"
 
     - name: Lint
-      run: >
-        find script/ -type f -iname "*.lua"
-        -exec luac {} \;
+      run: |
+        luacheck script/{_lib,campaign} \
+        --std lua51c \
+        --globals ${{ env.globals }} \
+        --formatter plain \
+        --codes --ranges
+
+        status=$?
+
+        if [ "$status" -gt 1 ]; then
+        exit $status
+        else
+        exit 0
+        fi 

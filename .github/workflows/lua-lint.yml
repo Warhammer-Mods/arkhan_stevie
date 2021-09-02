@@ -9,6 +9,19 @@ on:
       - 'script/**'
   workflow_dispatch:
 
+env:
+  globals: >
+    core
+    cm
+    out
+    script_error
+    is_table
+    is_string
+    is_number
+    is_function
+    is_boolean
+    ardm
+
 jobs:
 
   lint:
@@ -20,8 +33,27 @@ jobs:
     - uses: leafo/gh-actions-lua@v8.0.0
       with:
         luaVersion: "5.1"
+        
+    - uses: leafo/gh-actions-luarocks@v4.1.0
+      with:
+        luarocksVersion: "3.7.0"
+        
+    - name: Install luacheck
+      run: luarocks install luacheck
 
-    - name: lint
-      run: |
-        luac script/_lib/mod/*.lua \
-             script/campaign/mod/*.lua
+    - name: Lint
+      shell: bash --noprofile --norc {0}
+      run: >
+        luacheck script/{_lib,campaign}
+        --std lua51c
+        --formatter plain
+        --codes --ranges
+        --globals ${{ env.globals }}
+
+        status=$?
+
+        if [ "$status" -gt 1 ]; then
+        exit $status;
+        else
+        exit 0;
+        fi 

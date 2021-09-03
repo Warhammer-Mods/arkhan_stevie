@@ -82,11 +82,12 @@ local s = mod.settings;
 ---@vararg any
 ---@return nil
 function mod:log(e, ...)
+	local arg = {...};
 	local message = self.name .. ": ";
 	if e ~= 1 then
 		message = message .. tostring(e);
 	end
-	for _, v in ipairs(...) do
+	for _, v in ipairs(arg) do
 		message = message .. tostring(v);
 	end
 	if (e == 1) then

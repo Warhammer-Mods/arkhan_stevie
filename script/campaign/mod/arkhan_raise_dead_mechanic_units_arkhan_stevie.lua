@@ -135,6 +135,7 @@ ardm:register_table({
 -- Registering multiple tables within a single submod/file is possible.
 -- Below is an example of inline table definition.
 -- TODO: Define dictionary containing units and properties
+--[[ comment out for now
 ardm:register_table({
 		name = "arkhan_stevie",
 		build_number = 1,
@@ -142,3 +143,4 @@ ardm:register_table({
 		units = {
 		}
 })
+]]

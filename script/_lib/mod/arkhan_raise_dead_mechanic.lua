@@ -102,10 +102,12 @@ end
 ---@param e any
 ---@return nil
 function mod:deepPrint(e)
+
 	if e == nil then
 		self:log( 1, "passed nil to deepPrint()" );
 		return false;
 	end
+
 	local indent = "";
 	local function recurse(input)
 		if is_table(input) then
@@ -122,16 +124,15 @@ function mod:deepPrint(e)
 end
 
 --- Helper function to check if an element present in a set.
---- Is *not* recursive.
----
+--- Is *not* recursive
 --- Was it really necessary?
 ---@param set table
 ---@param key string|table
 ---@return boolean
-function mod.setContains(set, key)
+function mod:setContains(set, key)
 	if is_table(set) then
 		if is_table(key) then
-			for _, v in pairs(key) do
+			for k, v in pairs(key) do
 				if set[v] then
 					return set[v];
 				end
@@ -203,18 +204,12 @@ function mod:register_table(units_table)
 
 	if ( b ~= nil and b >= build ) then
 
-		self:log( 1, "A unit table for deployment mode [",
-			dep, "] is already registered for module [",
-			domain,
-			"], aborting…"
-		);
+		self:log( 1, "A unit table for deployment mode [", dep, "] is already registered for module [", domain, "], aborting…" );
 		return false;
 
 	elseif not self:setContains(s.deployment_modes, dep) then
 
-		self:log( 1, "Deployment mode [", dep, "] is not recognized as valid for module [",
-			domain, "], aborting…"
-		);
+		self:log( 1, "Deployment mode [", dep, "] is not recognized as valid for module [", domain, "], aborting…" );
 		return false;
 
 	else
@@ -288,15 +283,15 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 	--- Wrapper function for CA's cm:add_unit_to_province_mercenary_pool()
 	--- to reduce its whopping number of eleven arguments to just two
 	--- with a few additional checks and an exit status
-	---@param region_to_add CA_REGION
+	---@param region CA_REGION
 	---@param unit table
 	---@return boolean
-	local function addUnitToProvinceMercenaryPool(region_to_add, unit)
-		if ( region_to_add:is_null_interface() == false and is_table(unit) ) then
+	local function addUnitToProvinceMercenaryPool(region, unit)
+		if ( region:is_null_interface() == false and is_table(unit) ) then
 
 			--self:log( "proceeding with region [", region:name(), "]" );
 			cm:add_unit_to_province_mercenary_pool(
-				region_to_add,               -- REGION_SCRIPT_INTERFACE
+				region,                      -- REGION_SCRIPT_INTERFACE
 				unit.name,                   -- unit
 				unit.count,                  -- count
 				unit.replenishment_chance,   -- replenishment chance
@@ -308,7 +303,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 				unit.technology_required,    -- tech restriction
 				unit.partial_replenishment   -- partial replenishment
 			);
-			self:log( "added unit [", unit.name, "] to region [", region_to_add:name(), "]" );
+			self:log( "added unit [", unit.name, "] to region [", region:name(), "]" );
 
 			return true;
 
@@ -325,8 +320,8 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 		self:log( "Adding [", unit.name, "] to mercenary pools globally…" );
 
 		-- Traversing through world regions list
-		for _, v in pairs(self.unique_regions) do
-			region = region_manager:region_by_key(v);
+		for _, region in pairs(self.unique_regions) do
+			local region = region_manager:region_by_key(region);
 			addUnitToProvinceMercenaryPool(region, unit);
 		end
 
@@ -334,13 +329,13 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 	--- Parse units options and add to region
 	---@param units table
-	---@param region_to_add? CA_REGION
-	local function addUnits(units, region_to_add)
+	---@param region_restriction? CA_REGION
+	local function addUnits(units, region_restriction)
 
 		self:log( "addUnits() called");
 
-		if region_to_add and region_to_add:is_null_interface() then
-			region_to_add = nil;
+		if region_restriction and region_restriction:is_null_interface() then
+			region_restriction = nil;
 		elseif (
 			not is_table(units) and
 			not next(units)
@@ -362,15 +357,15 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 				if self:setContains(s.region_keywords.global, unit.regions) then -- GLOBAL
 
-					if region_to_add == nil then
+					if region_restriction == nil then
 						addUnitToGlobalMercenaryPools(unit);
 					else
-						addUnitToProvinceMercenaryPool(region_to_add, unit);
+						addUnitToProvinceMercenaryPool(region_restriction, unit);
 					end
 
 				elseif region_manager:region_by_key(unit.regions):is_null_interface() == false then
 
-					region = region_manager:region_by_key(unit.regions);
+					local region = region_manager:region_by_key(unit.regions);
 					addUnitToProvinceMercenaryPool(region, unit);
 
 				end
@@ -383,11 +378,11 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 					if region_manager:region_by_key(v):is_null_interface() == false then
 
-						region = region_manager:region_by_key(v);
+						local region = region_manager:region_by_key(v);
 
 						if (
-							region_to_add == nil or
-							region_to_add:name() == region:name()
+							region_restriction == nil or
+							region_restriction:name() == region:name()
 						) then
 							self:log("proceeding with region [", region:name(), "]…")
 							addUnitToProvinceMercenaryPool(region, unit);
@@ -395,10 +390,10 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 					elseif self:setContains(s.region_keywords.global, v) then
 
-						if region_to_add == nil then
+						if region_restriction == nil then
 							addUnitToGlobalMercenaryPools(unit);
 						else
-							addUnitToProvinceMercenaryPool(region_to_add, unit);
+							addUnitToProvinceMercenaryPool(region_restriction, unit);
 						end
 
 					else
@@ -429,8 +424,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 		if is_table(domain) then
 
 			local build_saved_named_value = tostring(self) ..
-				".modules." .. domain.name .. "." ..
-				getmetatable(units_table).name;
+				".modules." .. domain.name .. "." .. getmetatable(units_table).name;
 
 			if deployment_mode == "default" then
 
@@ -448,7 +442,9 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 				else
 
-					self:log( "Not processing [", domain.name, "]@",
+					self:log(
+						"Not processing [",
+						domain.name, "]@",
 						domain.build_number or build_saved,
 						" as it has already been deployed!"
 					);
@@ -471,8 +467,10 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 				else
 
-					self:log( "Not processing [",
-						domain.name, "]@", domain.build_number or build_saved,
+					self:log(
+						"Not processing [",
+						domain.name, "]@",
+						domain.build_number or build_saved,
 						" as it has already been deployed!"
 					);
 

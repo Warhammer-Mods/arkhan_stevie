@@ -108,13 +108,13 @@ function mod:deepPrint(e)
 		return false;
 	end
 
-	local indent = "";
-	local function recurse(input)
+	local function recurse(input, indent)
+		indent = indent or "";
 		if is_table(input) then
 			indent = indent .. "\t";
 			for key, value in pairs(input) do
 				self:log(indent, key);
-				recurse(value);
+				recurse(value, indent);
 			end
 		else
 			self:log(indent, tostring(input))

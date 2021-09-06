@@ -44,7 +44,7 @@ jobs:
     - name: Get Lua globals from vendor path
       id: lua-globals
       run: |
-        lua_files=$(find ${{ env.VENDOR_PATH }} -type -f -iname "*.lua")
+        lua_files=$(find ${{ env.VENDOR_PATH }} -type f -iname "*.lua")
         globals=$(
           for f in $lua_files; do
             lua show_globals.lua W < $f | cut -f2

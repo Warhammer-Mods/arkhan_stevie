@@ -9,6 +9,14 @@ on:
       - 'script/**'
   workflow_dispatch:
 
+env:
+  FILES_TO_CHECK: >-
+    script/{_lib,campaign}
+  VENDOR_PATH: .vscode
+  CUSTOM_GLOBALS: >-
+    ardm
+  REGEX: ^[\s]*(?<filename>.+?):(?<lineStart>[0-9]+):([0-9]+|(?<columnStart>[0-9]+)-(?<columnEnd>[0-9]+)):\s*\(?(?<errorCode>([W|E])[0-9]+)?\)?\s*(?<errorDesc>.+?)$
+
 jobs:
 
   lint:
@@ -28,19 +36,70 @@ jobs:
     - name: Install luacheck
       run: luarocks install luacheck
 
+    - name: Install show_globals.lua (courtesy of Egor Skriptunoff)
+      run: |
+        bin=${GITHUB_WORKSPACE}/bin
+        mkdir -p $bin
+        wget -O ${bin}/show_globals.lua \
+          https://gistcdn.githack.com/Egor-Skriptunoff/e4ab3bfc777faf4482a1b3f3ae19181b/raw/a39198cf62a52be7956abbff145a7fbf3f9a128a/show_globals.lua
+        chmod +x ${bin}/show_globals.lua
+        echo "::add-path::$bin"
+
+    - name: Get Lua globals from vendor path
+      id: lua-globals
+      run: |
+        lua_files=$(find ${{ env.VENDOR_PATH }} -type -f -iname "*.lua")
+        globals=$(
+          for f in $lua_files; do
+            lua show_globals.lua W < $f | cut -f2
+          done
+          printf '%s' ${{ env.CUSTOM_GLOBALS }}
+        )
+        globals=$(tr " " "\n" <<<"${globals}" | sort -u)
+        echo "::set-output name=globals::$globals"
+
     - name: Lint
       shell: bash --noprofile --norc {0}
-      run: >
-        luacheck script/{_lib,campaign}
-        --std lua51c
-        --formatter plain
-        --codes --ranges
-        --globals ${{ env.globals }}
-
-        status=$?
-
-        if [ "$status" -gt 1 ]; then
-        exit $status;
+      run: |
+        mkdir output
+        luacheck ${{ env.FILES_TO_CHECK }} \
+          --formatter plain \
+          --codes --ranges \
+          --globals ${{ steps.lua-globals.outputs.globals }} \
+        | tee -a output/luacheck.txt
+        exitcode=${PIPESTATUS[0]}
+        if [ "$exitcode" -gt 1 ]; then
+          exit $exitcode;
         else
-        exit 0;
-        fi 
+          exit 0;
+        fi
+
+    - name: Highlight annotations (Push)
+      uses: im-mortal/add-annotations-github-action@master
+      if: ${{ github.event == 'push' }}
+      with:
+        check_name: Luacheck
+        linter_output_path: output/luacheck.txt
+        commit_sha: ${{ github.sha }}
+        mode: regex
+        regex: ${{ env.REGEX }}
+
+    - name: Highlight annotations (PR)
+      uses: im-mortal/add-annotations-github-action@master
+      if: ${{ github.event == 'pull_request' }}
+      with:
+        check_name: Luacheck
+        linter_output_path: output/luacheck.txt
+        commit_sha: ${{ github.event.pull_request.head.sha }}
+        mode: regex
+        regex: ${{ env.REGEX }}
+
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: luacheck-results
+        path: output/luacheck.txt
+        retention-days: 30

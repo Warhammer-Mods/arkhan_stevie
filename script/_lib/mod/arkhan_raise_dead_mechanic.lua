@@ -132,7 +132,7 @@ end
 function mod:setContains(set, key)
 	if is_table(set) then
 		if is_table(key) then
-			for k, v in pairs(key) do
+			for _, v in pairs(key) do
 				if set[v] then
 					return set[v];
 				end
@@ -204,12 +204,20 @@ function mod:register_table(units_table)
 
 	if ( b ~= nil and b >= build ) then
 
-		self:log( 1, "A unit table for deployment mode [", dep, "] is already registered for module [", domain, "], aborting…" );
+		self:log( 1,
+			"A unit table for deployment mode [",
+			dep, "] is already registered for module [",
+			domain, "], aborting…"
+		);
 		return false;
 
 	elseif not self:setContains(s.deployment_modes, dep) then
 
-		self:log( 1, "Deployment mode [", dep, "] is not recognized as valid for module [", domain, "], aborting…" );
+		self:log( 1,
+			"Deployment mode [",
+			dep, "] is not recognized as valid for module [",
+			domain, "], aborting…"
+		);
 		return false;
 
 	else
@@ -498,13 +506,13 @@ function mod:init()
 end
 
 ---@diagnostic disable-next-line: lowercase-global
-function _G.get_ardm()
+function get_ardm()
 	return core:get_static_object("ardm");
 end
 
 core:add_static_object( "ardm", mod, false );
 
-_G.ardm = _G.get_ardm();
+_G.ardm = get_ardm();
 
 
 ----------------------------------

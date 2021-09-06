@@ -10,8 +10,10 @@ on:
   workflow_dispatch:
 
 env:
+  WORKDIR: ./script
   FILES_TO_CHECK: >-
-    script/{_lib,campaign}
+    _lib/
+    campaign/
   VENDOR_PATH: .vscode
   CUSTOM_GLOBALS: >-
     ardm
@@ -37,12 +39,14 @@ jobs:
       run: luarocks install luacheck
 
     - name: Install show_globals.lua (courtesy of Egor Skriptunoff)
+      working-directory: ${{ env.WORKDIR }}
       run: |
         wget -O show_globals.lua \
           https://gistcdn.githack.com/Egor-Skriptunoff/e4ab3bfc777faf4482a1b3f3ae19181b/raw/a39198cf62a52be7956abbff145a7fbf3f9a128a/show_globals.lua
 
     - name: Get Lua globals from vendor path
       id: lua-globals
+      working-directory: ${{ env.WORKDIR }}
       run: |
         lua_files=$(find ${{ env.VENDOR_PATH }} -type f -iname "*.lua")
         globals=$(
@@ -56,6 +60,7 @@ jobs:
 
     - name: Lint
       shell: bash --noprofile --norc {0}
+      working-directory: ${{ env.WORKDIR }}
       run: |
         mkdir output
         luacheck ${{ env.FILES_TO_CHECK }} \
@@ -70,23 +75,12 @@ jobs:
           exit 0;
         fi
 
-    - name: Highlight annotations (Push)
-      uses: im-mortal/add-annotations-github-action@master
-      if: ${{ github.event == 'push' }}
-      with:
-        check_name: Luacheck
-        linter_output_path: output/luacheck.txt
-        commit_sha: ${{ github.sha }}
-        mode: regex
-        regex: ${{ env.REGEX }}
-
     - name: Highlight annotations (PR)
       uses: im-mortal/add-annotations-github-action@master
-      if: ${{ github.event == 'pull_request' }}
       with:
         check_name: Luacheck
-        linter_output_path: output/luacheck.txt
-        commit_sha: ${{ github.event.pull_request.head.sha }}
+        linter_output_path: ${{ env.WORKDIR }}/output/luacheck.txt
+        commit_sha: ${{ github.event.pull_request.head.sha || github.sha }}
         mode: regex
         regex: ${{ env.REGEX }}
 
@@ -97,5 +91,5 @@ jobs:
       uses: actions/upload-artifact@v2.2.4
       with:
         name: luacheck-results
-        path: output/luacheck.txt
+        path: ${{ env.WORKDIR }}/output/luacheck.txt
         retention-days: 30

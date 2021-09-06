@@ -55,7 +55,7 @@ jobs:
           done
           printf '%s' ${{ env.CUSTOM_GLOBALS }}
         )
-        globals=$(tr " " "\n" <<<"${globals}" | sort -u)
+        globals=$(tr ' ' '\n' <<<"${globals}" | sort -u | tr '\n' ' ')
         echo "::set-output name=globals::$globals"
 
     - name: Lint

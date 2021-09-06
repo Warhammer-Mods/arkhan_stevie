@@ -38,12 +38,9 @@ jobs:
 
     - name: Install show_globals.lua (courtesy of Egor Skriptunoff)
       run: |
-        bin=${GITHUB_WORKSPACE}/bin
-        mkdir -p $bin
-        wget -O ${bin}/show_globals.lua \
+        wget -O show_globals.lua \
           https://gistcdn.githack.com/Egor-Skriptunoff/e4ab3bfc777faf4482a1b3f3ae19181b/raw/a39198cf62a52be7956abbff145a7fbf3f9a128a/show_globals.lua
-        chmod +x ${bin}/show_globals.lua
-        echo "::add-path::$bin"
+        chmod show_globals.lua
 
     - name: Get Lua globals from vendor path
       id: lua-globals

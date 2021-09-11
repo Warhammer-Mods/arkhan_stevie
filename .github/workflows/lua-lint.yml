@@ -11,7 +11,7 @@ on:
 
 env:
   FILES_TO_CHECK: >-
-    script/{_lib/, campaign}
+    script/{_lib/,campaign}
   VENDOR_PATH: script/.vscode
   CUSTOM_LUA_GLOBALS: >-
     ardm

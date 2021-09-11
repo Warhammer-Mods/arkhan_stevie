@@ -58,12 +58,15 @@ jobs:
       shell: bash --noprofile --norc {0}
       run: |
         mkdir output
+        echo "::add-matcher::.github/luacheck-plain.json"
         luacheck ${{ env.FILES_TO_CHECK }} \
           --formatter plain \
           --codes --ranges \
           --globals ${{ steps.lua-globals.outputs.globals }} \
         | tee -a output/luacheck.txt
         exitcode=${PIPESTATUS[0]}
+        echo "::remove-matcher owner=luacheck-plain_error::"
+        echo "::remove-matcher owner=luacheck-plain_warning::"
         if [ "$exitcode" -gt 1 ]; then
           exit $exitcode;
         else

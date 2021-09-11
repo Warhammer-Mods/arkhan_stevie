@@ -62,8 +62,7 @@ jobs:
         luacheck ${{ env.FILES_TO_CHECK }} \
           --formatter plain \
           --codes --ranges \
-          --globals ${{ steps.lua-globals.outputs.globals }} \
-        | tee -a output/luacheck.txt
+          --globals ${{ steps.lua-globals.outputs.globals }}
         exitcode=${PIPESTATUS[0]}
         echo "::remove-matcher owner=luacheck-plain_error::"
         echo "::remove-matcher owner=luacheck-plain_warning::"
@@ -72,10 +71,3 @@ jobs:
         else
           exit 0;
         fi
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2.2.4
-      with:
-        name: luacheck-report
-        path: output/luacheck.txt
-        retention-days: 30

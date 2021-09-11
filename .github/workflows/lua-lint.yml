@@ -15,7 +15,7 @@ env:
     _lib/
     campaign/
   VENDOR_PATH: .vscode
-  CUSTOM_GLOBALS: >-
+  CUSTOM_LUA_GLOBALS: >-
     ardm
   REGEX: ^[\s]*(?<filename>.+?):(?<lineStart>[0-9]+):([0-9]+|(?<columnStart>[0-9]+)-(?<columnEnd>[0-9]+)):\s*\(?(?<errorCode>([W|E])[0-9]+)?\)?\s*(?<errorDesc>.+?)$
 
@@ -53,7 +53,7 @@ jobs:
           for f in $lua_files; do
             lua show_globals.lua W < $f | cut -f2
           done
-          printf '%s' ${{ env.CUSTOM_GLOBALS }}
+          printf '%s' ${{ env.CUSTOM_LUA_GLOBALS }}
         )
         globals=$(tr ' ' '\n' <<<"${globals}" | sort -u | tr '\n' ' ')
         echo "::set-output name=globals::$globals"

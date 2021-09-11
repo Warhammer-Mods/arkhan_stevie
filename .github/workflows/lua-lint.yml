@@ -54,7 +54,8 @@ jobs:
         globals=$(tr ' ' '\n' <<<"${globals}" | sort -u | tr '\n' ' ')
         echo "::set-output name=globals::$globals"
 
-    - name: Lint
+    - name: Luacheck Lint
+      id: luacheck
       shell: bash --noprofile --norc {0}
       run: |
         mkdir output
@@ -85,6 +86,6 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: luacheck-results
+        name: luacheck-report
         path: output/luacheck.txt
         retention-days: 30

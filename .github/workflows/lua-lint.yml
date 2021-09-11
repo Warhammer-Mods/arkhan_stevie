@@ -15,7 +15,6 @@ env:
   VENDOR_PATH: .vscode
   CUSTOM_LUA_GLOBALS: >-
     ardm
-  REGEX: ^[\s]*(?<filename>.+?):(?<lineStart>[0-9]+):([0-9]+|(?<columnStart>[0-9]+)-(?<columnEnd>[0-9]+)):\s*\(?(?<errorCode>([W|E])[0-9]+)?\)?\s*(?<errorDesc>.+?)$
 
 jobs:
 
@@ -70,18 +69,6 @@ jobs:
         else
           exit 0;
         fi
-
-    - name: Highlight annotations (PR)
-      uses: im-mortal/add-annotations-github-action@master
-      with:
-        check_name: Luacheck
-        linter_output_path: output/luacheck.txt
-        commit_sha: ${{ github.event.pull_request.head.sha || github.sha }}
-        mode: regex
-        regex: ${{ env.REGEX }}
-
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2.2.4

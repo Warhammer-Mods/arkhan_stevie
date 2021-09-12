@@ -1,4 +1,4 @@
---- Arkhan Raise Dead mechanic
+---Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
 ---@version 0.4.2-dev
 ---@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
@@ -6,19 +6,6 @@
 
 local STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = {
 	__tostring = function() return "stephen_ardm"; end,
-
-	_unit = {
-		prototype = {
-			count = 1,
-			replenishment_chance = 100,
-			max_count = 1,
-			max_replenishment = 1,
-			level = 0,
-			technology_required = "",
-			partial_replenishment = false,
-			regions = "global"
-		}
-	},
 
 	units_table = {
 	--[[ SCHEMA
@@ -45,28 +32,6 @@ local STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = {
 			}
 		}
 	]]
-	},
-
-	name = "Arkhan Raise Dead Mechanic Stevie",
-
-	settings = {
-		faction_key = "wh2_dlc09_tmb_followers_of_nagash",
-		subculture_key = "",
-
-		deployment_modes = {
-			default       = true,  -- All regions on start, aka "global"
-			own_provinces = true   -- Only own provinces once fully taken
-		},
-
-		region_keywords = {
-			global = {
-				global = true,
-				any    = true,
-				all    = true
-			}
-			-- TODO: is adding to "sea" regions possible?
-		}
-
 	}
 
 }
@@ -74,10 +39,53 @@ local STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = {
 local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC;
 setmetatable(mod, mod);
 
+mod.name = "Arkhan Raise Dead Mechanic Stevie";
+
+---@class _unit
+---@field name string
+---@field count number
+---@field replenishment_chance number
+---@field max_count number
+---@field max_replenishment number
+---@field level number
+---@field technology_required string
+---@field partial_replenishment boolean
+---@field regions string | table
+mod._unit{
+	name                  = "",
+	count                 = 1,
+	replenishment_chance  = 100,
+	max_count             = 1,
+	max_replenishment     = 1,
+	level                 = 0,
+	technology_required   = "",
+	partial_replenishment = false,
+	regions               = "global"
+}
+
+mod.settings = {
+	faction_key    = "wh2_dlc09_tmb_followers_of_nagash",
+	subculture_key = "",
+
+	deployment_modes = {
+		default       = true,  --All regions on start, aka "global"
+		own_provinces = true   --Only own provinces once fully taken
+	},
+
+	region_keywords = {
+		global = {
+			global = true,
+			any    = true,
+			all    = true
+		}
+	}
+
+}
+
 local s = mod.settings;
 
---- Mod logger function.
---- If `1` passed as the first parameter, output using `script_error()`.
+---Mod logger function.
+---If `1` passed as the first parameter, output using `script_error()`.
 ---@param e any
 ---@vararg any
 ---@return nil
@@ -98,7 +106,7 @@ function mod:log(e, ...)
 	end
 end
 
---- Recursive table logger
+---Recursive table logger
 ---@param e any
 ---@return nil
 function mod:deepPrint(e)
@@ -123,9 +131,9 @@ function mod:deepPrint(e)
 	recurse(e);
 end
 
---- Helper function to check if an element present in a set.
---- Is *not* recursive
---- Was it really necessary?
+---Helper function to check if an element present in a set.
+---Is *not* recursive
+---Was it really necessary?
 ---@param set table
 ---@param key string|table
 ---@return boolean
@@ -143,9 +151,9 @@ function mod.setContains(set, key)
 	end
 end
 
---- Helper function to recursively `setmetatable()` for all tables in a passed table
---- getmetatable(table).name and tostring(table) all return table's name
---- Overengineering FTW
+---Helper function to recursively `setmetatable()` for all tables in a passed table
+---getmetatable(table).name and tostring(table) all return table's name
+---Overengineering FTW
 ---@param table table
 ---@param name string
 ---@return table
@@ -166,12 +174,12 @@ function mod:setmetatable(table, name)
 	end
 end
 
---- Register and initialize a module table in a module script file
+---Register and initialize a module table in a module script file
 ---@param units_table table
 ---@return boolean
 function mod:register_table(units_table)
 
-	local debug_info = debug.getinfo(2, "S"); -- TODO: No other way to get filename?
+	local debug_info = debug.getinfo(2, "S"); --TODO: No other way to get filename?
 	local file_path = debug_info.source;
 
 	if not is_table(units_table) then
@@ -179,14 +187,14 @@ function mod:register_table(units_table)
 		return false;
 	end
 
-	-- Make sure values are uniform
+	--Make sure values are uniform
 	local domain = string.lower(tostring(units_table.name));
 	local dep    = string.lower(tostring(units_table.deployment_mode));
 	local build  = math.floor( math.abs(units_table.build_number)) or 0;
 
 	local units  = units_table.units;
 
-	-- Check for mandatory parameters
+	--Check for mandatory parameters
 	if (
 		#domain < 1 or
 		#dep < 1 or
@@ -245,7 +253,7 @@ function mod:uniqueRegionList()
 	local provinces = {};
 	self.unique_regions = {};
 
-	-- Traversing through world regions list and building the province list
+	--Traversing through world regions list and building the province list
 	for i = 0, all_regions:num_items() - 1 do
 		local region = all_regions:item_at(i);
 		local province = region:province_name();
@@ -254,7 +262,7 @@ function mod:uniqueRegionList()
 		table.insert(provinces[province]["regions"], region:name());
 	end
 
-	-- Caching the first region from each province
+	--Caching the first region from each province
 	for _, province in pairs(provinces) do
 		table.insert(self.unique_regions, province["regions"][1])
 	end
@@ -288,30 +296,32 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 	local region_manager = cm:model():world():region_manager();
 	local region = region_restriction or nil;
 
-	--- Wrapper function for CA's cm:add_unit_to_province_mercenary_pool()
-	--- to reduce its whopping number of eleven arguments to just two
-	--- with a few additional checks and an exit status
-	---@param region CA_REGION
-	---@param unit table
+	---Wrapper function for CA's cm:add_unit_to_province_mercenary_pool()
+	---to reduce its whopping number of eleven arguments
+	---with a few additional checks and an exit status
+	---@param region_interface CA_REGION
+	---@param unit _unit
+	---@param faction_key string
+	---@param subculture_key string
 	---@return boolean
-	local function addUnitToProvinceMercenaryPool(region, unit)
-		if ( region:is_null_interface() == false and is_table(unit) ) then
+	local function addUnitToProvinceMercenaryPool(region_interface, unit, faction_key, subculture_key)
+		if ( region_interface:is_null_interface() == false and is_table(unit) ) then
 
 			--self:log( "proceeding with region [", region:name(), "]" );
 			cm:add_unit_to_province_mercenary_pool(
-				region,                      -- REGION_SCRIPT_INTERFACE
-				unit.name,                   -- unit
-				unit.count,                  -- count
-				unit.replenishment_chance,   -- replenishment chance
-				unit.max_count,              -- max units
-				unit.max_replenishment,      -- max per turn
-				unit.level,                  -- xp
-				s.faction_key,               -- faction restriction
-				s.subculture_key,            -- subculture restriction
-				unit.technology_required,    -- tech restriction
-				unit.partial_replenishment   -- partial replenishment
+				region_interface,            --REGION_SCRIPT_INTERFACE
+				unit.name,                   --unit
+				unit.count,                  --count
+				unit.replenishment_chance,   --replenishment chance
+				unit.max_count,              --max units
+				unit.max_replenishment,      --max per turn
+				unit.level,                  --xp
+				faction_key,                 --faction restriction
+				subculture_key,              --subculture restriction
+				unit.technology_required,    --tech restriction
+				unit.partial_replenishment   --partial replenishment
 			);
-			self:log( "added unit [", unit.name, "] to region [", region:name(), "]" );
+			self:log( "added unit [", unit.name, "] to region [", region_interface:name(), "]" );
 
 			return true;
 
@@ -327,15 +337,15 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 	local function addUnitToGlobalMercenaryPools(unit)
 		self:log( "Adding [", unit.name, "] to mercenary pools globally…" );
 
-		-- Traversing through world regions list
+		--Traversing through world regions list
 		for _, region in pairs(self.unique_regions) do
 			local region = region_manager:region_by_key(region);
-			addUnitToProvinceMercenaryPool(region, unit);
+			addUnitToProvinceMercenaryPool(region, unit, s.faction_key, s.subculture_key);
 		end
 
 	end
 
-	--- Parse units options and add to region
+	---Parse units options and add to region
 	---@param units table
 	---@param region_restriction? CA_REGION
 	local function addUnits(units, region_restriction)
@@ -354,27 +364,27 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 		for i, unit in pairs(units) do
 
-			-- Set unit defaults
-			getmetatable(unit).__index = function(key) return self._unit.prototype[key] end;
+			--Set unit defaults
+			getmetatable(unit).__index = function(key) return self._unit[key] end;
 			getmetatable(unit).__tostring = function() return getmetatable(unit).name end;
-			unit.name = tostring(unit) or i; -- Make sure unit.name is set
+			unit.name = tostring(unit) or i; --Make sure unit.name is set
 
 			self:log( "Processing unit [", unit.name, "]…" );
 
 			if is_string(unit.regions) then
 
-				if self:setContains(s.region_keywords.global, unit.regions) then -- GLOBAL
+				if self:setContains(s.region_keywords.global, unit.regions) then --GLOBAL
 
 					if region_restriction == nil then
 						addUnitToGlobalMercenaryPools(unit);
 					else
-						addUnitToProvinceMercenaryPool(region_restriction, unit);
+						addUnitToProvinceMercenaryPool(region_restriction, unit, s.faction_key, s.subculture_key);
 					end
 
 				elseif region_manager:region_by_key(unit.regions):is_null_interface() == false then
 
 					local region = region_manager:region_by_key(unit.regions);
-					addUnitToProvinceMercenaryPool(region, unit);
+					addUnitToProvinceMercenaryPool(region, unit, s.faction_key, s.subculture_key);
 
 				end
 
@@ -393,7 +403,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 							region_restriction:name() == region:name()
 						) then
 							self:log("proceeding with region [", region:name(), "]…")
-							addUnitToProvinceMercenaryPool(region, unit);
+							addUnitToProvinceMercenaryPool(region, unit, s.faction_key, s.subculture_key);
 						end
 
 					elseif self:setContains(s.region_keywords.global, v) then
@@ -401,7 +411,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 						if region_restriction == nil then
 							addUnitToGlobalMercenaryPools(unit);
 						else
-							addUnitToProvinceMercenaryPool(region_restriction, unit);
+							addUnitToProvinceMercenaryPool(region_restriction, unit, s.faction_key, s.subculture_key);
 						end
 
 					else
@@ -519,7 +529,7 @@ _G.ardm = get_ardm();
 --------------EVENTS--------------
 ----------------------------------
 
--- Run only in a campaign
+--Run only in a campaign
 if core:is_campaign() then
 
 	cm:add_first_tick_callback(

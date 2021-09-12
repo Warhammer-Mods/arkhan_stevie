@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'script/**'
+      - '.luacheckrc'
   pull_request:
     paths:
       - 'script/**'
+      - '.luacheckrc'
   workflow_dispatch:
 
 env:

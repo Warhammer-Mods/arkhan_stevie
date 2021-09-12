@@ -51,7 +51,7 @@ mod.name = "Arkhan Raise Dead Mechanic Stevie";
 ---@field technology_required string
 ---@field partial_replenishment boolean
 ---@field regions string | table
-mod._unit{
+mod._unit = {
 	name                  = "",
 	count                 = 1,
 	replenishment_chance  = 100,

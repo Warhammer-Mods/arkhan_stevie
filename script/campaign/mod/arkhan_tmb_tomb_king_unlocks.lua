@@ -1,9 +1,9 @@
 local arkhan_tmb_tomb_king_unlocks = "tech_arkhan_lord";
 local arkhan_tmb_tomb_king_unlocks_techs = {
-    ["tech_arkhan_lord_top_left"] = {forename = "names_name_159753853", surname = "", subtype = "arkhan_tmb_tomb_king"},
-    ["tech_arkhan_lord_top_right"] = {forename = "names_name_159753854", surname = "", subtype = "arkhan_tmb_tomb_king"},
-    ["tech_arkhan_lord_extra_left_lord_unlock"] = {forename = "names_name_159753855", surname = "", subtype = "arkhan_tmb_tomb_king"},
-    ["tech_arkhan_lord_extra_right_lord_unlock"] = {forename = "names_name_159753856", surname = "", subtype = "arkhan_tmb_tomb_king"}
+    ["tech_arkhan_lord_top_left"] = {forename = "names_name_159753853", surname = "", subtype = "arkhan_tmb_tomb_king_grief"},
+    ["tech_arkhan_lord_top_right"] = {forename = "names_name_159753854", surname = "", subtype = "arkhan_tmb_tomb_king_terror"},
+    ["tech_arkhan_lord_extra_left_lord_unlock"] = {forename = "names_name_159753855", surname = "", subtype = "arkhan_tmb_tomb_king_madness"},
+    ["tech_arkhan_lord_extra_right_lord_unlock"] = {forename = "names_name_159753856", surname = "", subtype = "arkhan_tmb_tomb_king_sacrament"}
 };
 
 local function STEPHEN_DynastyTree_ResearchCompleted(context)

@@ -1,0 +1,4 @@
+unit_set_unit_ability_junctions_tables	0
+key	unit_set	unit_ability
+sda_effect_direwolf_frenzy	wh2_dlc09_tmb_mon_dire_wolves	wh_main_unit_passive_frenzy
+tech_arkhan_cairn_hex_mortis_wayfarer_enable	ethereal_set	wh2_dlc17_unit_passive_wayfarer

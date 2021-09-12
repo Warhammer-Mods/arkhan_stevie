@@ -1,0 +1,4 @@
+resource_costs_tables	2
+id	treasury_cost	expenditure_type	income_type
+tech_rank_7_unlock	0	TECHNOLOGY	TECHNOLOGY
+tech_army_ability_unlock	0	TECHNOLOGY	TECHNOLOGY

@@ -1,0 +1,5 @@
+unit_variants_colours_tables	5
+unit_variant	faction	primary_colour_r	primary_colour_g	primary_colour_b	secondary_colour_r	secondary_colour_g	secondary_colour_b	tertiary_colour_r	tertiary_colour_g	tertiary_colour_b	soldier_type	key	subculture
+steve_ark_nagashizzar_guard		128	128	128	0	0	0	0	0	0	soldier	321654987	
+steve_ark_grave_guard		226	172	0	0	0	0	0	0	0	soldier	321654988	
+steve_ark_grave_guard_great		226	172	0	0	0	0	0	0	0	soldier	321654989	

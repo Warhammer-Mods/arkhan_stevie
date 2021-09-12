@@ -1,0 +1,27 @@
+effect_bundles_tables	4
+key	localised_title	localised_description	ui_icon	bundle_target	priority	is_global_effect	show_in_3d_space	owner_only
+wh2_dlc09_edict_tmb_worship_of_asaph	Worship of Asaph	Worship of Asaph	edict_tmb_worship_of_asaph.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_asaph_1	Worship of Asaph	Worship of Asaph	edict_tmb_worship_of_asaph.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_asaph_2	Worship of Asaph	Worship of Asaph	edict_tmb_worship_of_asaph.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_asaph_3	Worship of Asaph	Worship of Asaph	edict_tmb_worship_of_asaph.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_asaph_4	Worship of Asaph	Worship of Asaph	edict_tmb_worship_of_asaph.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_djaf	Worship of Djaf	Worship of Djaf	edict_tmb_worship_of_djaf.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_djaf_1	Worship of Djaf	Worship of Djaf	edict_tmb_worship_of_djaf.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_djaf_2	Worship of Djaf	Worship of Djaf	edict_tmb_worship_of_djaf.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_djaf_3	Worship of Djaf	Worship of Djaf	edict_tmb_worship_of_djaf.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_djaf_4	Worship of Djaf	Worship of Djaf	edict_tmb_worship_of_djaf.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_khsar	Worship of Khsar	Worship of Khsar	edict_tmb_worship_of_khsar.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_khsar_1	Worship of Khsar	Worship of Khsar	edict_tmb_worship_of_khsar.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_khsar_2	Worship of Khsar	Worship of Khsar	edict_tmb_worship_of_khsar.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_khsar_3	Worship of Khsar	Worship of Khsar	edict_tmb_worship_of_khsar.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_khsar_4	Worship of Khsar	Worship of Khsar	edict_tmb_worship_of_khsar.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_phakth	Worship of Phakth	Worship of Phakth	edict_tmb_worship_of_phakth.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_phakth_1	Worship of Phakth	Worship of Phakth	edict_tmb_worship_of_phakth.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_phakth_2	Worship of Phakth	Worship of Phakth	edict_tmb_worship_of_phakth.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_phakth_3	Worship of Phakth	Worship of Phakth	edict_tmb_worship_of_phakth.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_phakth_4	Worship of Phakth	Worship of Phakth	edict_tmb_worship_of_phakth.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_ptra	Worship of Ptra	Worship of Ptra	edict_tmb_worship_of_ptra.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_ptra_1	Worship of Ptra	Worship of Ptra	edict_tmb_worship_of_ptra.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_ptra_2	Worship of Ptra	Worship of Ptra	edict_tmb_worship_of_ptra.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_ptra_3	Worship of Ptra	Worship of Ptra	edict_tmb_worship_of_ptra.png	province	1	true	false	true
+wh2_dlc09_edict_tmb_worship_of_ptra_4	Worship of Ptra	Worship of Ptra	edict_tmb_worship_of_ptra.png	province	1	true	false	true

@@ -132,21 +132,25 @@ function mod:deepPrint(e)
 end
 
 ---Helper function to check if an element present in a set.
----Is *not* recursive
----Was it really necessary?
 ---@param set table
 ---@param key string|table
 ---@return boolean
-function mod.setContains(set, key)
+function mod:setContains(set, key)
 	if is_table(set) then
 		if is_table(key) then
 			for _, v in pairs(key) do
 				if set[v] then
 					return set[v];
+				elseif is_table(set[v]) then
+					self:setContains(set[v], key)
 				end
 			end
 		elseif is_string(key) and set[key] ~= nil then
-			return set[key];
+			if set[key] then
+				return set[key];
+			elseif is_table(set[key]) then
+				self:setContains(set[key], key)
+			end
 		end
 	end
 end

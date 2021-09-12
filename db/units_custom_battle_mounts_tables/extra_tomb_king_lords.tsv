@@ -1,0 +1,5 @@
+units_custom_battle_mounts_tables	1
+base_unit	mounted_unit	icon_name
+stephen_tmb_cha_tomb_king_1	stephen_tmb_cha_tomb_king_2	ui/campaign ui/mounts/mount_skeletal_steed_tmb.png
+stephen_tmb_cha_tomb_king_1	stephen_tmb_cha_tomb_king_3	ui/campaign ui/mounts/mount_chariot_of_the_gods.png
+stephen_tmb_cha_tomb_king_1	stephen_tmb_cha_tomb_king_4	ui/campaign ui/mounts/mount_warsphinx.png

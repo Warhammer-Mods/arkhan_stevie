@@ -1,0 +1,4 @@
+campaign_features_tables	0
+feature	group	available
+vampiric_mercenary_recruitment	arkhan_raise_dead_mechanic_vampiric_mercenary_recruitment	true
+undead_unit_saving_postbattle	arkhan_raise_dead_mechanic_vampiric_mercenary_recruitment	true

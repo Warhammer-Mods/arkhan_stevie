@@ -1,0 +1,6 @@
+special_ability_to_invalid_usage_flags_tables	0
+special_ability	invalid_usage_flag
+arkhan_zombie_raise_dead	army_is_full
+arkhan_zombie_raise_dead	climbing
+wh2_dlc09_spell_vampires_raise_dead	climbing
+wh2_dlc09_spell_vampires_raise_dead_upgraded	climbing

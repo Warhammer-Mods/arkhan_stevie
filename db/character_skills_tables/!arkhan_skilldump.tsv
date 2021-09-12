@@ -1,0 +1,4 @@
+character_skills_tables	5
+key	image_path	localised_name	localised_description	unlocked_at_rank	is_background_skill	is_female_only_background_skill	is_male_only_background_skill	background_weighting	influence_cost
+the_rise_of_nagash_skilldump_1	campaign_canopic_jars.png	Skill Dump	Skill Dump	19	false	false	false	0.0	0
+the_rise_of_nagash_skilldump_2	battle_morale.png	Skill Dump	Skill Dump	19	false	false	false	0.0	0

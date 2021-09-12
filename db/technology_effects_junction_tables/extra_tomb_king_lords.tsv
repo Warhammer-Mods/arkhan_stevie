@@ -1,0 +1,4 @@
+technology_effects_junction_tables	0
+technology	effect	value	effect_scope
+tech_arkhan_lord_top_left	stephen_tomb_king_unlock_1	1.0	faction_to_faction_own_unseen
+tech_arkhan_lord_top_right	stephen_tomb_king_unlock_2	1.0	faction_to_faction_own_unseen

@@ -1,0 +1,10 @@
+unit_sets_tables	2
+key	use_unit_exp_level_range	min_unit_exp_level_inclusive	max_unit_exp_level_inclusive	special_category
+grave_guard_set	false	-1	-1	
+ethereal_set	false	-1	-1	
+arkhan_vampires_all	false	-1	-1	
+tomb_kings_all	false	-1	-1	
+titanic_bats_set	false	-1	-1	
+ghoul_set	false	-1	-1	
+wolves_bats_set	false	-1	-1	
+skeleton_set	false	-1	-1	

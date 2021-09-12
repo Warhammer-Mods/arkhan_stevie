@@ -2,3 +2,4 @@
 * text=auto
 
 /.vscode/autocomplete/** linguist-vendored
+.luacheckrc linguist-vendored

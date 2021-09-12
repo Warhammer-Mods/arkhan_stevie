@@ -439,6 +439,20 @@ function CM:load_named_value(name, default, context) end
 ---@param opt boolean
 function CM:disable_saving_game(opt) end
 
+---Spawns a new character in the specified faction's recruitment pool.
+---@param faction string
+---@param forename string
+---@param surname string
+---@param clanname string
+---@param othername string
+---@param age number
+---@param male boolean
+---@param agent_key string
+---@param agent_subtype_key string
+---@param immortal boolean
+---@param art_set string
+function CM:spawn_character_to_pool(faction, forename, surname, clanname, othername, age, male, agent_key, agent_subtype_key, immortal, art_set) end
+
 ---@param faction_key string
 ---@param start_x number
 ---@param start_y number

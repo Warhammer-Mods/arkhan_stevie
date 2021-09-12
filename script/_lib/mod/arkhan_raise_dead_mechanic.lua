@@ -129,7 +129,7 @@ end
 ---@param set table
 ---@param key string|table
 ---@return boolean
-function mod:setContains(set, key)
+function mod.setContains(set, key)
 	if is_table(set) then
 		if is_table(key) then
 			for _, v in pairs(key) do

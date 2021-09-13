@@ -43,7 +43,7 @@ jobs:
     - name: Set Lua globals from vendor path
       id: lua-globals
       run: |
-        .vscode\update_lua_globals.sh
+        .vscode/update_lua_globals.sh
 
     - name: Luacheck Lint
       id: luacheck

@@ -1,0 +1,3 @@
+projectile_bombardments_tables	6
+bombardment_key	projectile_type	num_projectiles	start_time	arrival_window	radius_spread	launch_source	launch_vfx	launch_height	audio_type	launch_height_underground	randomise_launch
+arkhan_army_ability_rain_of_souls	arkhan_army_ability_rain_of_souls	30	2.0	3.0	12.0	above_target	wh2_dlc11_wraith_storm_spawn	220	wh2_main_ability_soul_torrent	75	true

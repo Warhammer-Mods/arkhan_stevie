@@ -1,0 +1,37 @@
+unit_set_to_unit_junctions_tables	0
+unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
+steve_ark_crypt_horror	steve_ark_crypt_horror				false
+steve_ark_grave_guard	steve_ark_grave_guard				false
+steve_ark_grave_guard_great	steve_ark_grave_guard_great				false
+steve_ark_mourngul	steve_ark_mourngul				false
+steve_ark_terrorgheist	steve_ark_terrorgheist				false
+steve_ark_vargheist	steve_ark_vargheist				false
+steve_ark_zmb	steve_ark_zmb				false
+steve_ark_zmb_summon	steve_ark_zmb_summon				false
+steve_ark_zmb_halberd	steve_ark_zmb_halberd				false
+ethereal	steve_ark_cairn_wraith				false
+steve_ark_cairn_wraith	steve_ark_cairn_wraith				false
+steve_ark_rotting_leviathan	steve_ark_rotting_leviathan				false
+steve_ark_grave_guard_halberd	steve_ark_grave_guard_halberd				false
+steve_ark_mortis_engine	steve_ark_mortis_engine				false
+ethereal	steve_ark_mortis_engine				false
+steve_ark_tmb_liche_priest_vampire	steve_ark_tmb_liche_priest_vampire				false
+steve_ark_tmb_liche_priest_vampire_1	steve_ark_tmb_liche_priest_vampire_1				false
+steve_ark_zmb_gunner_mob	steve_ark_zmb_gunner_mob				false
+steve_ark_zmb_handgunner_mob	steve_ark_zmb_handgunner_mob				false
+steve_ark_prometheans_gunnery_mob	steve_ark_prometheans_gunnery_mob				false
+arkhan_tmb_vmp_caps_all	wh2_dlc09_tmb_cav_hexwraiths				false
+arkhan_tmb_vmp_caps_all	wh2_dlc09_tmb_mon_dire_wolves				false
+arkhan_tmb_vmp_caps_all	wh2_dlc09_tmb_mon_fell_bats				false
+arkhan_tmb_vmp_caps_all	wh2_dlc09_tmb_inf_crypt_ghouls				false
+arkhan_tmb_vmp_caps_all	steve_ark_grave_guard				false
+arkhan_tmb_vmp_caps_all	steve_ark_grave_guard_great				false
+arkhan_tmb_vmp_caps_all	steve_ark_cairn_wraith				false
+arkhan_tmb_vmp_caps_all	steve_ark_mortis_engine				false
+maggie_unit_cap	steve_ark_zmb_gunner_mob				false
+maggie_unit_cap	steve_ark_zmb_handgunner_mob				false
+maggie_unit_cap	steve_ark_prometheans_gunnery_mob				false
+maggie_unit_cap	steve_ark_mourngul				false
+maggie_unit_cap	steve_ark_rotting_leviathan				false
+steve_ark_nagashizzar_guard	steve_ark_nagashizzar_guard				false
+steve_ark_skeleton_archers	steve_ark_skeleton_archers				false

@@ -1,0 +1,11 @@
+character_skill_level_details_tables	0
+level	skill_key	faction_key	campaign_key	subculture_key	image_path	unlocked_at_rank
+1	arkhan_skill_tmb_crypt_ghouls_crypt_horrors				x	1
+1	arkhan_skill_tmb_fell_bats_dire_wolves				x	1
+1	arkhan_skill_tmb_grave_guard				x	1
+1	arkhan_skill_tmb_ethereal				x	1
+1	arkhan_skill_tmb_vargheist_terrorgheist				x	1
+1	arkhan_skill_tmb_skeletons				x	1
+1	arkhan_skill_tmb_army_leadership				x	1
+1	arkhan_skill_tmb_chariot_rampage				x	13
+1	arkhan_skill_tmb_chariot_devastation				x	13

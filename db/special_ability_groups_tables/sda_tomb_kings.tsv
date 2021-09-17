@@ -1,0 +1,3 @@
+special_ability_groups_tables	9
+ability_group	icon_path	special_edition_mask	sort_order	is_naval	colour_r	colour_g	colour_b	button_name	sound_event	is_composite_group	show_lore_icon
+wh2_dlc09_lore_vampires_arkhan	UI\Battle UI\ability_icons\wh2_main_lore_passive_combined.png	0	6	false	119	1	1	lore_vampire	Play_WH_UI_Ability_Click_Generic_Vampire	false	true

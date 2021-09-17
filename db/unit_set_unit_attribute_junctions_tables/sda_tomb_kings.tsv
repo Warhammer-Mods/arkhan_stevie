@@ -1,0 +1,8 @@
+unit_set_unit_attribute_junctions_tables	0
+key	unit_set	unit_attribute
+crypt_ghoul_stalk	wh2_dlc09_tmb_inf_crypt_ghouls	stalk
+dire_wolf_strider	wh2_dlc09_tmb_mon_dire_wolves	stalk
+hexwraith_strider	wh2_dlc09_tmb_cav_hexwraiths	strider
+hexwraith_stalk	wh2_dlc09_tmb_cav_hexwraiths	stalk
+cairnwraith_strider	steve_ark_cairn_wraith	strider
+cairnwraith_stalk	steve_ark_cairn_wraith	stalk

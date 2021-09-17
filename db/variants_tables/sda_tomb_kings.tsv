@@ -1,0 +1,25 @@
+variants_tables	6
+variant_name	tech_folder	variant_filename	scale	scale_variation	low_poly_filename	mount_scale	super_low_poly_filename
+steve_ark_zmb		steve_ark_zmb	1.0	0.05	hu1/cst/cst_zombie_deckhands/cst_zombie_deckhands_imposter	1.0	
+steve_ark_grave_guard		steve_ark_grave_guard	1.0	0.05	hu1\vmp\vmp_black_knights\low_poly\vmp_grave_guards_lowlod	1.0	hu1\imposter\humanoid_imposter
+steve_ark_terrorgheist		steve_ark_terrorgheist	1.0	0.0		1.0	
+steve_ark_vargheist		steve_ark_vargheist	1.0	0.05		1.0	
+steve_ark_mourngul		steve_ark_mourngul	0.6	0.0	gh4/cst/cst_mourngul_haunter/cst_mourngul_imposter	1.0	
+steve_ark_zmb_halberd		steve_ark_zmb_halberd	1.0	0.05	hu1/cst/cst_zombie_deckhands/cst_zombie_deckhands_imposter	1.0	
+steve_ark_crypt_horror		steve_ark_crypt_horror	1.5	0.0	hu8\vmp\vmp_crypt_horror\low_poly\vmp_crypt_horror_lowlod	1.0	
+steve_ark_grave_guard_great		steve_ark_grave_guard_great	1.0	0.05	hu1\vmp\vmp_black_knights\low_poly\vmp_grave_guard_great_lowlod	1.0	hu1\imposter\humanoid_imposter
+steve_ark_cairn_wraith		steve_ark_cairn_wraith	1.0	0.05	gh1\vmp\vmp_cairn_wraith\low_poly\vmp_cairn_wraith_lowlod	1.0	
+steve_ark_rotting_leviathan		steve_ark_rotting_leviathan	1.0	0.05		1.0	
+steve_ark_zmb_summon		steve_ark_zmb_summon	1.0	0.05	hu1\vmp\vmp_zombies\low_poly\vmp_zombies_lowlod	1.0	hu1\imposter\humanoid_imposter
+steve_ark_grave_guard_halberd		steve_ark_grave_guard_halberd	1.0	0.05		1.0	
+steve_ark_mortis_engine		steve_ark_mortis_engine	1.0	0.05		1.0	
+steve_ark_tmb_liche_priest_vampire		steve_ark_tmb_liche_priest_vampire	1.1	0.05		1.0	
+steve_ark_tmb_liche_priest_vampire_1		steve_ark_tmb_liche_priest_vampire_1	1.1	0.05		1.0	
+steve_ark_zmb_gunner_mob		steve_ark_zmb_gunner_mob	1.0	0.05	hu1/cst/cst_zombie_gunnery/cst_zombie_gunnery_imposter	1.0	
+steve_ark_zmb_handgunner_mob		steve_ark_zmb_handgunner_mob	1.0	0.05	hu1/cst/cst_zombie_gunnery/cst_zombie_gunnery_imposter	1.0	
+steve_ark_prometheans_gunnery_mob		steve_ark_prometheans_gunnery_mob	1.0	0.05	hu1/cst/cst_zombie_gunnery/cst_zombie_gunnery_imposter	1.0	
+wh2_dlc09_tmb_skeletal_steed_mortis_engine		wh2_dlc09_tmb_skeletal_steed_mortis_engine	1.0	0.05		1.0	
+steve_ark_nagashizzar_guard		steve_ark_nagashizzar_guard	1.0	0.05	hu1\vmp\vmp_black_knights\low_poly\vmp_grave_guards_lowlod	1.0	hu1\imposter\humanoid_imposter
+steve_ark_skeleton_spearmen		steve_ark_skeleton_spearmen	1.0	0.05	hu1\tmb\tmb_skeleton_warriors\imposter\tmb_skeleton_spear_shield_imposter	1.0	hu1\imposter\humanoid_imposter
+steve_ark_skeleton_warriors		steve_ark_skeleton_warriors	1.0	0.05	hu1\tmb\tmb_skeleton_warriors\imposter\tmb_skeleton_sword_shield_imposter	1.0	hu1\imposter\humanoid_imposter
+steve_ark_skeleton_archers		steve_ark_skeleton_archers	1.0	0.05	hu1\tmb\tmb_skeleton_warriors\imposter\tmb_skeleton_warriors_imposter	1.0	hu1\imposter\humanoid_imposter

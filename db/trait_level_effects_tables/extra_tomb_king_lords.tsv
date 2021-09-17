@@ -1,0 +1,4 @@
+trait_level_effects_tables	0
+trait_level	effect	value	effect_scope
+stephen_tmb_tomb_king_dummy_trait_1	wh2_main_effect_grant_immortality_lord	1.0	character_to_character_own
+stephen_tmb_tomb_king_dummy_trait_1	stephen_tomb_king_dummy_trait_1	2.0	general_to_force_own

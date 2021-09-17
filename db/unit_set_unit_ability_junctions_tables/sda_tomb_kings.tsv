@@ -1,0 +1,3 @@
+unit_set_unit_ability_junctions_tables	0
+key	unit_set	unit_ability
+sda_effect_direwolf_frenzy	wh2_dlc09_tmb_mon_dire_wolves	wh_main_unit_passive_frenzy

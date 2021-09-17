@@ -1,0 +1,7 @@
+effects_tables	3
+effect	icon	priority	icon_negative	category	is_positive_value_good
+stephen_tomb_king_enable_name_tomb_king		0		campaign	true
+stephen_tomb_king_dummy_trait_1	trait_tomb_kings.png	1	trait_vampire_counts.png	campaign	true
+stephen_tomb_king_dummy_trait_2	general_ability.png	1	general_ability.png	campaign	true
+stephen_tomb_king_unlock_1	army.png	99	army.png	campaign	true
+stephen_tomb_king_unlock_2	army.png	99	army.png	campaign	true

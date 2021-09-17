@@ -115,6 +115,8 @@ Bugfixing and Submods
 - [Guv](https://steamcommunity.com/id/Guvenoren/myworkshopfiles/) for allowing me to use his Cairn Wraith and Mortis Engine unit cards.
 - [Prop Joe](https://steamcommunity.com/workshop/filedetails/?id=2155060363) for the Bloodline Unlock script.
 - [smOkin](https://steamcommunity.com/profiles/76561197971867345/myworkshopfiles/?appid=594570) for the script to enable the horde mechanic on two of my agents.
+- Huge thanks to xxxxxxxx who provided feedback on Arkhan’s unique Lords and their traits.
+- shiny for the Raise Dead script, unit cards and UI work.
 - All images and assets used on this page are property of Creative Assembly.
 
 ---

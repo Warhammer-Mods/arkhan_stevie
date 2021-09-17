@@ -57,7 +57,7 @@
 
 - Tomb King of Terror: Removed 'Immune to Psychology'.
 
-## [2.3.7] - 2021-09-17
+## [2.3.7](../../releases/tag/2.3.7) - 2021-09-17
 
 Fixed:
 

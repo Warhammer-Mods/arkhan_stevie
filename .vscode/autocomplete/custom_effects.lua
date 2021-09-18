@@ -4,27 +4,27 @@
 function CM:create_new_custom_effect_bundle(effect_bundle_key) end
 
 ---@param custom_effect_bundle CUSTOM_EFFECT_BUNDLE
----@param faction CA_FACTION
+---@param faction FACTION_SCRIPT_INTERFACE
 function CM:apply_custom_effect_bundle_to_faction(custom_effect_bundle, faction) end
 
 ---@param custom_effect_bundle CUSTOM_EFFECT_BUNDLE
----@param character CA_CHAR
+---@param character CHARACTER_SCRIPT_INTERFACE
 function CM:apply_custom_effect_bundle_to_character(custom_effect_bundle, character) end
 
 ---@param custom_effect_bundle CUSTOM_EFFECT_BUNDLE
----@param force CA_MILITARY_FORCE
+---@param force MILITARY_FORCE_LIST_SCRIPT_INTERFACE
 function CM:apply_custom_effect_bundle_to_force(custom_effect_bundle, force) end
 
 ---@param custom_effect_bundle CUSTOM_EFFECT_BUNDLE
----@param character CA_CHAR
+---@param character CHARACTER_SCRIPT_INTERFACE
 function CM:apply_custom_effect_bundle_to_characters_force(custom_effect_bundle, character) end
 
 ---param custom_effect_bundle CUSTOM_EFFECT_BUNDLE
----@param region CA_REGION
+---@param region REGION_SCRIPT_INTERFACE
 function CM:apply_custom_effect_bundle_to_region(custom_effect_bundle, region) end
 
 ---@param custom_effect_bundle CUSTOM_EFFECT_BUNDLE
----@param region CA_REGION
+---@param region REGION_SCRIPT_INTERFACE
 function CM:apply_custom_effect_bundle_to_faction_province(custom_effect_bundle, region) end
 
 ---@class LIST_INTERFACE

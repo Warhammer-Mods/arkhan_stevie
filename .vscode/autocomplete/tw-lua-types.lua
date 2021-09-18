@@ -1,8 +1,16 @@
 ---@diagnostic disable: lowercase-global
 
----@class CA_CQI
----@type number
+---@class card32: number
+---@class CA_CQI: card32
 CA_CQI = {}
+
+---An empty interface, returned if a requested interface doesn't exist. If function calls are made with this interface, the LUA script will fail.
+---@class NULL_SCRIPT_INTERFACE
+NULL_SCRIPT_INTERFACE = {}
+
+---Is this the null script interface?
+---@return boolean
+function NULL_SCRIPT_INTERFACE:is_null_interface() end
 
 ---@class CA_EventName
 ---@type "CharacterCreated" | "ComponentLClickUp" | "ComponentMouseOn" | "PanelClosedCampaign" | "PanelOpenedCampaign" | "TimeTrigger" | "UICreated"
@@ -40,7 +48,7 @@ EVENT_CONTEXT = {}
 ---@class CA_CHAR_CONTEXT
 CA_CHAR_CONTEXT = {}
 
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CA_CHAR_CONTEXT:character() end
 
 ---@class CA_UIC
@@ -280,7 +288,7 @@ function CM:is_multiplayer() end
 function CM:is_new_game() end
 
 ---@param force boolean?
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CM:get_local_faction(force) end
 
 ---@param force boolean?
@@ -294,26 +302,26 @@ function CM:whose_turn_is_it() end
 function CM:get_human_factions() end
 
 ---@param faction_key string
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CM:get_highest_ranked_general_for_faction(faction_key) end
 
 ---@param cqi CA_CQI
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CM:get_character_by_cqi(cqi) end
 
 ---@param regionName string
----@return CA_REGION
+---@return REGION_SCRIPT_INTERFACE
 function CM:get_region(regionName) end
 
 ---@param factionName string
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CM:get_faction(factionName) end
 
 ---@param cqi CA_CQI
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CM:get_character_by_mf_cqi(cqi) end
 
----@param char CA_CQI | CA_CHAR | number
+---@param char CA_CQI | CHARACTER_SCRIPT_INTERFACE | number
 ---@return string
 function CM:char_lookup_str(char) end
 
@@ -399,7 +407,7 @@ function CM:kill_character(lookup, kill_army, throughcq) end
 ---@param immortal boolean
 function CM:set_character_immortality(lookup, immortal) end
 
----@param factionName CA_FACTION
+---@param factionName FACTION_SCRIPT_INTERFACE
 function CM:kill_all_armies_for_faction(factionName) end
 
 ---@param charString string
@@ -528,7 +536,7 @@ function CM:remove_unit_from_character(lookup_string, unitID) end
 ---@param unit string
 function CM:grant_unit_to_character(lookup, unit) end
 
----@param character CA_CHAR
+---@param character CHARACTER_SCRIPT_INTERFACE
 function CM:remove_all_units_from_general(character) end
 
 ---@param faction string
@@ -562,12 +570,12 @@ function CM:force_make_vassal(vassaliser, vassal) end
 ---@param faction2 string
 function CM:force_make_trade_agreement(faction1, faction2) end
 
----@param first_faction CA_FACTION
----@param second_faction CA_FACTION
+---@param first_faction FACTION_SCRIPT_INTERFACE
+---@param second_faction FACTION_SCRIPT_INTERFACE
 function CM:faction_has_trade_agreement_with_faction(first_faction, second_faction) end
 
----@param first_faction CA_FACTION
----@param second_faction CA_FACTION
+---@param first_faction FACTION_SCRIPT_INTERFACE
+---@param second_faction FACTION_SCRIPT_INTERFACE
 function CM:faction_has_nap_with_faction(first_faction, second_faction) end
 
 ---@param confederator string
@@ -587,8 +595,8 @@ function CM:pending_battle_cache_get_defender(pos) end
 ---@return CA_CQI, CA_CQI, string
 function CM:pending_battle_cache_get_attacker(pos) end
 
----@param char CA_CHAR
----@return CA_CHAR[]
+---@param char CHARACTER_SCRIPT_INTERFACE
+---@return CHARACTER_SCRIPT_INTERFACE[]
 function CM:pending_battle_cache_get_enemies_of_char(char) end
 
 ---@return boolean
@@ -715,13 +723,31 @@ function CM:pooled_resource_mod(cqi, pooled_resource, factor, quantity) end
 ---@param quantity number
 function CM:faction_set_food_factor_value(faction_key, factor_key, quantity) end
 
----@param char CA_CHAR
+---@param char CHARACTER_SCRIPT_INTERFACE
 ---@return boolean
 function CM:char_is_mobile_general_with_army(char) end
 
 ---@param building_chain string
 ---@param settlement_skin string
 function CM:override_building_chain_display(building_chain, settlement_skin) end
+
+---Makes the supplied faction purchase a supplied effect for a supplied unit.
+---All arguments are specified by model hierarchy objects - see the Model Hierarchy documentation for more information.
+---@param faction FACTION_SCRIPT_INTERFACE Faction object.
+---@param unit UNIT_SCRIPT_INTERFACE Unit object.
+---@param purchasable_effect any
+---@return nil
+function CM:faction_purchase_unit_effect(faction, unit, purchasable_effect) end
+
+---Locks or unlocks the purchasable unit effect faction-wide, with an optional lock reason record.
+---The purchasable effect is specified by string key.
+---The faction is specified by FACTION_SCRIPT_INTERFACE - see the Model Hierarchy documentation for more information.
+---@param faction FACTION_SCRIPT_INTERFACE Faction object.
+---@param purchasable_effect string Unit purchasable effect. This should be a key from the `unit_purchasable_effects` database table.
+---@param lock_reason string Lock reason. This should be a key from the `unit_purchasable_effect_lock_reasons` database table. A blank string may be supplied to not provide a lock reason.
+---@param should_lock boolean Should lock: supply `true` to lock the effect, and `false` to unlock it.
+---@return nil
+function CM:faction_set_unit_purchasable_effect_lock_state(faction, purchasable_effect, lock_reason, should_lock) end
 
 ---@class CUIM
 CUIM = {}
@@ -751,7 +777,7 @@ CA_GAME = {}
 ---@return string
 function CA_GAME:filesystem_lookup(filePath, matchRegex) end
 
----@class CA_CHAR
+---@class CHARACTER_SCRIPT_INTERFACE
 CA_CHAR = {}
 
 ---@param traitName string
@@ -773,13 +799,13 @@ function CA_CHAR:display_position_y() end
 ---@return string
 function CA_CHAR:character_subtype_key() end
 
----@return CA_REGION
+---@return REGION_SCRIPT_INTERFACE
 function CA_CHAR:region() end
 
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CA_CHAR:faction() end
 
----@return CA_MILITARY_FORCE
+---@return MILITARY_FORCE_LIST_SCRIPT_INTERFACE
 function CA_CHAR:military_force() end
 
 ---@return CA_GARRISON_RESIDENCE
@@ -823,10 +849,10 @@ function CA_CHAR:has_military_force() end
 ---@return boolean
 function CA_CHAR:is_faction_leader() end
 
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CA_CHAR:family_member() end
 
----@return boolean
+---@return NULL_SCRIPT_INTERFACE
 function CA_CHAR:is_null_interface() end
 
 ---@param skill_key string
@@ -846,134 +872,134 @@ CA_CHAR_LIST = {}
 function CA_CHAR_LIST:num_items() end
 
 ---@param index number
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CA_CHAR_LIST:item_at(index) end
 
----@class CA_MILITARY_FORCE
-CA_MILITARY_FORCE = {}
+---@class MILITARY_FORCE_LIST_SCRIPT_INTERFACE
+MILITARY_FORCE_SCRIPT_INTERFACE = {}
 
----@return CA_CHAR
-function CA_MILITARY_FORCE:general_character() end
+---@return CHARACTER_SCRIPT_INTERFACE
+function MILITARY_FORCE_SCRIPT_INTERFACE:general_character() end
 
----@return CA_UNIT_LIST
-function CA_MILITARY_FORCE:unit_list() end
+---@return UNIT_LIST_SCRIPT_INTERFACE
+function MILITARY_FORCE_SCRIPT_INTERFACE:unit_list() end
 
 ---@return CA_CQI
-function CA_MILITARY_FORCE:command_queue_index() end
+function MILITARY_FORCE_SCRIPT_INTERFACE:command_queue_index() end
 
 ---@param bundle string
 ---@return boolean
-function CA_MILITARY_FORCE:has_effect_bundle(bundle) end
+function MILITARY_FORCE_SCRIPT_INTERFACE:has_effect_bundle(bundle) end
 
 ---@return CA_CHAR_LIST
-function CA_MILITARY_FORCE:character_list() end
+function MILITARY_FORCE_SCRIPT_INTERFACE:character_list() end
 
 ---@return boolean
-function CA_MILITARY_FORCE:has_general() end
+function MILITARY_FORCE_SCRIPT_INTERFACE:has_general() end
 
 ---@return boolean
-function CA_MILITARY_FORCE:is_armed_citizenry() end
+function MILITARY_FORCE_SCRIPT_INTERFACE:is_armed_citizenry() end
 
 ---@return number
-function CA_MILITARY_FORCE:morale() end
+function MILITARY_FORCE_SCRIPT_INTERFACE:morale() end
 
 ---@class CA_MILITARY_FORCE_LIST
-CA_MILITARY_FORCE_LIST = {}
+MILITARY_FORCE_LIST_SCRIPT_INTERFACE = {}
 
 ---@return number
-function CA_MILITARY_FORCE_LIST:num_items() end
+function MILITARY_FORCE_LIST_SCRIPT_INTERFACE:num_items() end
 
 ---@param index number
----@return CA_MILITARY_FORCE
-function CA_MILITARY_FORCE_LIST:item_at(index) end
+---@return MILITARY_FORCE_LIST_SCRIPT_INTERFACE
+function MILITARY_FORCE_LIST_SCRIPT_INTERFACE:item_at(index) end
 
----@class CA_UNIT
-CA_UNIT = {}
+---@class UNIT_SCRIPT_INTERFACE
+UNIT_SCRIPT_INTERFACE = {}
 
 ---@return number
-function CA_UNIT:command_queue_index() end
+function UNIT_SCRIPT_INTERFACE:command_queue_index() end
 
----@return CA_FACTION
-function CA_UNIT:faction() end
+---@return FACTION_SCRIPT_INTERFACE
+function UNIT_SCRIPT_INTERFACE:faction() end
 
 ---@return string
-function CA_UNIT:unit_key() end
+function UNIT_SCRIPT_INTERFACE:unit_key() end
 
 ---@return boolean
-function CA_UNIT:has_force_commander() end
+function UNIT_SCRIPT_INTERFACE:has_force_commander() end
 
----@return CA_CHAR
-function CA_UNIT:force_commander() end
+---@return CHARACTER_SCRIPT_INTERFACE
+function UNIT_SCRIPT_INTERFACE:force_commander() end
 
----@return CA_MILITARY_FORCE
-function CA_UNIT:military_force() end
+---@return MILITARY_FORCE_LIST_SCRIPT_INTERFACE
+function UNIT_SCRIPT_INTERFACE:military_force() end
 
 ---@return boolean
-function CA_UNIT:has_military_force() end
+function UNIT_SCRIPT_INTERFACE:has_military_force() end
 
 ---@return number
-function CA_UNIT:percentage_proportion_of_full_strength() end
+function UNIT_SCRIPT_INTERFACE:percentage_proportion_of_full_strength() end
 
----@class CA_UNIT_LIST
-CA_UNIT_LIST = {}
+---@class UNIT_LIST_SCRIPT_INTERFACE
+UNIT_LIST_SCRIPT_INTERFACE = {}
 
 ---@return number
-function CA_UNIT_LIST:num_items() end
+function UNIT_LIST_SCRIPT_INTERFACE:num_items() end
 
 ---@param j number
----@return CA_UNIT
-function CA_UNIT_LIST:item_at(j) end
+---@return UNIT_SCRIPT_INTERFACE
+function UNIT_LIST_SCRIPT_INTERFACE:item_at(j) end
 
 ---@param unit string
 ---@return boolean
-function CA_UNIT_LIST:has_unit(unit) end
+function UNIT_LIST_SCRIPT_INTERFACE:has_unit(unit) end
 
----@class CA_REGION
-CA_REGION = {}
+---@class REGION_SCRIPT_INTERFACE
+REGION_SCRIPT_INTERFACE = {}
 
 ---@return CA_SETTLEMENT
-function CA_REGION:settlement() end
+function REGION_SCRIPT_INTERFACE:settlement() end
 
 ---@return CA_GARRISON_RESIDENCE
-function CA_REGION:garrison_residence() end
+function REGION_SCRIPT_INTERFACE:garrison_residence() end
 
 ---@return string
-function CA_REGION:name() end
+function REGION_SCRIPT_INTERFACE:name() end
 
 ---@return string
-function CA_REGION:province_name() end
+function REGION_SCRIPT_INTERFACE:province_name() end
 
 ---@return number
-function CA_REGION:public_order() end
+function REGION_SCRIPT_INTERFACE:public_order() end
+
+---@return NULL_SCRIPT_INTERFACE
+function REGION_SCRIPT_INTERFACE:is_null_interface() end
 
 ---@return boolean
-function CA_REGION:is_null_interface() end
+function REGION_SCRIPT_INTERFACE:is_abandoned() end
 
----@return boolean
-function CA_REGION:is_abandoned() end
-
----@return CA_FACTION
-function CA_REGION:owning_faction() end
+---@return FACTION_SCRIPT_INTERFACE
+function REGION_SCRIPT_INTERFACE:owning_faction() end
 
 ---@return CA_SLOT_LIST
-function CA_REGION:slot_list() end
+function REGION_SCRIPT_INTERFACE:slot_list() end
 
 ---@return boolean
-function CA_REGION:is_province_capital() end
+function REGION_SCRIPT_INTERFACE:is_province_capital() end
 
 ---@param building string
 ---@return boolean
-function CA_REGION:building_exists(building) end
+function REGION_SCRIPT_INTERFACE:building_exists(building) end
 
 ---@param resource_key string
 ---@return boolean
-function CA_REGION:resource_exists(resource_key) end
+function REGION_SCRIPT_INTERFACE:resource_exists(resource_key) end
 
 ---@return boolean
-function CA_REGION:any_resource_available() end
+function REGION_SCRIPT_INTERFACE:any_resource_available() end
 
----@return CA_REGION_LIST
-function CA_REGION:adjacent_region_list() end
+---@return REGION_LIST_SCRIPT_INTERFACE
+function REGION_SCRIPT_INTERFACE:adjacent_region_list() end
 
 ---@class CA_SETTLEMENT
 CA_SETTLEMENT = {}
@@ -993,13 +1019,13 @@ function CA_SETTLEMENT:display_position_y() end
 ---@return string
 function CA_SETTLEMENT:get_climate() end
 
----@return boolean
+---@return NULL_SCRIPT_INTERFACE
 function CA_SETTLEMENT:is_null_interface() end
 
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CA_SETTLEMENT:faction() end
 
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CA_SETTLEMENT:commander() end
 
 ---@return boolean
@@ -1011,7 +1037,7 @@ function CA_SETTLEMENT:slot_list() end
 ---@return boolean
 function CA_SETTLEMENT:is_port() end
 
----@return CA_REGION
+---@return REGION_SCRIPT_INTERFACE
 function CA_SETTLEMENT:region() end
 
 ---@return string
@@ -1071,19 +1097,19 @@ function CA_BUILDING:chain() end
 ---@return string
 function CA_BUILDING:superchain() end
 
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CA_BUILDING:faction() end
 
----@return CA_REGION
+---@return REGION_SCRIPT_INTERFACE
 function CA_BUILDING:region() end
 
 ---@class CA_GARRISON_RESIDENCE
 CA_GARRISON_RESIDENCE = {}
 
----@return CA_REGION
+---@return REGION_SCRIPT_INTERFACE
 function CA_GARRISON_RESIDENCE:region() end
 
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CA_GARRISON_RESIDENCE:faction() end
 
 ---@return boolean
@@ -1092,7 +1118,7 @@ function CA_GARRISON_RESIDENCE:is_under_siege() end
 ---@return CA_SETTLEMENT
 function CA_GARRISON_RESIDENCE:settlement_interface() end
 
----@return CA_MILITARY_FORCE
+---@return MILITARY_FORCE_LIST_SCRIPT_INTERFACE
 function CA_GARRISON_RESIDENCE:army() end
 
 ---@return CA_CQI
@@ -1134,11 +1160,11 @@ function CA_MODEL:campaign_type() end
 function CA_MODEL:is_multiplayer() end
 
 ---@param cqi CA_CQI
----@return CA_MILITARY_FORCE
+---@return MILITARY_FORCE_LIST_SCRIPT_INTERFACE
 function CA_MODEL:military_force_for_command_queue_index(cqi) end
 
 ---@param cqi CA_CQI
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CA_MODEL:character_for_command_queue_index(cqi) end
 
 ---@param chance number
@@ -1150,7 +1176,7 @@ function CA_MODEL:random_percent(chance) end
 function CA_MODEL:faction_is_local(faction_key) end
 
 ---@param cqi CA_CQI
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CA_MODEL:faction_for_command_queue_index(cqi) end
 
 ---@return boolean
@@ -1159,14 +1185,14 @@ function CA_MODEL:is_player_turn() end
 ---@class CA_WORLD
 CA_WORLD = {}
 
----@return CA_FACTION_LIST
+---@return FACTION_LIST_SCRIPT_INTERFACE
 function CA_WORLD:faction_list() end
 
 ---@param factionKey string
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CA_WORLD:faction_by_key(factionKey) end
 
----@return CA_FACTION
+---@return FACTION_SCRIPT_INTERFACE
 function CA_WORLD:whose_turn_is_it() end
 
 ---@return CA_REGION_MANAGER
@@ -1175,134 +1201,134 @@ function CA_WORLD:region_manager() end
 ---@class CA_REGION_MANAGER
 CA_REGION_MANAGER = {}
 
----@return CA_REGION_LIST
+---@return REGION_LIST_SCRIPT_INTERFACE
 function CA_REGION_MANAGER:region_list() end
 
 ---@param key string
----@return CA_REGION
+---@return REGION_SCRIPT_INTERFACE
 function CA_REGION_MANAGER:region_by_key(key) end
 
----@class CA_FACTION
-CA_FACTION = {}
+---@class FACTION_SCRIPT_INTERFACE
+FACTION_SCRIPT_INTERFACE = {}
 
 ---@return CA_CHAR_LIST
-function CA_FACTION:character_list() end
+function FACTION_SCRIPT_INTERFACE:character_list() end
 
 ---@return number
-function CA_FACTION:treasury() end
+function FACTION_SCRIPT_INTERFACE:treasury() end
 
 ---@return string
-function CA_FACTION:name() end
+function FACTION_SCRIPT_INTERFACE:name() end
 
 ---@return string
-function CA_FACTION:subculture() end
+function FACTION_SCRIPT_INTERFACE:subculture() end
 
 ---@return string
-function CA_FACTION:culture() end
+function FACTION_SCRIPT_INTERFACE:culture() end
 
 ---@return CA_MILITARY_FORCE_LIST
-function CA_FACTION:military_force_list() end
+function FACTION_SCRIPT_INTERFACE:military_force_list() end
 
 ---@return boolean
-function CA_FACTION:is_human() end
+function FACTION_SCRIPT_INTERFACE:is_human() end
 
 ---@return boolean
-function CA_FACTION:is_dead() end
+function FACTION_SCRIPT_INTERFACE:is_dead() end
 
----@param faction CA_FACTION
+---@param faction FACTION_SCRIPT_INTERFACE
 ---@return boolean
-function CA_FACTION:is_vassal_of(faction) end
+function FACTION_SCRIPT_INTERFACE:is_vassal_of(faction) end
 
 ---@return boolean
-function CA_FACTION:is_vassal() end
+function FACTION_SCRIPT_INTERFACE:is_vassal() end
 
 ---@param faction string
 ---@return boolean
-function CA_FACTION:is_ally_vassal_or_client_state_of(faction) end
+function FACTION_SCRIPT_INTERFACE:is_ally_vassal_or_client_state_of(faction) end
 
----@param faction CA_FACTION
-function CA_FACTION:allied_with(faction) end
+---@param faction FACTION_SCRIPT_INTERFACE
+function FACTION_SCRIPT_INTERFACE:allied_with(faction) end
 
----@param faction CA_FACTION
+---@param faction FACTION_SCRIPT_INTERFACE
 ---@return boolean
-function CA_FACTION:at_war_with(faction) end
+function FACTION_SCRIPT_INTERFACE:at_war_with(faction) end
 
----@return CA_REGION_LIST
-function CA_FACTION:region_list() end
+---@return REGION_LIST_SCRIPT_INTERFACE
+function FACTION_SCRIPT_INTERFACE:region_list() end
 
 ---@param bundle string
 ---@return boolean
-function CA_FACTION:has_effect_bundle(bundle) end
+function FACTION_SCRIPT_INTERFACE:has_effect_bundle(bundle) end
 
----@return CA_REGION
-function CA_FACTION:home_region() end
+---@return REGION_SCRIPT_INTERFACE
+function FACTION_SCRIPT_INTERFACE:home_region() end
 
 ---@return CA_CQI
-function CA_FACTION:command_queue_index() end
+function FACTION_SCRIPT_INTERFACE:command_queue_index() end
+
+---@return NULL_SCRIPT_INTERFACE
+function FACTION_SCRIPT_INTERFACE:is_null_interface() end
+
+---@return CHARACTER_SCRIPT_INTERFACE
+function FACTION_SCRIPT_INTERFACE:faction_leader() end
 
 ---@return boolean
-function CA_FACTION:is_null_interface() end
+function FACTION_SCRIPT_INTERFACE:has_home_region() end
 
----@return CA_CHAR
-function CA_FACTION:faction_leader() end
+---@return FACTION_LIST_SCRIPT_INTERFACE
+function FACTION_SCRIPT_INTERFACE:factions_met() end
 
----@return boolean
-function CA_FACTION:has_home_region() end
-
----@return CA_FACTION_LIST
-function CA_FACTION:factions_met() end
-
----@return CA_FACTION_LIST
-function CA_FACTION:factions_at_war_with() end
+---@return FACTION_LIST_SCRIPT_INTERFACE
+function FACTION_SCRIPT_INTERFACE:factions_at_war_with() end
 
 ---@return boolean
-function CA_FACTION:at_war() end
+function FACTION_SCRIPT_INTERFACE:at_war() end
 
 ---@param resource string
 ---@return boolean
-function CA_FACTION:has_pooled_resource(resource) end
+function FACTION_SCRIPT_INTERFACE:has_pooled_resource(resource) end
 
 ---@param resource string
 ---@return CA_POOLED
-function CA_FACTION:pooled_resource(resource) end
+function FACTION_SCRIPT_INTERFACE:pooled_resource(resource) end
 
 ---@return CA_FACTION_RITUALS
-function CA_FACTION:rituals() end
+function FACTION_SCRIPT_INTERFACE:rituals() end
 
 ---@return boolean
-function CA_FACTION:has_rituals() end
+function FACTION_SCRIPT_INTERFACE:has_rituals() end
 
 ---@param province_key string
 ---@param include_vassals boolean
-function CA_FACTION:holds_entire_province(province_key, include_vassals) end
+function FACTION_SCRIPT_INTERFACE:holds_entire_province(province_key, include_vassals) end
 
----@class CA_FACTION_LIST
-CA_FACTION_LIST = {}
+---@class FACTION_LIST_SCRIPT_INTERFACE
+FACTION_LIST_SCRIPT_INTERFACE = {}
 
 ---@return number
-function CA_FACTION_LIST:num_items() end
+function FACTION_LIST_SCRIPT_INTERFACE:num_items() end
 
 ---@param index number
----@return CA_FACTION
-function CA_FACTION_LIST:item_at(index) end
+---@return FACTION_SCRIPT_INTERFACE
+function FACTION_LIST_SCRIPT_INTERFACE:item_at(index) end
 
----@class CA_REGION_LIST
-CA_REGION_LIST = {}
+---@class REGION_LIST_SCRIPT_INTERFACE
+REGION_LIST_SCRIPT_INTERFACE = {}
 
 ---@return number
-function CA_REGION_LIST:num_items() end
+function REGION_LIST_SCRIPT_INTERFACE:num_items() end
 
 ---@param i number
----@return CA_REGION
-function CA_REGION_LIST:item_at(i) end
+---@return REGION_SCRIPT_INTERFACE
+function REGION_LIST_SCRIPT_INTERFACE:item_at(i) end
 
 ---@class CA_PENDING_BATTLE
 CA_PENDING_BATTLE = {}
 
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CA_PENDING_BATTLE:attacker() end
 
----@return CA_CHAR
+---@return CHARACTER_SCRIPT_INTERFACE
 function CA_PENDING_BATTLE:defender() end
 
 ---@return boolean
@@ -1390,47 +1416,53 @@ function CA_FACTION_RITUALS:active_rituals() end
 ---@return boolean
 function CA_FACTION_RITUALS:ritual_status(ritual_key) end
 
----@class CA_RITUAL
-CA_RITUAL = {}
+---@class ACTIVE_RITUAL_SCRIPT_INTERFACE
+ACTIVE_RITUAL_SCRIPT_INTERFACE = {}
 
----@return CA_REGION_LIST
-function CA_RITUAL:ritual_sites() end
+---Is this the null script interface?
+---@return NULL_SCRIPT_INTERFACE
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:is_null_interface() end
 
+---@return REGION_LIST_SCRIPT_INTERFACE
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:ritual_sites() end
+
+---Returns the ritual chain record key for this active ritual. Empty if it isn't part of a chain.
 ---@return string
-function CA_RITUAL:ritual_chain_key() end
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:ritual_chain_key() end
 
+---Returns the ritual record key for this active ritual.
 ---@return string
-function CA_RITUAL:ritual_key() end
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:ritual_key() end
 
+---Is this active ritual part of a chain?
 ---@return boolean
-function CA_RITUAL:is_part_of_chain() end
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:is_part_of_chain() end
 
----@return CA_FACTION
-function CA_RITUAL:target_faction() end
-
----@return number
-function CA_RITUAL:cast_time() end
-
----@return boolean
-function CA_RITUAL:is_null_interface() end
+---@return FACTION_SCRIPT_INTERFACE
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:target_faction() end
 
 ---@return number
-function CA_RITUAL:cooldown_time() end
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:cast_time() end
+
+
 
 ---@return number
-function CA_RITUAL:expended_resources() end
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:cooldown_time() end
 
 ---@return number
-function CA_RITUAL:slave_cost() end
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:expended_resources() end
+
+---@return number
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:slave_cost() end
 
 ---@return string
-function CA_RITUAL:ritual_category() end
+function ACTIVE_RITUAL_SCRIPT_INTERFACE:ritual_category() end
 
 ---@class CA_RITUAL_LIST
 CA_RITUAL_LIST = {}
 
 ---@param i integer
----@return CA_RITUAL
+---@return ACTIVE_RITUAL_SCRIPT_INTERFACE
 function CA_RITUAL_LIST:item_at(i) end
 
 ---@return boolean
@@ -1547,7 +1579,7 @@ function MISSION_MANAGER:trigger(dismiss_callback, delay) end
 ---@return MISSION_MANAGER
 function CM:get_mission_manager(mission_key) end
 
----@param unit_interface CA_UNIT
+---@param unit_interface UNIT_SCRIPT_INTERFACE
 ---@param rank number
 function CM:add_experience_to_unit(unit_interface, rank) end
 
@@ -1666,7 +1698,7 @@ function INVASION:remove_aggro_radius() end
 function INVASION:abort_on_target_owner_change(abort) end
 
 ---Sets a General to be used when spawning this invasion
----@param character CA_CHAR
+---@param character CHARACTER_SCRIPT_INTERFACE
 ---@return nil
 function INVASION:assign_general(character) end
 
@@ -1761,7 +1793,7 @@ is_uicomponent = function(object) end
 ---@param omit_children boolean
 output_uicomponent = function(uic, omit_children) end
 
----@param faction CA_FACTION
+---@param faction FACTION_SCRIPT_INTERFACE
 ---@return boolean
 wh_faction_is_horde = function(faction) end
 
@@ -1807,7 +1839,7 @@ get_cm = function() end
 ---@param context EVENT_CONTEXT
 get_events = function(context) end
 
----@param char CA_CHAR
+---@param char CHARACTER_SCRIPT_INTERFACE
 ---@return BATTLE_SIDE
 Get_Character_Side_In_Last_Battle = function(char) end
 
@@ -1893,7 +1925,7 @@ function CM:add_pre_first_tick_callback(callback) end
 
 --- Adds one or more units of a specified type to the mercenary pool in a province.
 --- These units can then be recruitable by that faction (or potentially other factions) using gameplay mechanics such as Raising Dead.
----@param region CA_REGION
+---@param region REGION_SCRIPT_INTERFACE
 ---@param unitkey string
 ---@param count number
 ---@param replenishment_chance number

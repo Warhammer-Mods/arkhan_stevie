@@ -59,7 +59,7 @@ core:add_listener(
 		return true
 	end,
 	function(context)
-		---@type CA_CHAR
+		---@type CHARACTER_SCRIPT_INTERFACE
 		local char = context:character()
 
 		cm:replenish_action_points(cm:char_lookup_str(char))

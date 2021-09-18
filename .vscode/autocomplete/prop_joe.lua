@@ -17,8 +17,3 @@ function ddraw(...) end
 ---Specific to [Draw Debug Logs](https://steamcommunity.com/sharedfiles/filedetails/?id=1929093751)
 ---@vararg any
 function ddump (...) end
-
---Weird stuff
-
-eight_peaks_check = function(faction_name) end
-is_karak_eight_peaks_owner_faction = function(faction_name) end

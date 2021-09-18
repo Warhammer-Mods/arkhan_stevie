@@ -2,6 +2,8 @@
 
 ![Arlhan the Black: Expanded – Logo](https://github.com/Warhammer-Mods/assets/blob/master/mods/arkhan_stevie/steam_workshop.png?raw=1)
 
+By **[Mortarch of Sacrament](https://github.com/Zalbardeon)** ([Steam Workshop page](https://steamcommunity.com/id/Zalbardeon/myworkshopfiles/))
+
 This mod makes changes to Arkhan's faction by giving him access to The Lore of Vampires. It also adds additional units with unique unit cards, over 20 new technologies and access to Bloodline Lords & Scrap Upgrades via the submods listed below.
 
 ## New units

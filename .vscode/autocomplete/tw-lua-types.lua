@@ -425,24 +425,62 @@ function CM:add_saving_game_callback(callback) end
 ---@param callback fun(context: EVENT_CONTEXT)
 function CM:add_loading_game_callback(callback) end
 
----@param valueKey string
----@param value string | boolean | number | table
-function CM:set_saved_value(valueKey, value) end
+---Sets a value to be saved using the saved value system.
+---Values saved using this function are added to an internal register within the campaign manager,
+---and are automatically saved and loaded with the game,
+---so there is no need to register callbacks with `CM:add_loading_game_callback`
+---or `CM:add_saving_game_callback`.
+---Once saved with this function, the value can be accessed at any time with `CM:get_saved_value`.  
+---Values are stored and accessed by a string name.
+---Values can be booleans, numbers or strings. Repeated calls to `set_saved_value` with the same name are legal,
+---and will just overwrite the value of the value stored with the supplied name.
+---@param value_name string Value name.
+---@param value string | boolean | number | table Value.
+---@return nil
+function CM:set_saved_value(value_name, value) end
 
----@param valueKey string
+---Retrieves a value saved using the saved value system.
+---Values saved using CM:set_saved_value are added to an internal register within the campaign manager,
+---and are automatically saved and loaded with the game,
+---so there is no need to register callbacks with CM:add_loading_game_callback
+---or CM:add_saving_game_callback. Once saved with CM:set_saved_value, values can be accessed with this function.  
+---Values are stored and accessed by a string name. Values can be booleans, numbers or strings.
+---@param value_name string Value name.
 ---@return string | boolean | number | table
-function CM:get_saved_value(valueKey) end
+function CM:get_saved_value(value_name) end
 
----@param name string
----@param value any
----@param context userdata
-function CM:save_named_value(name, value, context) end
+---Retrieves or generates a value saved using the saved value system.
+---When called, the function looks up a value by supplied name using `CM:get_saved_value`.
+---If it exists it is returned, but if it doesn't exist a supplied function is called which generates the cached value.
+---This value is saved with the supplied name, and also returned.
+---A value is generated the first time this function is called, therefore,
+---and is retrieved from the savegame on subsequent calls with the same arguments.
+---If the supplied function doesn't return a value, a script error is triggered.
+---@param value_name string Value name.
+---@param generator_callback function Generator callback.
+---@return object
+function CM:get_cached_value(value_name, generator_callback) end
 
----@param name string
----@param default string | boolean | number | table
+---Write a value to the savegame.
+---This should only be called when the SavingGame event is received,
+---and must be passed the context object supplied by that event.  
+---It's recommended to use the saving functions provided by the campaign manager,
+---listed in the Saving Game section of this documentation, instead of directly calling this function.
+---@param value_name string Value name.
+---@param value string | boolean | number | table Value to save.
+---@param context userdata context object
+function CM:save_named_value(value_name, value, context) end
+
+---Reads a value from a loading game.
+---Should only be called when the LoadingGame event is received,
+---and must be passed the context object supplied by that event.  
+---It's recommended to use the loading functions provided by the campaign manager,
+---listed in the Loading Game section of this documentation, instead of directly calling this function.
+---@param value_name string Value name.
+---@param default string | boolean | number | table This defines the type of the value to load from the savegame and also a default value which will be returned if no value with the specified name could be found in the savegame. Can be a boolean, number or string.
 ---@param context userdata
----@return string | boolean | number | table
-function CM:load_named_value(name, default, context) end
+---@return string | boolean | number
+function CM:load_named_value(value_name, default, context) end
 
 ---@param opt boolean
 function CM:disable_saving_game(opt) end

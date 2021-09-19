@@ -1,6 +1,6 @@
 ---Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.5.0-dev
+---@version 0.5.1-dev
 ---@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 ---@alias ardm STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 
@@ -253,11 +253,10 @@ end
 ---Since `cm:add_unit_to_province_mercenary_pool()` takes region object as an input,
 ---passing all regions from a province is suboptimal.
 ---@return nil
-function mod:uniqueRegionList()
+function mod.uniqueRegionList()
 	local region_manager = cm:model():world():region_manager();
 	local all_regions = region_manager:region_list();
-	local provinces = {};
-	self.unique_regions = {};
+	local provinces, unique_regions = {}, {};
 
 	--Traversing through world regions list and building the province list
 	for i = 0, all_regions:num_items() - 1 do
@@ -270,8 +269,10 @@ function mod:uniqueRegionList()
 
 	--Caching the first region from each province
 	for _, province in pairs(provinces) do
-		table.insert(self.unique_regions, province["regions"][1])
+		table.insert(unique_regions, province["regions"][1])
 	end
+
+	return unique_regions;
 
 end
 
@@ -344,8 +345,8 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 		self:log( "Adding [", unit.name, "] to mercenary pools globally…" );
 
 		--Traversing through world regions list
-		for _, region in pairs(self.unique_regions) do
-			local region = region_manager:region_by_key(region);
+		for _, region in pairs( cm:get_cached_value( "unique_regions", self.uniqueRegionList() ) ) do
+			region = region_manager:region_by_key(region);
 			addUnitToProvinceMercenaryPool(region, unit, s.faction_key, s.subculture_key);
 		end
 
@@ -514,10 +515,8 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 end
 
 function mod:init()
-	mod:log( "FIRST TICK REGISTERED" );
-	mod:log( "Caching region list…" );
-	self:uniqueRegionList();
-	mod:setmetatable(mod.units_table, "units_table");
+	self:log( "FIRST TICK REGISTERED" );
+	self:setmetatable(mod.units_table, "units_table");
 end
 
 ---@diagnostic disable-next-line: lowercase-global

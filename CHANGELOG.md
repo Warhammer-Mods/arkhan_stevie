@@ -53,7 +53,6 @@
 - Liche Priest (Vampires) now has Skaven discoverability like other Liche Priest variants.
 - Attrition tables updated to cover all of Arkhan's units.
 
-
 ## [2.3.7](../../releases/tag/2.3.7) - 2021-09-17
 
 Fixed:

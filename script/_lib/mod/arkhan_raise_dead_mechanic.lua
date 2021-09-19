@@ -275,7 +275,7 @@ end
 
 ---Main population function
 ---@param units_table table
----@param region_restriction? CA_REGION
+---@param region_restriction? REGION_SCRIPT_INTERFACE
 ---@return boolean
 function mod:populateMercenaryPools(units_table, region_restriction)
 	self:log( tostring(mod), ":populateMercenaryPools() initialized" );
@@ -303,7 +303,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 	---Wrapper function for CA's cm:add_unit_to_province_mercenary_pool()
 	---to reduce its whopping number of eleven arguments
 	---with a few additional checks and an exit status
-	---@param region_interface CA_REGION
+	---@param region_interface REGION_SCRIPT_INTERFACE
 	---@param unit _unit
 	---@param faction_key string
 	---@param subculture_key string
@@ -351,7 +351,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 	---Parse units options and add to region
 	---@param units table
-	---@param region_restriction? CA_REGION
+	---@param region_restriction? REGION_SCRIPT_INTERFACE
 	local function addUnits(units, region_restriction)
 
 		self:log( "addUnits() called");

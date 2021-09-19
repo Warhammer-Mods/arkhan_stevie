@@ -1,3 +1,5 @@
+---@diagnostic disable: lowercase-global
+
 --Odd global functions defined in game scripts
 
 ---Checks if an element is in the table.  

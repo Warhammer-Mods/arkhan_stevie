@@ -252,7 +252,7 @@ end
 ---Builds a list of regions, one from each province.
 ---Since `cm:add_unit_to_province_mercenary_pool()` takes region object as an input,
 ---passing all regions from a province is suboptimal.
----@return nil
+---@return table
 function mod.uniqueRegionList()
 	local region_manager = cm:model():world():region_manager();
 	local all_regions = region_manager:region_list();

@@ -31,7 +31,7 @@
   - Tomb King of Grief.
     - Serrated Bones – enables the passive ability 'Serrated Bones' for Crypt Ghouls' that reduces enemy weapon strength in a small radius around the unit.
   - Tomb King of Terror.
-    - … *(see Removed)*
+    - TBC - removes Immunity to Psychology
   - Tomb King of Madness.
     - ….
   - Tomb King of Sacrament.
@@ -53,9 +53,6 @@
 - Liche Priest (Vampires) now has Skaven discoverability like other Liche Priest variants.
 - Attrition tables updated to cover all of Arkhan's units.
 
-### Removed
-
-- Tomb King of Terror: Removed 'Immune to Psychology'.
 
 ## [2.3.7](../../releases/tag/2.3.7) - 2021-09-17
 

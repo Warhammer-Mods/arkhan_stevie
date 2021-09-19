@@ -1,6 +1,6 @@
 ---Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.4.2-dev
+---@version 0.5.0-dev
 ---@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 ---@alias ardm STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
 
@@ -81,6 +81,8 @@ mod.settings = {
 	}
 
 }
+
+mod.state = {};
 
 local s = mod.settings;
 
@@ -445,13 +447,12 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 		if is_table(domain) then
 
-			local build_saved_named_value = tostring(self) ..
-				".modules." .. domain.name .. "." .. getmetatable(units_table).name;
+			local build_saved_named_value = ".modules." .. domain.name .. "." .. getmetatable(units_table).name;
 
 			if deployment_mode == "default" then
 
 				build_saved_named_value = build_saved_named_value .. ".build_number";
-				local build_saved = cm:get_saved_value(build_saved_named_value) or 0;
+				local build_saved = mod.state[build_saved_named_value] or 0;
 
 				self:log(domain.name, ".build_saved = " .. build_saved)
 
@@ -459,7 +460,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 					self:log( "Processing [", domain.name, "]@", domain.build_number or build_saved, " units…" );
 
 					if addUnits(domain.units, region) then
-						cm:set_saved_value(build_saved_named_value, domain.build_number);
+						mod.state[build_saved_named_value] = domain.build_number;
 					end
 
 				else
@@ -476,7 +477,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 			elseif deployment_mode == "own_provinces" and region:is_null_interface() == false then
 
 				build_saved_named_value = build_saved_named_value .. "." .. region:province_name() .. ".build_number";
-				local build_saved = cm:get_saved_value(build_saved_named_value) or 0;
+				local build_saved = mod.state[build_saved_named_value] or 0;
 
 				self:log(domain.name, ".build_saved = ", build_saved)
 
@@ -484,7 +485,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 					self:log( "Processing [", domain.name, "]@", domain.build_number or build_saved, " units…" );
 
 					if addUnits(domain.units, region) then
-						cm:set_saved_value(build_saved_named_value, domain.build_number);
+						mod.state[build_saved_named_value] = domain.build_number;
 					end
 
 				else
@@ -581,3 +582,21 @@ if core:is_campaign() then
 	);
 
 end
+
+----------------------------------
+-------- SAVING / LOADING --------
+----------------------------------
+
+cm:add_saving_game_callback(
+	function(context)
+		cm:save_named_value(tostring(mod) .. "state", mod.state, context);
+	end
+);
+
+cm:add_loading_game_callback(
+	function(context)
+		if cm:is_new_game() == false then
+			mod.state = cm:load_named_value(tostring(mod) .. "state", mod.state, context);
+		end
+	end
+);

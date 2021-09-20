@@ -69,7 +69,6 @@ jobs:
       id: luacheck
       shell: bash --noprofile --norc {0}
       run: |
-        mkdir output
         echo "::add-matcher::.github/luacheck-plain.json"
         luacheck ${{ env.FILES_TO_CHECK }} \
           --formatter plain \

@@ -12,8 +12,6 @@
 		"editor.insertSpaces": false,
 		"editor.detectIndentation": true,
 		"editor.acceptSuggestionOnEnter": "on",
-		"perforce.editOnFileModified": true,
-		"perforce.addOnFileCreate": true,
 		"editor.suggest.localityBonus": true,
 		"editor.suggestSelection": "first",
 		"editor.tabCompletion": "onlySnippets",
@@ -24,18 +22,43 @@
 		"Lua.runtime.version": "Lua 5.1",
 		"window.title": "${rootName}: ${folderName}/${activeEditorMedium} ${dirty}",
 		"Lua.workspace.ignoreDir": [],
-		"Lua.workspace.preloadFileSize": 10000
-    },
-    "launch": {
-        "configurations": [
-            {
-                "type": "lrdb",
-                "request": "attach",
-                "name": "Attach",
-                "host": "localhost",
-                "port": 21110,
-                "sourceRoot": "${workspaceRoot}/.."
-            }
-        ]
-    }
+		"Lua.workspace.preloadFileSize": 10000,
+		"markdownlint.config": {
+			"default": true,
+			"MD024": { "siblings_only": true }
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"prettier.useTabs": true,
+		"prettier.semi": true,
+		"prettier.endOfLine": "auto",
+		"[json]": {
+			"editor.quickSuggestions": {
+				"strings": true
+			},
+			"editor.suggest.insertMode": "replace",
+			"gitlens.codeLens.scopes": ["document"],
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"rainbow_csv.rbql_with_headers_by_default": true,
+		"rainbow_csv.comment_prefix": "#"
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "lrdb",
+				"request": "attach",
+				"name": "Attach",
+				"host": "localhost",
+				"port": 21110,
+				"sourceRoot": "${workspaceRoot}/.."
+			}
+		]
+	},
+	"extensions": {
+		"recommendations": [
+			"sumneko.lua",
+			"davidanson.vscode-markdownlint",
+			"mechatroner.rainbow-csv"
+		]
+	}
 }

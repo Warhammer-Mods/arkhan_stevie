@@ -334,7 +334,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 		else
 
-			self:log( 1, "Invalid parameters passed to addUnitToProvinceMercenaryPool()")
+			self:log( 1, "Invalid parameters passed to addUnitToProvinceMercenaryPool()" )
 			return false;
 
 		end

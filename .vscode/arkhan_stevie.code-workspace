@@ -20,7 +20,7 @@
 		"workbench.tree.indent": 20,
 		"Lua.telemetry.enable": false,
 		"Lua.runtime.version": "Lua 5.1",
-		"window.title": "${rootName}: ${folderName}/${activeEditorMedium} ${dirty}",
+		"window.title": "${rootName}: ${activeEditorMedium} ${dirty}",
 		"Lua.workspace.ignoreDir": [],
 		"Lua.workspace.preloadFileSize": 10000,
 		"markdownlint.config": {

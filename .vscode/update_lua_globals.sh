@@ -49,7 +49,7 @@ lua_globals=$(
   done
   
   for v in ${CUSTOM_VARS[@]}; do
-    echo "\"${v}\",\n"
+    echo "\"${v}\","
   done
 )
 

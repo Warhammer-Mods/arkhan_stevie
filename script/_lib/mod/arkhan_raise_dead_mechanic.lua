@@ -63,6 +63,13 @@ mod._unit = {
 	regions               = "global"
 }
 
+mod._cache = {}
+mod._cache_meta = {
+	--set corresponding table's keys weak
+	__mode = "k"
+}
+setmetatable(mod._cache, mod._cache_meta)
+
 mod.settings = {
 	faction_key    = "wh2_dlc09_tmb_followers_of_nagash",
 	subculture_key = "",
@@ -85,6 +92,7 @@ mod.settings = {
 mod.state = {};
 
 local s = mod.settings;
+local cache = mod._cache;
 
 ---Mod logger function.
 ---If `1` passed as the first parameter, output using `script_error()`.
@@ -317,33 +325,36 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 	local function addUnitToGlobalMercenaryPools(unit)
 		self:log( "Adding [", unit.name, "] to mercenary pools globally…" );
 
-		--Traversing through world regions list
-		local unique_regions = cm:get_cached_value( "unique_regions",
-			---Builds a list of regions, one from each province.
-			---Since `cm:add_unit_to_province_mercenary_pool()` takes region object as an input,
-			---passing all regions from a province is suboptimal.
-			---@return table
-			function()
-				local all_regions = region_manager:region_list();
-				local provinces, unique_regions = {}, {};
+		---Builds and caches a list of regions, one from each province.
+		---Since `cm:add_unit_to_province_mercenary_pool()` takes region object as an input,
+		---passing all regions from a province is suboptimal.
+		---@return table
+		local function cacheUniqueRegionsList()
+			self:log( "Caching world regions…" );
+			local all_regions = region_manager:region_list();
+			local provinces, unique_regions = {}, {};
 
-				--Traversing through world regions list and building the province list
-				for i = 0, all_regions:num_items() - 1 do
-					local region = all_regions:item_at(i);
-					local province = region:province_name();
+			--Traversing through world regions list and building the province list
+			for i = 0, all_regions:num_items() - 1 do
+				local region = all_regions:item_at(i);
+				local province = region:province_name();
 
-					provinces[province] = provinces[province] or {regions = {}};
-					table.insert(provinces[province]["regions"], region:name());
-				end
-
-				--Caching the first region from each province
-				for _, province in pairs(provinces) do
-					table.insert(unique_regions, province["regions"][1])
-				end
-
-				return unique_regions;
+				provinces[province] = provinces[province] or {regions = {}};
+				table.insert(provinces[province]["regions"], region:name());
 			end
-		);
+
+			--Caching the first region from each province
+			for _, province in pairs(provinces) do
+				table.insert(unique_regions, province["regions"][1])
+			end
+
+			cache.unique_regions = unique_regions;
+			return unique_regions;
+		end
+
+		--Traversing through world regions list
+		local unique_regions = cache.unique_regions or cacheUniqueRegionsList();
+
 		for _, region in pairs(unique_regions) do
 			region = region_manager:region_by_key(region);
 			addUnitToProvinceMercenaryPool(region, unit, s.faction_key, s.subculture_key);

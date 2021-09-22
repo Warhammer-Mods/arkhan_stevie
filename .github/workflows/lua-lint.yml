@@ -120,7 +120,7 @@ jobs:
         fi
 
     - name: Upload .luacheckrc
-      if: steps.lua-globals.outputs.clean
+      if: steps.lua-globals.outputs.clean == 'false'
       uses: actions/upload-artifact@v2
       with:
         name: luacheckrc

@@ -126,7 +126,7 @@ jobs:
         name: luacheckrc
         path: .luacheckrc
 
-  push:
+  create-pr:
     runs-on: ubuntu-latest
     needs: lint
     if: needs.lint.outputs.clean == 'false'
@@ -160,14 +160,27 @@ jobs:
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add ${VENDOR_PATH} ${LUACHECK_CONFIG}
-        git commit -m "Update luacheck config"
+        git commit -m "[Luacheck] Update config and autocomplete"
         if ${{ startsWith(github.ref, 'refs/tags/') }}; then
           git tag -fa ${{ github.ref }}
         fi
 
-    - name: Push changes
-      uses: ad-m/github-push-action@8407731efefc0d8f72af254c74276b7a90be36e1
+    - name: Create a PR
+      id: pr
+      uses: peter-evans/create-pull-request@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-        tags: true
+        token: ${{ secrets.BOT_TOKEN }}
+        committer: github-actions[bot]
+        author: github-actions[bot]
+        branch: bot/update_luacheck
+        delete-branch: true
+        signoff: false
+        title: "[Luacheck] Update config and autocomplete"
+        labels: |
+          dep
+
+    - name: Show info
+      run: |
+        echo "::notice::Pull request number: ${{ steps.pr.outputs.pull-request-number }}"
+        echo "::notice::Pull request URL: ${{ steps.pr.outputs.pull-request-url }}"
+        echo "::notice::Pull request status: ${{ steps.pr.outputs.pull-request-operation }}"

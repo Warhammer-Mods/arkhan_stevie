@@ -77,6 +77,7 @@ globals = {
 	"UNIT_LIST_SCRIPT_INTERFACE",
 	"UNIT_SCRIPT_INTERFACE",
 	"Util",
+	"ae",
 	"ardm",
 	"battle_manager",
 	"check_element_in_table",

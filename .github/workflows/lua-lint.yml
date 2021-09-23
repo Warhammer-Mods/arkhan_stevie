@@ -43,7 +43,8 @@ env:
   LUAROCKS_VERSION: "3.7.0"
   LUACHECK_CONFIG: .luacheckrc
   CUSTOM_LUA_GLOBALS: >-
-    
+    ae
+    ardm
 
 jobs:
 
@@ -204,11 +205,3 @@ jobs:
         echo "::notice::Pull request number: ${{ steps.pr.outputs.pull-request-number }}"
         echo "::notice::Pull request URL: ${{ steps.pr.outputs.pull-request-url }}"
         echo "::notice::Pull request status: ${{ steps.pr.outputs.pull-request-operation }}"
-
-    - name: Enable Pull Request Automerge
-      if: steps.pr.outputs.pull-request-operation == 'created'
-      uses: peter-evans/enable-pull-request-automerge@v1
-      with:
-        token: ${{ secrets.BOT_TOKEN }}
-        pull-request-number: ${{ steps.pr.outputs.pull-request-number }}
-        merge-method: squash

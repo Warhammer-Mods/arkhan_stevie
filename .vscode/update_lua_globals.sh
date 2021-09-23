@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 CONFIG_FILE=${LUACHECK_CONFIG:-'.luacheckrc'}
 LUA_VENDOR_FILES=${VENDOR_PATH:-'.vscode/autocomplete'}
@@ -45,18 +45,17 @@ lua_globals=$(
     find ${LUA_VENDOR_FILES} -type f -iname "*.lua"
   ); do 
     lua .vscode/show_globals.lua W < $f | 
-    awk -F"\t" '{printf "  \"%s\",\n", $2}'
+    awk -F"\t" '{printf "	\"%s\",\n", $2}'
   done
   
   for v in ${CUSTOM_VARS[@]}; do
-    echo "  \"${v}\","
+    echo "	\"${v}\","
   done
 )
 
 # reformat the list of lua globals
 lua_globals=$(
-  tr ' ' '\n' <<< "${lua_globals}" | 
-  sort -u | 
+  sort -u <<< "${lua_globals}" | 
   sed '$ s/,\s*$//'
 )
 
@@ -64,5 +63,6 @@ lua_globals=$(
 config="globals = {
 ${lua_globals}
 }"
-sed -i '(\n*?)\n?globals\s*=\s*{.*?}\n?(\n*)/$1$2/sg' ${CONFIG_FILE}
+perl -0777pe 's/\n*globals\s*=\s*[^\\{}]*(?:\\.[\\{}]*)*(?<!\\)(\{(?>\\.|[^{}]|(?1))*})\n*/\n/g' ${CONFIG_FILE} \
+  > ${CONFIG_FILE}.tmp && mv ${CONFIG_FILE}.tmp ${CONFIG_FILE}
 printf '\n%s\n' "${config}" >> ${CONFIG_FILE}

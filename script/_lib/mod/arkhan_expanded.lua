@@ -1,11 +1,12 @@
 ---Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.5.1-dev
----@class STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
----@alias ardm STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC
-
-local STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = {
-	__tostring = function() return "stephen_ardm"; end,
+---@version 0.5.2-dev
+---@class STEPHEN_ARKHAN_EXPANDED
+---@alias ae STEPHEN_ARKHAN_EXPANDED
+---Legacy alias
+---@alias ardm STEPHEN_ARKHAN_EXPANDED
+local STEPHEN_ARKHAN_EXPANDED = {
+	__tostring = function() return "STEPHEN_ARKHAN_EXPANDED"; end,
 
 	units_table = {
 	--[[ SCHEMA
@@ -36,10 +37,10 @@ local STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC = {
 
 }
 
-local mod = STEPHEN_ARKHAN_RAISE_DEAD_MECHANIC;
+local mod = STEPHEN_ARKHAN_EXPANDED;
 setmetatable(mod, mod);
 
-mod.name = "Arkhan Raise Dead Mechanic Stevie";
+mod.name = "Arkhan the Black: Expanded";
 
 ---@class _unit
 ---@field name string
@@ -257,7 +258,7 @@ function mod:register_table(units_table)
 
 end
 
----Main population function
+---Main province mercenary pool population function
 ---@param units_table table
 ---@param region_restriction? REGION_SCRIPT_INTERFACE
 ---@return boolean
@@ -458,7 +459,7 @@ function mod:populateMercenaryPools(units_table, region_restriction)
 
 		if is_table(domain) then
 
-			local build_saved_named_value = ".modules." .. domain.name .. "." .. getmetatable(units_table).name;
+			local build_saved_named_value = "raise_dead.modules." .. domain.name .. "." .. getmetatable(units_table).name;
 
 			if deployment_mode == "default" then
 
@@ -530,12 +531,18 @@ function mod:init()
 end
 
 ---@diagnostic disable-next-line: lowercase-global
+function get_ae()
+	return core:get_static_object("ae");
+end
+core:add_static_object( "ae", mod, false );
+_G.ae = get_ae();
+
+--legacy `ardm` object
+---@diagnostic disable-next-line: lowercase-global
 function get_ardm()
 	return core:get_static_object("ardm");
 end
-
 core:add_static_object( "ardm", mod, false );
-
 _G.ardm = get_ardm();
 
 

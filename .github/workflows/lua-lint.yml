@@ -2,12 +2,28 @@ name: Lua lint
 
 on: 
   push:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+      - 'hotfix/**'
+      - 'bugfix/**'
+      - 'support/**'
+      - 'update/**'
     paths:
       - 'script/**'
       - '.luacheckrc'
       - '.vscode/**'
       - '.github/workflows/**'
   pull_request:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+      - 'hotfix/**'
+      - 'bugfix/**'
+      - 'support/**'
+      - 'update/**'
     paths:
       - 'script/**'
       - '.luacheckrc'
@@ -110,7 +126,6 @@ jobs:
       id: luacheck
       shell: bash --noprofile --norc {0}
       run: |
-        mkdir output
         echo "::add-matcher::.github/luacheck-plain.json"
         luacheck ${{ env.FILES_TO_CHECK }} \
           --formatter plain \
@@ -177,7 +192,8 @@ jobs:
         token: ${{ secrets.BOT_TOKEN }}
         committer: ${{ format( '{0} <{1}>', env.GIT_COMMITTER_NAME, env.GIT_COMMITTER_EMAIL) }}
         author: ${{ format( '{0} <{1}>', env.GIT_AUTHOR_NAME, env.GIT_AUTHOR_EMAIL) }}
-        branch: bot/update_luacheck
+        branch: bot/autocomplete-patch
+        branch-suffix: short-commit-hash
         delete-branch: true
         signoff: false
         title: "[Luacheck] Update config and autocomplete"

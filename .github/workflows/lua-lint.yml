@@ -24,6 +24,10 @@ env:
   LUACHECK_CONFIG: .luacheckrc
   CUSTOM_LUA_GLOBALS: >-
     ardm
+  GIT_AUTHOR_NAME: "github-actions[bot]"
+  GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+  GIT_COMMITTER_NAME: "github-actions[bot]"
+  GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
 
 jobs:
 
@@ -157,8 +161,8 @@ jobs:
     - name: Commit files
       id: commit
       run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --local user.email ${{ env.GIT_AUTHOR_EMAIL }}
+        git config --local user.name ${{ env.GIT_AUTHOR_NAME }}
         git add ${VENDOR_PATH} ${LUACHECK_CONFIG}
         git commit -m "[Luacheck] Update config and autocomplete"
         if ${{ startsWith(github.ref, 'refs/tags/') }}; then
@@ -170,8 +174,8 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       with:
         token: ${{ secrets.BOT_TOKEN }}
-        committer: github-actions[bot]
-        author: github-actions[bot]
+        committer: ${{ format( '{0} <{1}>', env.GIT_COMMITTER_NAME, env.GIT_COMMITTER_EMAIL) }}
+        author: ${{ format( '{0} <{1}>', env.GIT_AUTHOR_NAME, env.GIT_AUTHOR_EMAIL) }}
         branch: bot/update_luacheck
         delete-branch: true
         signoff: false

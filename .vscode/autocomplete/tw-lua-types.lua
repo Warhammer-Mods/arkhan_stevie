@@ -278,6 +278,12 @@ function CM:remove_callback(name) end
 ---@return CA_GAME
 function CM:get_game_interface() end
 
+---Returns the current combined campaign difficulty.
+---This is returned as an integer value by default, or a string if a single true argument is passed in.
+---@param return_as_string? boolean Optional, default: false
+---@return number | string
+function CM:get_difficulty(return_as_string) end
+
 ---@return CA_MODEL
 function CM:model() end
 
@@ -1335,6 +1341,10 @@ function FACTION_SCRIPT_INTERFACE:rituals() end
 
 ---@return boolean
 function FACTION_SCRIPT_INTERFACE:has_rituals() end
+
+---Is this faction a quest battle faction?
+---@return boolean
+function FACTION_SCRIPT_INTERFACE:is_quest_battle_faction() end
 
 ---@param province_key string
 ---@param include_vassals boolean

@@ -45,11 +45,11 @@ lua_globals=$(
     find ${LUA_VENDOR_FILES} -type f -iname "*.lua"
   ); do 
     lua .vscode/show_globals.lua W < $f | 
-    awk -F"\t" '{printf "\t\"%s\",\n", $2}'
+    awk -F"\t" '{printf "  \"%s\",\n", $2}'
   done
   
   for v in ${CUSTOM_VARS[@]}; do
-    echo "\t\"${v}\","
+    echo "  \"${v}\","
   done
 )
 
@@ -57,7 +57,7 @@ lua_globals=$(
 lua_globals=$(
   tr ' ' '\n' <<< "${lua_globals}" | 
   sort -u | 
-  sed 's/,\s*$//'
+  sed '$ s/,\s*$//'
 )
 
 # update luacheck config

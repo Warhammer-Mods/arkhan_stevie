@@ -24,11 +24,6 @@ on:
       - 'bugfix/**'
       - 'support/**'
       - 'update/**'
-    paths:
-      - 'script/**'
-      - '.luacheckrc'
-      - '.vscode/**'
-      - '.github/workflows/**'
   workflow_dispatch:
 
 env:
@@ -43,8 +38,7 @@ env:
   LUAROCKS_VERSION: "3.7.0"
   LUACHECK_CONFIG: .luacheckrc
   CUSTOM_LUA_GLOBALS: >-
-    ae
-    ardm
+    
 
 jobs:
 

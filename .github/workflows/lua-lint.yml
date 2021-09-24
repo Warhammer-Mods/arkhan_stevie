@@ -118,11 +118,14 @@ jobs:
         if [ -z "${changes}" ]; then
           echo "::set-output name=clean::true"
         else
+          files=()
           while IFS= read -r line; do
             file=$(cut -d" " -f3 <<< ${line})
+            files+=("${file}")
             echo "::notice file=${file}::File changed: ${line}"
             echo "::debug::$(git diff ${file})"
           done <<< ${changes}
+          echo "::set-output name=files::${files[@]}"
           echo "::set-output name=clean::false"
         fi
 
@@ -143,12 +146,12 @@ jobs:
           exit 0;
         fi
 
-    - name: Upload .luacheckrc
-      if: steps.lua-globals.outputs.clean == 'false'
+    - name: Upload updated files
+      if: steps.changes.outputs.clean == 'false'
       uses: actions/upload-artifact@v2
       with:
         name: luacheckrc
-        path: .luacheckrc
+        path: ${{ env.LUACHECK_CONFIG }}
 
   create-pr:
     runs-on: ubuntu-latest
@@ -173,7 +176,7 @@ jobs:
     - name: Remove PJ-autocomplete meta files
       run: rm -rf ${{ env.VENDOR_PATH }}/{.git,.github}
 
-    - name: Download .luacheckrc
+    - name: Download updated files
       uses: actions/download-artifact@v2
       with:
         name: luacheckrc

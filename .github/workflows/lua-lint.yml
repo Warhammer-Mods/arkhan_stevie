@@ -51,7 +51,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     outputs:
-      clean: ${{ steps.lua-globals.outputs.clean }}
+      clean: ${{ steps.changes.outputs.clean }}
 
     steps:
     - uses: actions/checkout@v2
@@ -109,6 +109,10 @@ jobs:
       run: |
         chmod +x .vscode/update_lua_globals.sh
         .vscode/update_lua_globals.sh
+
+    - name: Get file changes
+      id: changes
+      run: |
         changes="$(git status --porcelain=1 ${VENDOR_PATH} ${LUACHECK_CONFIG})"
         echo "::debug::${changes}"
         if [ -z "${changes}" ]; then
@@ -130,7 +134,7 @@ jobs:
         luacheck ${{ env.FILES_TO_CHECK }} \
           --formatter plain \
           --codes --ranges
-        exitcode=${PIPESTATUS[0]}
+        exitcode=$?
         echo "::remove-matcher owner=luacheck-plain_error::"
         echo "::remove-matcher owner=luacheck-plain_warning::"
         if [ "$exitcode" -gt 1 ]; then
@@ -198,10 +202,14 @@ jobs:
         signoff: false
         title: "[Luacheck] Update config and autocomplete"
         labels: |
+          automation
           dep
 
     - name: Show info
       run: |
-        echo "::notice::Pull request number: ${{ steps.pr.outputs.pull-request-number }}"
-        echo "::notice::Pull request URL: ${{ steps.pr.outputs.pull-request-url }}"
-        echo "::notice::Pull request status: ${{ steps.pr.outputs.pull-request-operation }}"
+        echo "::notice::${{ format(
+          'Pull request #{0} is {1}: {2}',
+          steps.pr.outputs.pull-request-number,
+          steps.pr.outputs.pull-request-operation,
+          steps.pr.outputs.pull-request-url
+        ) }}"

@@ -1,5 +1,5 @@
-ancillary_types_tables	0
 type	ui_icon
+#ancillary_types_tables	0	db/ancillary_types_tables/extra_tomb_king_lords
 stephen_anc_mount_tomb_king_warsphinx	ui/campaign ui/mounts/mount_warsphinx.png
 stephen_anc_mount_tomb_king_steed	ui/campaign ui/mounts/mount_skeletal_steed_tmb.png
 stephen_anc_mount_tomb_king_chariot	ui/campaign ui/mounts/mount_skeleton_chariot.png

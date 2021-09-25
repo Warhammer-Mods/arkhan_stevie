@@ -1,5 +1,5 @@
-ui_unit_bullet_point_unit_overrides_tables	0
 unit_key	bullet_point
+#ui_unit_bullet_point_unit_overrides_tables	0	db/ui_unit_bullet_point_unit_overrides_tables/extra_tomb_king_lords
 stephen_tmb_cha_tomb_king_1	anti_infantry
 stephen_tmb_cha_tomb_king_1	armoured_and_shielded
 stephen_tmb_cha_tomb_king_1	melee_expert

@@ -1,5 +1,5 @@
-unit_set_to_unit_junctions_tables	0
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
+#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/arkhan_technology
 skeleton_set	steve_ark_skeleton_spearmen				false
 skeleton_set	steve_ark_skeleton_warriors				false
 skeleton_set	steve_ark_skeleton_archers				false

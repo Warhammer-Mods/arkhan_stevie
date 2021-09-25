@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/extra_tomb_king_lords_core_land_units__.loc
 land_units_onscreen_name_stephen_tmb_cha_tomb_king_1	Tomb King	true
 land_units_onscreen_name_stephen_tmb_cha_tomb_king_2	Tomb King	true
 land_units_onscreen_name_stephen_tmb_cha_tomb_king_3	Tomb King	true

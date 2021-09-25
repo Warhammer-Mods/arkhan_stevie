@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/extra_tomb_king_lords_ancillaries__.loc
 ancillaries_onscreen_name_stephen_anc_mount_tomb_king_warsphinx	Khemrian Warsphinx	true
 ancillaries_colour_text_stephen_anc_mount_tomb_king_warsphinx	Giant leonine statues, almost impervious to harm; they wade through foes, crushing them like bothersome insects.	true
 ancillaries_onscreen_name_stephen_anc_mount_tomb_king_steed	Skeletal Steed	true

@@ -1,5 +1,5 @@
-character_skill_node_sets_tables	2
 key	faction_key	campaign_key	agent_key	subculture	for_army	for_navy	agent_subtype_key
+#character_skill_node_sets_tables	2	db/character_skill_node_sets_tables/extra_tomb_king_lords
 stephen_skill_node_set_tmb_tomb_king_vampire			general		false	false	arkhan_tmb_tomb_king
 stephen_skill_node_set_tmb_tomb_king_grief			general		false	false	arkhan_tmb_tomb_king_grief
 stephen_skill_node_set_tmb_tomb_king_terror			general		false	false	arkhan_tmb_tomb_king_terror

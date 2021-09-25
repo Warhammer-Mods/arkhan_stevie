@@ -1,5 +1,5 @@
-variants_tables	6
 variant_name	tech_folder	variant_filename	scale	scale_variation	low_poly_filename	mount_scale	super_low_poly_filename
+#variants_tables	6	db/variants_tables/sda_tomb_kings
 steve_ark_zmb		steve_ark_zmb	1.0	0.05	hu1/cst/cst_zombie_deckhands/cst_zombie_deckhands_imposter	1.0	
 steve_ark_grave_guard		steve_ark_grave_guard	1.0	0.05	hu1\vmp\vmp_black_knights\low_poly\vmp_grave_guards_lowlod	1.0	hu1\imposter\humanoid_imposter
 steve_ark_terrorgheist		steve_ark_terrorgheist	1.0	0.0		1.0	

@@ -1,4 +1,4 @@
-character_skill_level_details_tables	0
 level	skill_key	faction_key	campaign_key	subculture_key	image_path	unlocked_at_rank
+#character_skill_level_details_tables	0	db/character_skill_level_details_tables/sda_tomb_kings
 1	nagash_must_rise				x	19
 1	arkhan_skill_mount_tmb_wizard_unique_liche_priest_death_skeletal_steed				x	6

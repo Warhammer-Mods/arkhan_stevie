@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/sda_tomb_kings_building_culture_variants__.loc
 building_culture_variants_name_arkhan_minor_walls_1wh2_dlc09_tmb_followers_of_nagash	Desert Lookout	true
 building_culture_variants_name_arkhan_minor_walls_2wh2_dlc09_tmb_followers_of_nagash	Tower of Bone	true
 building_culture_variants_name_arkhan_major_walls_1wh2_dlc09_tmb_followers_of_nagash	Skeletal Garrison	true

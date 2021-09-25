@@ -1,5 +1,5 @@
-agent_subtypes_tables	19
 key	auto_generate	is_caster	small_icon	associated_unit_override	audio_voiceover_actor_group	show_in_ui	cap	has_female_name	can_gain_xp	loyalty_is_applicable	contributes_to_agent_cap	recruitment_category	magic_lore	audio_vo_culture_override	spam_click_vo_enabled
+#agent_subtypes_tables	19	db/agent_subtypes_tables/extra_tomb_king_lords
 arkhan_tmb_tomb_king	true	false		stephen_tmb_cha_tomb_king_1	wh2_dlc09_vo_actor_Tomb_Kings_Tomb_King	true	-1	false	true	true	true	tmb_tomb_king			false
 arkhan_tmb_tomb_king_grief	false	false		stephen_tmb_cha_tomb_king_grief	wh2_dlc09_vo_actor_Tomb_Kings_Tomb_King	true	-1	false	true	true	true	tmb_tomb_king			false
 arkhan_tmb_tomb_king_terror	false	false		stephen_tmb_cha_tomb_king_terror	wh2_dlc09_vo_actor_Tomb_Kings_Tomb_King	true	-1	false	true	true	true	tmb_tomb_king			false

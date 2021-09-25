@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/arkhan_technology_character_skills__.loc
 character_skills_localised_name_arkhan_skill_tmb_crypt_ghouls_crypt_horrors	Fiendish Ghouls	true
 character_skills_localised_description_arkhan_skill_tmb_crypt_ghouls_crypt_horrors	Though not truly Undead, Crypt Ghouls unconsciously feel the Dark Magic that surrounds the most powerful Undead lords and are drawn inexorably towards it. Incantations bring out latent power.	true
 character_skills_localised_name_arkhan_skill_tmb_fell_bats_dire_wolves	Dark Creatures	true

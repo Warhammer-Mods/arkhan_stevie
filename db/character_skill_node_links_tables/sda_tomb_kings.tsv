@@ -1,5 +1,5 @@
-character_skill_node_links_tables	3
 parent_key	child_key	initial_descent_tiers	parent_link_position	child_link_position	parent_link_position_offset	child_link_position_offset	link_type
+#character_skill_node_links_tables	3	db/character_skill_node_links_tables/sda_tomb_kings
 steve_ark_zmb_arkhan_vamp_magic_1	steve_ark_zmb_arkhan_vamp_magic_2	0	1	1	0.0	0.0	REQUIRED
 steve_ark_zmb_arkhan_vamp_magic_1	steve_ark_zmb_arkhan_vamp_magic_3	0	1	1	0.0	0.0	REQUIRED
 steve_ark_zmb_arkhan_vamp_magic_1	steve_ark_zmb_arkhan_vamp_magic_4	0	1	1	0.0	0.0	REQUIRED

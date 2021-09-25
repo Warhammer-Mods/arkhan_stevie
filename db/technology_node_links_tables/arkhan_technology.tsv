@@ -1,5 +1,5 @@
-technology_node_links_tables	2
 parent_key	child_key	initial_descent_tiers	parent_link_position	child_link_position	parent_link_position_offset	child_link_position_offset
+#technology_node_links_tables	2	db/technology_node_links_tables/arkhan_technology
 tech_arkhan_lord_left_centre	tech_arkhan_lord_top_left	0	1	3	0.0	0.0
 tech_arkhan_lord_left_centre	tech_arkhan_lord_bottom_left	0	3	1	0.0	0.0
 tech_arkhan_lord_right_centre	tech_arkhan_lord_top_right	0	1	3	0.0	0.0

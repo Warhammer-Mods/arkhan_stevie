@@ -1,5 +1,5 @@
-character_skills_tables	5
 key	image_path	localised_name	localised_description	unlocked_at_rank	is_background_skill	is_female_only_background_skill	is_male_only_background_skill	background_weighting	influence_cost
+#character_skills_tables	5	db/character_skills_tables/extra_tomb_king_lords
 stephen_skill_tmb_tomb_king_mount_steed	mount_skeletal_steed_tmb.png	Skeletal Steed	Long-dead destriers, awakened to serve their Unliving masters far beyond death.	3	false	false	false	0.0	0
 stephen_skill_tmb_tomb_king_mount_chariot	mount_skeleton_chariot.png	Skeleton Chariot	The pride of Nehekharan armies, impacting enemy lines with bone-shattering force and grinding the corpses beneath their heavy wheels.	13	false	false	false	0.0	0
 stephen_skill_tmb_tomb_king_mount_warsphinx	mount_warsphinx.png	Khemrian Warsphinx	Giant leonine statues, almost impervious to harm; they wade through foes, crushing them like bothersome insects.	17	false	false	false	0.0	0

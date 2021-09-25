@@ -38,7 +38,8 @@ env:
   LUAROCKS_VERSION: "3.7.0"
   LUACHECK_CONFIG: .luacheckrc
   CUSTOM_LUA_GLOBALS: >-
-    
+    ae
+    ardm
 
 jobs:
 
@@ -198,6 +199,10 @@ jobs:
         delete-branch: true
         signoff: false
         title: "[Luacheck] Update config and autocomplete"
+        body: |
+          **Update**:
+            - Total War Lua autocompletion
+            - Luacheck globals list
         labels: |
           automation
           dep

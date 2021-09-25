@@ -1,0 +1,11 @@
+{
+  "settings_text": {
+    "diagnostics_files_to_ignore": "",
+    "import_files_to_ignore": ".git\n.gitignore\n.gitattributes\n.github\n.luacheckrc\n.vscode\nassets\nREADME.md\nCHANGELOG.md\n*.code-workspace"
+  },
+  "settings_string": {},
+  "settings_bool": {
+    "disable_autosaves": false
+  },
+  "settings_number": {}
+}

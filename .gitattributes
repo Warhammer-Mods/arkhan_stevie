@@ -1,5 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Disable git line endings management
+* -text
 
 /.vscode/** linguist-vendored
 /.luacheckrc linguist-generated=true

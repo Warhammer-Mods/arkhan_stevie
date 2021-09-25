@@ -23,10 +23,6 @@ on:
       - 'bugfix/**'
       - 'support/**'
       - 'update/**'
-    paths:
-      - 'db/**'
-      - '.github/workflows/**'
-      - '.vscode/**'
   workflow_dispatch:
 
 env:

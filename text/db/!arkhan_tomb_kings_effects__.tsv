@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/!arkhan_tomb_kings_effects__.loc
 effects_description_wh2_dlc09_effect_unit_cap_steve_ark_grave_guard	Unit capacity: %+n\\nGrave Guard	true
 effects_description_wh2_dlc09_effect_unit_cap_steve_ark_grave_guard_great	Unit capacity: %+n\\nGrave Guard (Great Weapons)	true
 effects_description_wh2_dlc09_effect_unit_cap_steve_ark_terrorgheist	Unit capacity: %+n\\nTerrorgheists	true

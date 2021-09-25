@@ -1,5 +1,5 @@
-building_units_allowed_tables	4
 building	unit	xp	conditions	key	faction	enabled
+#building_units_allowed_tables	4	db/building_units_allowed_tables/sda_tomb_kings
 arkhan_vmp_fell_tree_1	steve_ark_crypt_horror	0	0	11889966		false
 arkhan_vmp_fell_tree_2	steve_ark_crypt_horror	0	0	11889967		false
 arkhan_vmp_fell_tree_2	steve_ark_vargheist	0	0	11889968		false

@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/sda_tomb_kings_character_skills__.loc
 character_skills_localised_description_nagash_must_rise	Arkhan’s mastery of the dread art of necromancy is superior to even that of his fellow Mortarchs. He is so steeped in deathly sorcery that his presence bolsters and invorgates his forces.	true
 character_skills_localised_name_nagash_must_rise	First of the Mortarchs	true
 character_skills_localised_name_arkhan_skill_mount_tmb_wizard_unique_liche_priest_death_skeletal_steed	Skeletal Steed	true

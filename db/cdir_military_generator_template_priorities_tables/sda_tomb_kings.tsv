@@ -1,3 +1,3 @@
-cdir_military_generator_template_priorities_tables	1
 config_key	template_key	priority	leader_only
+#cdir_military_generator_template_priorities_tables	1	db/cdir_military_generator_template_priorities_tables/sda_tomb_kings
 WH_Tomb_Kings_Arkhan	WH_Tomb_Kings_land_leader_arkhan	500	true

@@ -1,3 +1,3 @@
-unit_set_unit_ability_junctions_tables	0
 key	unit_set	unit_ability
+#unit_set_unit_ability_junctions_tables	0	db/unit_set_unit_ability_junctions_tables/sda_tomb_kings
 sda_effect_direwolf_frenzy	wh2_dlc09_tmb_mon_dire_wolves	wh_main_unit_passive_frenzy

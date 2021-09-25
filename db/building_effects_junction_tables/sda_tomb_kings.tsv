@@ -1,5 +1,5 @@
-building_effects_junction_tables	3
 building	effect	value	effect_scope	value_damaged	value_ruined
+#building_effects_junction_tables	3	db/building_effects_junction_tables/sda_tomb_kings
 wh2_dlc09_tmb_arkhan_burial_mound	wh_main_effect_religion_conversion_undeath	1.0	region_to_region_own	1.0	0.0
 wh2_dlc09_tmb_arkhan_burial_mound	sda_effect_unit_cap_steve_ark_skeleton_archers	4.0	building_to_faction_own	2.0	0.0
 wh2_dlc09_tmb_arkhan_burial_mound_2	wh_main_effect_religion_conversion_undeath	1.0	region_to_region_own	1.0	0.0

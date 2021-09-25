@@ -1,5 +1,5 @@
-armed_citizenry_unit_groups_tables	0
 unit_group
+#armed_citizenry_unit_groups_tables	0	db/armed_citizenry_unit_groups_tables/sda_tomb_kings
 wh2_dlc09_tmb_inf_crypt_ghouls
 steve_ark_cairn_wraith
 steve_ark_grave_guard

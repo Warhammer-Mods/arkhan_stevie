@@ -12,6 +12,8 @@ on:
       - 'update/**'
     paths:
       - 'db/**'
+      - '.github/workflows/**'
+      - '.vscode/**'
   pull_request:
     branches:
       - main
@@ -23,6 +25,8 @@ on:
       - 'update/**'
     paths:
       - 'db/**'
+      - '.github/workflows/**'
+      - '.vscode/**'
   workflow_dispatch:
 
 env:
@@ -32,6 +36,7 @@ env:
   GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GIT_COMMITTER_NAME: "github-actions[bot]"
   GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+  CSVLINT_PATH: ".csvlint" #relative to $HOME
 
 jobs:
 
@@ -41,6 +46,31 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
+
+    - id: date
+      run: |
+        echo "::set-output name=day::$(date '+%d')"
+        echo "::set-output name=month::$(date '+%m')"
+        echo "::set-output name=year::$(date '+%Y')"
+
+    - name: Cache apt sources lists
+      id: apt-cache
+      uses: actions/cache@v2
+      with:
+        key: ${{ runner.os }}-apt-cache-${{ format(
+          '{0}-{1}-{2}',
+          steps.date.outputs.year,
+          steps.date.outputs.month,
+          steps.date.outputs.day) }}
+        path: |
+          /var/cache/apt/archives
+
+    - if: steps.apt-cache.outputs.cache-hit != 'true'
+      run: sudo apt-get update
+
+    - name: Install dos2unix
+      run: |
+        sudo apt-get install -y dos2unix
 
     - name: Normalize LF/CRLF
       run: |
@@ -52,21 +82,77 @@ jobs:
           fi
         done 
 
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-
-    - run: npm install --global csval
-
-    - name: Check TSV syntax
+    - name: Set csvlint info
+      id: csvlint-info
       run: |
-        for path in ${FILES_TO_CHECK}; do
+        api="api.github.com"
+        repo="Clever/csvlint"
+
+        response=$(
+          curl "https://${api}/repos/${repo}/releases/latest" |
+          jq -rc
+        )
+
+        version="$(jq -r '.name' <<< ${response})"
+        download_url="$(jq -r '.assets[].browser_download_url' <<< ${response} | grep -i "$(uname -s)")"
+
+        echo "::set-output name=json::${response}"
+        echo "::set-output name=latest-version::${version}"
+        echo "::set-output name=download-url::${download_url}"
+
+        if [[ -z ${{ env.CSVLINT_PATH }} ]]; then
+          echo "CSVLINT_PATH=.csvlint" >> ${GITHUB_ENV}
+        fi
+
+    - name: Cache cvslint
+      id: csvlint-cache
+      uses: actions/cache@v2
+      with:
+        key: ${{ runner.os }}-csvlint-${{ steps.csvlint-info.outputs.latest-version }}
+        path: ${{ env.CSVLINT_PATH }}
+
+    - if: steps.csvlint-cache.outputs.cache-hit == 'true'
+      run: echo "${HOME}/${{ env.CSVLINT_PATH }}" >> ${GITHUB_PATH}
+
+    - name: Install csvlint
+      id: csvlint-install
+      if: steps.csvlint-cache.outputs.cache-hit != 'true'
+      run: |
+        mkdir -p ${HOME}/${{ env.CSVLINT_PATH }}
+        curl -sL ${{ steps.csvlint-info.outputs.download-url }} |
+          tar -xzv - --strip-components=1 -C ${{ env.CSVLINT_PATH }}
+        echo "${HOME}/${{ env.CSVLINT_PATH }}" >> ${GITHUB_PATH}
+    
+    - name: Check TSV syntax
+      id: check_syntax
+      shell: bash --noprofile --norc {0}
+      run: |
+        checkTSV () {
+          for file in $@; do
+            echo "File: ${file}"
+            csvlint --delimiter='\t' "${file}"
+            exitstatus=$?
+
+            [[ ${exitstatus} == 1 ]] \
+            && echo "::set-output name=failed::true" \
+            && failed=true
+          done
+        }
+
+        echo "::add-matcher::.github/csvlint.json"
+        for path in ${{ env.FILES_TO_CHECK }}; do
           if [[ -d ${path} ]]; then
-            find ${path} -type f -iname "*.tsv" -exec csval {} \;
+            find ${path} -type f -iname "*.tsv" | 
+              while read file; do
+                checkTSV "$file"
+              done
           elif [[ -f ${path} ]]; then
-            csval ${path}
+            checkTSV ${path}
           fi
         done 
+        echo "::remove-matcher owner=csvlint_error::"
+        
+        [[ ${failed} == "true" ]] && exit 1
 
     - name: Get file changes
       id: changes

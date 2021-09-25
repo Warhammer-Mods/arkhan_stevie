@@ -151,6 +151,7 @@ jobs:
           fi
         done 
         echo "::remove-matcher owner=csvlint_error::"
+        echo "::remove-matcher owner=csvlint_warning::"
         
         [[ ${failed} == "true" ]] && exit 1
 

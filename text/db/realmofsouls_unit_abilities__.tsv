@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/realmofsouls_unit_abilities__.loc
 unit_abilities_onscreen_name_followers_of_nagash_realm_of_souls_1	Siphon of Souls Tier 1	true
 unit_abilities_onscreen_name_followers_of_nagash_realm_of_souls_2	Siphon of Souls Tier 2	true
 unit_abilities_onscreen_name_followers_of_nagash_realm_of_souls_3	Siphon of Souls Tier 3	true

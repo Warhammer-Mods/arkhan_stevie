@@ -1,3 +1,3 @@
-faction_agent_permitted_subtypes_tables	0
 faction	agent	subtype
+#faction_agent_permitted_subtypes_tables	0	db/faction_agent_permitted_subtypes_tables/extra_tomb_king_lords
 wh2_dlc09_tmb_followers_of_nagash	general	arkhan_tmb_tomb_king

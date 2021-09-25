@@ -1,5 +1,5 @@
-technology_nodes_tables	3
 key	technology_node_set	technology_key	faction_key	campaign_key	tier	indent	research_points_required	cost_per_round	optional_ui_group	food_cost	resource_cost
+#technology_nodes_tables	3	db/technology_nodes_tables/arkhan_technology
 tech_arkhan_nagash_monsters_1_1	tmb_mil	tech_arkhan_nagash_monsters_1_1	wh2_dlc09_tmb_followers_of_nagash		15	4	200	0	tmb_03	0	
 tech_arkhan_nagash_monsters_1_2	tmb_mil	tech_arkhan_nagash_monsters_1_2	wh2_dlc09_tmb_followers_of_nagash		15	5	200	0	tmb_03	0	
 tech_arkhan_nagash_monsters_1_3	tmb_mil	tech_arkhan_nagash_monsters_1_3	wh2_dlc09_tmb_followers_of_nagash		16	4	200	0	tmb_03	0	

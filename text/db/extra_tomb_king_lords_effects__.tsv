@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/extra_tomb_king_lords_effects__.loc
 effects_description_stephen_tomb_king_dummy_trait_1	This lord will be assigned a random trait once recruited	true
 effects_description_stephen_tomb_king_dummy_trait_2		true
 effects_description_stephen_tomb_king_unlock_1	Adds a unique Tomb King to your faction's [[img:icon_general]][[/img]]Lord pool	true

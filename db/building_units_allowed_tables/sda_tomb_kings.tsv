@@ -1,5 +1,5 @@
-building_units_allowed_tables	4
 building	unit	xp	conditions	key	faction	enabled
+#building_units_allowed_tables	4	db/building_units_allowed_tables/sda_tomb_kings
 wh2_main_special_galbaraz_mourkain_tmb_1	steve_ark_crypt_horror	0	0	11889975		false
 wh2_main_special_galbaraz_mourkain_tmb_1	steve_ark_vargheist	0	0	11889976		false
 arkhan_major_walls_1	wh2_dlc09_tmb_mon_fell_bats	0	0	11889977		false

@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/arkhan_technology_technologies__.loc
 technologies_long_description_tech_arkhan_army_unlock_left		true
 technologies_onscreen_name_tech_arkhan_army_unlock_left	Legions of Nagash	true
 technologies_short_description_tech_arkhan_army_unlock_left	The incantations of Nagash are the darkest of fell rituals, not to be used lightly if at all. For while they may ease the burden of Unlife, they can also act as a siren call to their original author. Nagash has been gone long from this world, but should he ever return then doom awaits us all! 	true

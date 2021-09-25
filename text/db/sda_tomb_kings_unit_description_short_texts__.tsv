@@ -1,5 +1,5 @@
-Loc PackedFile	1
 key	text	tooltip
+#Loc PackedFile	1	text/db/sda_tomb_kings_unit_description_short_texts__.loc
 unit_description_short_texts_text_steve_ark_zmb	Zombies	true
 unit_description_short_texts_text_steve_ark_zmb_summon	Zombies	true
 unit_description_short_texts_text_steve_ark_grave_guard	Grave Guard	true

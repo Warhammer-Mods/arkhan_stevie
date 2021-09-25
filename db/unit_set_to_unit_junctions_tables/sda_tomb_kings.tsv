@@ -1,5 +1,5 @@
-unit_set_to_unit_junctions_tables	0
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
+#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/sda_tomb_kings
 steve_ark_crypt_horror	steve_ark_crypt_horror				false
 steve_ark_grave_guard	steve_ark_grave_guard				false
 steve_ark_grave_guard_great	steve_ark_grave_guard_great				false

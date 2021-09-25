@@ -120,7 +120,7 @@ jobs:
       run: |
         mkdir -p ${HOME}/${{ env.CSVLINT_PATH }}
         curl -sL ${{ steps.csvlint-info.outputs.download-url }} |
-          tar -xzvf - --strip-components=1 -C ${{ env.CSVLINT_PATH }}
+          tar -xzvf - --strip-components=1 -C ${HOME}/${{ env.CSVLINT_PATH }}
         echo "${HOME}/${{ env.CSVLINT_PATH }}" >> ${GITHUB_PATH}
     
     - name: Check TSV syntax

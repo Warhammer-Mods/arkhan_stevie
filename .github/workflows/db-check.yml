@@ -86,7 +86,7 @@ jobs:
         repo="Clever/csvlint"
 
         response=$(
-          curl "https://${api}/repos/${repo}/releases/latest" |
+          curl -sL "https://${api}/repos/${repo}/releases/latest" |
           jq -rc
         )
 

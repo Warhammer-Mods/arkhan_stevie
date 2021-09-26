@@ -129,6 +129,7 @@ jobs:
             echo "File: ${file}"
             csvlint --delimiter='\t' "${file}"
             exitstatus=$?
+            echo "::debug::Check finished with exit status: ${exitstatus}"
 
             if [[ ${exitstatus} == 1 ]]; then
               echo "::set-output name=failed::true"

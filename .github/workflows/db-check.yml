@@ -123,15 +123,17 @@ jobs:
       id: check_syntax
       shell: bash --noprofile --norc {0}
       run: |
+        exit_code=0
         checkTSV () {
           for file in $@; do
             echo "File: ${file}"
             csvlint --delimiter='\t' "${file}"
             exitstatus=$?
 
-            [[ ${exitstatus} == 1 ]] \
-            && echo "::set-output name=failed::true" \
-            && failed=true
+            if [[ ${exitstatus} == 1 ]]; then
+              echo "::set-output name=failed::true"
+              exit_code=1
+            fi
           done
         }
 
@@ -149,7 +151,7 @@ jobs:
         echo "::remove-matcher owner=csvlint_error::"
         echo "::remove-matcher owner=csvlint_warning::"
         
-        [[ ${failed} == "true" ]] && exit 1
+        exit ${exit_code}
 
     - name: Get file changes
       id: changes

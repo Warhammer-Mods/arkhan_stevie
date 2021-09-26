@@ -43,30 +43,31 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - id: date
+    - name: Get current date
+      id: date
       run: |
         echo "::set-output name=day::$(date '+%d')"
         echo "::set-output name=month::$(date '+%m')"
         echo "::set-output name=year::$(date '+%Y')"
 
-    - name: Cache apt sources lists
-      id: apt-cache
+    - name: Cache dos2unix
+      id: cache-dos2unix
       uses: actions/cache@v2
       with:
-        key: ${{ runner.os }}-apt-cache-${{ format(
-          '{0}-{1}-{2}',
-          steps.date.outputs.year,
-          steps.date.outputs.month,
-          steps.date.outputs.day) }}
-        path: |
-          /var/cache/apt/archives
-
-    - if: steps.apt-cache.outputs.cache-hit != 'true'
-      run: sudo apt-get update
+        key: ${{ runner.os }}-dos2unix-cache
+        path: "~/dos2unix"
 
     - name: Install dos2unix
+      env:
+        CACHE_HIT: ${{steps.cache-dos2unix.outputs.cache-hit}}
       run: |
-        sudo apt-get install -y dos2unix
+          if [[ "$CACHE_HIT" == 'true' ]]; then
+            sudo cp --verbose --force --recursive ~/dos2unix/* /
+          else
+            sudo apt-get install --yes dos2unix
+            mkdir -p ~/dos2unix
+            sudo dpkg -L dos2unix | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/dos2unix/
+          fi
 
     - name: Normalize LF/CRLF
       run: |

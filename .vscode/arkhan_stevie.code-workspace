@@ -9,28 +9,27 @@
 	],
 	"settings": {
 		"debug.node.autoAttach": "on",
-		"editor.insertSpaces": false,
-		"editor.detectIndentation": true,
 		"editor.acceptSuggestionOnEnter": "on",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.detectIndentation": true,
+		"editor.parameterHints.enabled": true,
 		"editor.suggest.localityBonus": true,
 		"editor.suggestSelection": "first",
 		"editor.tabCompletion": "onlySnippets",
-		"editor.wordBasedSuggestions": false,
-		"editor.parameterHints.enabled": true,
-		"workbench.tree.indent": 20,
-		"Lua.telemetry.enable": false,
+		"files.eol": "\n",
 		"Lua.runtime.version": "Lua 5.1",
-		"window.title": "${rootName}: ${activeEditorMedium} ${dirty}",
+		"Lua.telemetry.enable": false,
 		"Lua.workspace.ignoreDir": [],
 		"Lua.workspace.preloadFileSize": 10000,
 		"markdownlint.config": {
 			"default": true,
 			"MD024": { "siblings_only": true }
 		},
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"prettier.useTabs": true,
-		"prettier.semi": true,
-		"prettier.endOfLine": "auto",
+		"rainbow_csv.comment_prefix": "#",
+		"rainbow_csv.rbql_with_headers_by_default": true,
+		"window.title": "${rootName}: ${activeEditorMedium} ${dirty}",
+		"workbench.tree.indent": 20,
 		"[json]": {
 			"editor.quickSuggestions": {
 				"strings": true
@@ -38,9 +37,7 @@
 			"editor.suggest.insertMode": "replace",
 			"gitlens.codeLens.scopes": ["document"],
 			"editor.defaultFormatter": "esbenp.prettier-vscode"
-		},
-		"rainbow_csv.rbql_with_headers_by_default": true,
-		"rainbow_csv.comment_prefix": "#"
+		}
 	},
 	"launch": {
 		"configurations": [

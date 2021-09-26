@@ -1,0 +1,35 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "csvlint_error",
+      "pattern": [
+        {
+          "regexp": "^File:\\s*(.*)$",
+          "file": 1
+        },
+        {
+          "regexp": "^\\s*Record\\s*#(\\d*)\\s*has\\s(error):\\s*(.*)$",
+          "line": 1,
+          "severity": 2,
+          "message": 3,
+          "loop": true
+        }
+      ]
+    },
+    {
+      "owner": "csvlint_warning",
+      "pattern": [
+        {
+          "regexp": "^File:\\s*(.*)$",
+          "file": 1
+        },
+        {
+          "regexp": "^\\s*(Warning):\\s*(.*)$",
+          "severity": 1,
+          "message": 2,
+          "loop": true
+        }
+      ]
+    }
+  ]
+}

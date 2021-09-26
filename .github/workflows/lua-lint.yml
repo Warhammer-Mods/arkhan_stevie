@@ -54,28 +54,6 @@ jobs:
         persist-credentials: false
         fetch-depth: 0
 
-    - name: Cache lua environment
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-lua
-      with:
-        path: |
-          .install
-          .lua
-        key: ${{ runner.os }}-lua-${{ env.LUA_VERSION }}
-        restore-keys: |
-          ${{ runner.os }}-lua-
-
-    - name: Cache luarocks installation
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-luarocks
-      with:
-        path: .luarocks
-        key: ${{ runner.os }}-luarocks-${{ env.LUAROCKS_VERSION }}
-        restore-keys: |
-          ${{ runner.os }}-luarocks-
-
     - uses: leafo/gh-actions-lua@v8.0.0
       with:
         luaVersion: ${{ env.LUA_VERSION }}

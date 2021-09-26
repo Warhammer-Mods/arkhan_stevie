@@ -1,5 +1,5 @@
 unit_key	bullet_point
-#ui_unit_bullet_point_unit_overrides_tables	0	db/ui_unit_bullet_point_unit_overrides_tables/sda_tomb_kings
+#ui_unit_bullet_point_unit_overrides_tables;0;db/ui_unit_bullet_point_unit_overrides_tables/sda_tomb_kings	
 steve_ark_zmb	meat_shield
 steve_ark_zmb_summon	meat_shield
 steve_ark_grave_guard	anti_infantry

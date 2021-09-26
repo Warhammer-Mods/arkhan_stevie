@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/extra_tomb_king_lords_names__.loc
+#Loc PackedFile;1;text/db/extra_tomb_king_lords_names__.loc		
 names_name_159753852	King	true
 names_name_159753853	Thutmose	true
 names_name_159753854	Rahoshen	true

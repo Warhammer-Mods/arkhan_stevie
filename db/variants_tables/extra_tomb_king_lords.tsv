@@ -1,5 +1,5 @@
 variant_name	tech_folder	variant_filename	scale	scale_variation	low_poly_filename	mount_scale	super_low_poly_filename
-#variants_tables	6	db/variants_tables/extra_tomb_king_lords
+#variants_tables;6;db/variants_tables/extra_tomb_king_lords							
 arkhan_tmb_tomb_king_1		arkhan_tmb_tomb_king_1	1.2	0.05		1.0	
 arkhan_tmb_tomb_king_2		arkhan_tmb_tomb_king_2	1.2	0.05		1.0	
 arkhan_tmb_tomb_king_3		arkhan_tmb_tomb_king_3	1.2	0.05		1.0	

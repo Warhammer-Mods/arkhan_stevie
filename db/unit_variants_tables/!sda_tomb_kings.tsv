@@ -1,5 +1,5 @@
 name	faction	unit	variant	unit_card
-#unit_variants_tables	5	db/unit_variants_tables/!sda_tomb_kings
+#unit_variants_tables;5;db/unit_variants_tables/!sda_tomb_kings				
 steve_ark_zmb		steve_ark_zmb	steve_ark_zmb	steve_ark_zmb
 steve_ark_zmb_summon		steve_ark_zmb_summon	steve_ark_zmb_summon	steve_ark_zmb_summon
 steve_ark_grave_guard		steve_ark_grave_guard	steve_ark_grave_guard	steve_ark_grave_guard

@@ -1,5 +1,5 @@
 level_name	chain	level	only_in_capital	create_time	create_cost	upkeep_cost	commodity	military_prestige	naval_prestige	economic_prestige	enlightenment_prestige	faction_unique	religion_requirement	first_in_world_bundle	resource_requirement	can_convert	building_instance_key	audio_building_type	should_show_building_level_in_ui_for_technology	health_override	development_point_cost	can_be_damaged	primary_slot_building_building_level_requirement	visible_in_ui	food_cost	slave_cap_contribution
-#building_levels_tables	16	db/building_levels_tables/sda_tomb_kings
+#building_levels_tables;16;db/building_levels_tables/sda_tomb_kings																										
 arkhan_minor_walls_1	arkhan_minor_walls	0	false	3	1500	0		0	0	0	0	false				true	wh2_dlc09_tmb_garrison		false	0.0	0	true	2	true	0	0
 arkhan_minor_walls_2	arkhan_minor_walls	1	false	4	3000	0		0	0	0	0	false				true	wh2_dlc09_tmb_garrison		false	0.0	0	true	3	true	0	0
 arkhan_major_walls_1	arkhan_major_walls	0	false	3	2500	0		0	0	0	0	false				true	wh2_dlc09_tmb_walls		false	0.0	0	true	2	true	0	0

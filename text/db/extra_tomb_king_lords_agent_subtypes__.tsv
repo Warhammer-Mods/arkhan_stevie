@@ -1,4 +1,4 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/extra_tomb_king_lords_agent_subtypes__.loc
+#Loc PackedFile;1;text/db/extra_tomb_king_lords_agent_subtypes__.loc		
 agent_subtypes_description_text_override_arkhan_tmb_tomb_king		true
 agent_subtypes_onscreen_name_override_arkhan_tmb_tomb_king	Tomb King	true

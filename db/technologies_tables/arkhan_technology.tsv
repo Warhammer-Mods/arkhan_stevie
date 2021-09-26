@@ -1,5 +1,5 @@
 key	building_level	position_index	icon_name	military_prestige	naval_prestige	economic_prestige	enlightenment_prestige	mp_available_early	mp_available_late	info_pic	unique_index	is_civil	is_engineering	is_military
-#technologies_tables	5	db/technologies_tables/arkhan_technology
+#technologies_tables;5;db/technologies_tables/arkhan_technology														
 tech_arkhan_nagash_monsters_1_1	wh_main_chs_port	1	wh_main_vmp_cannibalistic_rituals	0	0	0	0	false	false	"placeholder.tga"	33557788	false	false	true
 tech_arkhan_nagash_monsters_1_2	wh_main_chs_port	1	wh_main_vmp_master_of_the_swarm	0	0	0	0	false	false	"placeholder.tga"	33557789	false	false	true
 tech_arkhan_nagash_monsters_1_3	wh_main_chs_port	1	wh_main_vmp_leader_of_the_pack	0	0	0	0	false	false	"placeholder.tga"	33557790	false	false	true

@@ -1,5 +1,5 @@
 key	image_path	localised_name	localised_description	unlocked_at_rank	is_background_skill	is_female_only_background_skill	is_male_only_background_skill	background_weighting	influence_cost
-#character_skills_tables	5	db/character_skills_tables/arkhan_technology
+#character_skills_tables;5;db/character_skills_tables/arkhan_technology									
 arkhan_skill_tmb_crypt_ghouls_crypt_horrors	wh2_dlc11_infinite_hatred.png	Fiendish Ghouls	Though not truly Undead, Crypt Ghouls unconsciously feel the Dark Magic that surrounds the most powerful Undead lords and are drawn inexorably towards it. Incantations bring out latent power.	1	false	false	false	0.0	0
 arkhan_skill_tmb_fell_bats_dire_wolves	wh2_dlc11_fell_nest.png	Dark Creatures	Dire Wolves are the hunting hounds of the Vampires and their senses are as keen as they were in life. With a body as long as a grown man, Fell Bats are a fearsome sight. Foul magic only makes these creatures stronger.	1	false	false	false	0.0	0
 arkhan_skill_tmb_grave_guard	wh2_dlc11_grave_sentinels.png	Grave Legions	Although their bodies have decayed, leaving only bones and tattered flesh, a Grave Guard is held together by evil magic so strong that it has endured for centuries. 	1	false	false	false	0.0	0

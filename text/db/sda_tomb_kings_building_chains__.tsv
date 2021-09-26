@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/sda_tomb_kings_building_chains__.loc
+#Loc PackedFile;1;text/db/sda_tomb_kings_building_chains__.loc		
 building_chains_chain_tooltip_arkhan_awaken_battlefield	Battlefield	true
 building_chains_chain_tooltip_arkhan_vmp_growth	Growth	true
 building_chains_chain_tooltip_arkhan_vmp_income	Income	true

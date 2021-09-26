@@ -1,5 +1,5 @@
 art_set_id	is_custom	agent_type	faction	culture	subculture	is_male	agent_subtype	campaign_map_scale
-#campaign_character_art_sets_tables	6	db/campaign_character_art_sets_tables/extra_tomb_king_lords
+#campaign_character_art_sets_tables;6;db/campaign_character_art_sets_tables/extra_tomb_king_lords								
 stephen_art_set_tmb_tomb_king_1	false	general		wh2_dlc09_tmb_tomb_kings		true	arkhan_tmb_tomb_king	1.0
 stephen_art_set_tmb_tomb_king_2	false	general		wh2_dlc09_tmb_tomb_kings		true	arkhan_tmb_tomb_king	1.0
 stephen_art_set_tmb_tomb_king_3	false	general		wh2_dlc09_tmb_tomb_kings		true	arkhan_tmb_tomb_king	1.0

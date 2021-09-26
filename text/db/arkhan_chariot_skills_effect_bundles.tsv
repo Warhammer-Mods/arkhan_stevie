@@ -1,4 +1,4 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/arkhan_chariot_skills_effect_bundles.loc
+#Loc PackedFile;1;text/db/arkhan_chariot_skills_effect_bundles.loc		
 effect_bundles_localised_title_arkhan_skill_chariot_upgrade_1	Devistating Charge	true
 effect_bundles_localised_description_arkhan_skill_chariot_upgrade_1	'Death comes to all who stand in our way'	true

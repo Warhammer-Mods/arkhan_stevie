@@ -1,3 +1,3 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/arkhan_technology_unit_abilities_additional_ui_effects__.loc
+#Loc PackedFile;1;text/db/arkhan_technology_unit_abilities_additional_ui_effects__.loc		
 unit_abilities_additional_ui_effects_localised_text_rain_of_souls	[[col:green]][[img:icon_arrow_up]][[/img]] Unleash the Realm of Souls[[/col]]	true

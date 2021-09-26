@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/sda_tomb_kings_core_land_units__.loc
+#Loc PackedFile;1;text/db/sda_tomb_kings_core_land_units__.loc		
 land_units_onscreen_name_steve_ark_zmb	Zombies	true
 land_units_onscreen_name_steve_ark_zmb_summon	Zombies	true
 land_units_onscreen_name_steve_ark_grave_guard	Grave Guard	true

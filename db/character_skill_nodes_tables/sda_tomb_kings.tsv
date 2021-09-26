@@ -1,5 +1,5 @@
 key	character_skill_node_set_key	character_skill_key	faction_key	campaign_key	tier	indent	subculture	points_on_creation	required_num_parents	visible_in_ui
-#character_skill_nodes_tables	5	db/character_skill_nodes_tables/sda_tomb_kings
+#character_skill_nodes_tables;5;db/character_skill_nodes_tables/sda_tomb_kings										
 wh2_dlc09_skill_tmb_arkhan_lore_dummy_1	wh2_dlc09_skill_node_set_tmb_arkhan	wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight			11.0	3.0		1	0	false
 wh2_dlc09_skill_tmb_arkhan_lore_10	wh2_dlc09_skill_node_set_tmb_arkhan	wh2_dlc11_skill_vmp_bloodline_necrarch_magic_greater_arcane_conduit			10.0	3.0		0	4	true
 wh2_dlc09_skill_tmb_arkhan_lore_dummy_2	wh2_dlc09_skill_node_set_tmb_arkhan	wh2_main_skill_vmp_magic_vampires_dummy_invocation_of_nehek_danse_macabre			11.0	4.0		1	0	false

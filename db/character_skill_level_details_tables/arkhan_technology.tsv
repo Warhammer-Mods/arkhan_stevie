@@ -1,5 +1,5 @@
 level	skill_key	faction_key	campaign_key	subculture_key	image_path	unlocked_at_rank
-#character_skill_level_details_tables	0	db/character_skill_level_details_tables/arkhan_technology
+#character_skill_level_details_tables;0;db/character_skill_level_details_tables/arkhan_technology						
 1	arkhan_skill_tmb_crypt_ghouls_crypt_horrors				x	1
 1	arkhan_skill_tmb_fell_bats_dire_wolves				x	1
 1	arkhan_skill_tmb_grave_guard				x	1

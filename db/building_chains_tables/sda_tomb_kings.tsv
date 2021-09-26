@@ -1,5 +1,5 @@
 key	tech_category_tab	chain_category	in_encyclopedia	building_superchain	encyclopedia_group	optional_tier_icon	optional_sort_order	optional_required_horde_commander
-#building_chains_tables	6	db/building_chains_tables/sda_tomb_kings
+#building_chains_tables;6;db/building_chains_tables/sda_tomb_kings								
 arkhan_awaken_battlefield		military	false	arkhan_awaken_battlefield			0	
 arkhan_vmp_fell_tree		military	false	arkhan_vmp_fell_tree			8	
 arkhan_vmp_halls_dead		military	false	arkhan_vmp_halls_dead			0	

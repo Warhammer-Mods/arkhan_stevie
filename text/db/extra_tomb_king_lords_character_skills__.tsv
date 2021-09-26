@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/extra_tomb_king_lords_character_skills__.loc
+#Loc PackedFile;1;text/db/extra_tomb_king_lords_character_skills__.loc		
 character_skills_localised_name_stephen_skill_tmb_tomb_king_mount_steed	Skeletal Steed	true
 character_skills_localised_description_stephen_skill_tmb_tomb_king_mount_steed	Long-dead destriers, awakened to serve their Unliving masters far beyond death.	true
 character_skills_localised_name_stephen_skill_tmb_tomb_king_mount_warsphinx	Khemrian Warsphinx	true

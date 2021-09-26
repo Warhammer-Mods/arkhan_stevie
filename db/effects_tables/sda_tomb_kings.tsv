@@ -1,5 +1,5 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/sda_tomb_kings
+#effects_tables;3;db/effects_tables/sda_tomb_kings					
 arkhan_minor_walls	edict_cst_bat_swarms.png	99	edict_cst_bat_swarms.png	campaign	true
 sda_skill_liber_mortis_add	wh2_dlc09_lord_abilities_the_liber_mortis.png	99	wh2_dlc09_lord_abilities_the_liber_mortis.png	battle	true
 sda_skill_necropolis_blast_add	general_ability.png	99	general_ability.png	battle	true

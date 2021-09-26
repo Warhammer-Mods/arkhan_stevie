@@ -1,5 +1,5 @@
 building_set	building_level	building_chain	exclude
-#building_set_to_building_junctions_tables	0	db/building_set_to_building_junctions_tables/sda_tomb_kings
+#building_set_to_building_junctions_tables;0;db/building_set_to_building_junctions_tables/sda_tomb_kings			
 wh2_dlc09_set_tomb_kings_basic_infra	arkhan_vmp_balefire_1		false
 wh2_dlc09_set_tomb_kings_basic_infra	arkhan_vmp_balefire_2		false
 wh2_dlc09_set_tomb_kings_basic_infra	arkhan_vmp_balefire_3		false

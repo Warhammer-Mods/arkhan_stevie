@@ -1,5 +1,5 @@
 ancillary	agent
-#ancillary_to_included_agents_tables	0	db/ancillary_to_included_agents_tables/extra_tomb_king_lords
+#ancillary_to_included_agents_tables;0;db/ancillary_to_included_agents_tables/extra_tomb_king_lords	
 stephen_anc_mount_tomb_king_warsphinx	general
 stephen_anc_mount_tomb_king_steed	general
 stephen_anc_mount_tomb_king_chariot	general

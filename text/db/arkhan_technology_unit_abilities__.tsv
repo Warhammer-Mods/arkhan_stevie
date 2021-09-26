@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/arkhan_technology_unit_abilities__.loc
+#Loc PackedFile;1;text/db/arkhan_technology_unit_abilities__.loc		
 unit_abilities_onscreen_name_tech_arkhan_army_ability_raise_skeletons	Summon Skeleton Warriors	true
 unit_abilities_tooltip_text_tech_arkhan_army_ability_raise_skeletons	"Let the splintered bones burrow from the grave pall. Let cold fingers grip tomb-worn blades, and unseeing eyes survey the fields of slaughter. For your time has come once more."	true
 unit_abilities_onscreen_name_tech_arkhan_army_ability_rain_of_souls	Rain of Desecration	true

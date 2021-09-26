@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/sda_tomb_kings_unit_abilities__.loc
+#Loc PackedFile;1;text/db/sda_tomb_kings_unit_abilities__.loc		
 unit_abilities_onscreen_name_arkhan_zombie_raise_dead	Summon Zombies	true
 unit_abilities_tooltip_text_arkhan_zombie_raise_dead	"Let the splintered bones burrow from the grave pall. Let cold fingers grip tomb-worn blades, and unseeing eyes survey the fields of slaughter. For your time has come once more."	true
 unit_abilities_onscreen_name_arkhan_necropolis_blast	Eldritch Blast	true

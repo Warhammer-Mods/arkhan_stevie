@@ -1,5 +1,5 @@
 key	character_skill_node_set_key	character_skill_key	faction_key	campaign_key	tier	indent	subculture	points_on_creation	required_num_parents	visible_in_ui
-#character_skill_nodes_tables	5	db/character_skill_nodes_tables/!arkhan_skilldump
+#character_skill_nodes_tables;5;db/character_skill_nodes_tables/!arkhan_skilldump										
 nagash_skill_node_set_tmb_arkhan_skill_dump_001	wh2_dlc09_skill_node_set_tmb_arkhan	the_rise_of_nagash_skilldump_1			85.0	5.0		0	0	true
 nagash_skill_node_set_tmb_liche_priest_skill_dump_001	sda_skill_node_set_steve_ark_tmb_liche_priest_vampire	the_rise_of_nagash_skilldump_1			85.0	5.0		0	0	true
 nagash_skill_node_set_tmb_arkhan_skill_dump_002	wh2_dlc09_skill_node_set_tmb_arkhan	the_rise_of_nagash_skilldump_2			86.0	5.0		0	0	true

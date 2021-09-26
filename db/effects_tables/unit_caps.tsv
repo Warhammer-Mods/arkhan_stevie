@@ -1,5 +1,5 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/unit_caps
+#effects_tables;3;db/effects_tables/unit_caps					
 wh2_dlc09_effect_unit_cap_steve_ark_grave_guard	unit_capacity.png	1	unit_capacity.png	campaign	true
 wh2_dlc09_effect_unit_cap_steve_ark_grave_guard_great	unit_capacity.png	1	unit_capacity.png	campaign	true
 wh2_dlc09_effect_unit_cap_steve_ark_terrorgheist	unit_capacity.png	1	unit_capacity.png	campaign	true

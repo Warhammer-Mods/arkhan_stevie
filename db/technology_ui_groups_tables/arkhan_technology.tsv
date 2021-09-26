@@ -1,5 +1,5 @@
 key	colour_red	colour_green	colour_blue	optional_background_image
-#technology_ui_groups_tables	6	db/technology_ui_groups_tables/arkhan_technology
+#technology_ui_groups_tables;6;db/technology_ui_groups_tables/arkhan_technology				
 tmb_01	175	200	200	staff_bottom.png
 tmb_02	175	200	200	tech_watermark_dynasty_6.png
 tmb_03	175	200	200	parchment_divider_left.png

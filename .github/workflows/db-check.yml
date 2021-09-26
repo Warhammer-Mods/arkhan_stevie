@@ -32,7 +32,7 @@ env:
   GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GIT_COMMITTER_NAME: "github-actions[bot]"
   GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
-  CSVLINT_PATH: ".csvlint" #relative to $HOME
+  CSVLINT_PATH: "csvlint" #relative to $HOME
 
 jobs:
 
@@ -98,15 +98,15 @@ jobs:
         echo "::set-output name=download-url::${download_url}"
 
         if [[ -z ${{ env.CSVLINT_PATH }} ]]; then
-          echo "CSVLINT_PATH=.csvlint" >> ${GITHUB_ENV}
+          echo "CSVLINT_PATH=${HOME}/csvlint" >> ${GITHUB_ENV}
         fi
 
     - name: Cache cvslint
       id: csvlint-cache
       uses: actions/cache@v2
       with:
-        key: ${{ runner.os }}-csvlint-${{ steps.csvlint-info.outputs.latest-version }}
-        path: ${{ env.CSVLINT_PATH }}
+        key: "${{ runner.os }}-csvlint@${{ steps.csvlint-info.outputs.latest-version }}"
+        path: "~/${{ env.CSVLINT_PATH }}"
 
     - if: steps.csvlint-cache.outputs.cache-hit == 'true'
       run: echo "${HOME}/${{ env.CSVLINT_PATH }}" >> ${GITHUB_PATH}

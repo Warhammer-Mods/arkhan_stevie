@@ -1,4 +1,4 @@
-local ardm = ardm
+local arkhan_expanded = arkhan_expanded
 
 -- General module info
 
@@ -34,7 +34,7 @@ local table_deployment_mode = "default"
 
 		 TODO: To be finalized
 ]]
-ardm:register_table({
+arkhan_expanded:register_table({
 	name = table_name,
 	build_number = table_build_number,
 	deployment_mode = table_deployment_mode,
@@ -95,7 +95,7 @@ ardm:register_table({
 -- Registering multiple tables within a single submod/file is possible.
 -- Below is an example of inline table definition.
 -- TODO: Define dictionary containing units and properties
-ardm:register_table({
+arkhan_expanded:register_table({
 	name = "vanilla",
 	build_number = 2,
 	deployment_mode = "own_provinces",

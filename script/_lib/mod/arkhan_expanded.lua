@@ -1,8 +1,8 @@
 ---Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.5.2-dev
+---@version 0.5.3-dev
 ---@class STEPHEN_ARKHAN_EXPANDED
----@alias ae STEPHEN_ARKHAN_EXPANDED
+---@alias arkhan_expanded STEPHEN_ARKHAN_EXPANDED
 ---Legacy alias
 ---@alias ardm STEPHEN_ARKHAN_EXPANDED
 local STEPHEN_ARKHAN_EXPANDED = {
@@ -531,13 +531,14 @@ function mod:init()
 end
 
 ---@diagnostic disable-next-line: lowercase-global
-function get_ae()
-	return core:get_static_object("ae");
+function arkhan_expanded()
+	return core:get_static_object("arkhan_expanded");
 end
-core:add_static_object( "ae", mod, false );
-_G.ae = get_ae();
+core:add_static_object( "arkhan_expanded", mod, false );
+_G.arkhan_expanded = arkhan_expanded();
 
 --legacy `ardm` object
+--TODO: Depreciated
 ---@diagnostic disable-next-line: lowercase-global
 function get_ardm()
 	return core:get_static_object("ardm");

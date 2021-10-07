@@ -1,6 +1,6 @@
-local ardm = ardm
+local arkhan_expanded = arkhan_expanded
 
-ardm:register_table({
+arkhan_expanded:register_table({
 	name = "arkhan_stevie",
 	build_number = 2,
 	deployment_mode = "default",
@@ -136,7 +136,7 @@ ardm:register_table({
 -- Below is an example of inline table definition.
 -- TODO: Define dictionary containing units and properties
 --[[ comment out for now
-ardm:register_table({
+arkhan_expanded:register_table({
 		name = "arkhan_stevie",
 		build_number = 1,
 		deployment_mode = "own_provinces",

@@ -25,6 +25,8 @@
 - Tomb King of Terror – passive trait that debuffs leadership and speed in a small radius around the caster.
 - Tomb King of Madness – passive trait that enables a contact effect that inflicts rampage on enemy units.
 - Tomb King of Sacrament – passive trait that enables a few bound spells.
+- `ardm` global script object is renamed to `arkhan_expanded`
+  - `ardm` object continues to exist as deprecated (see Deprecated)
 
   **Skill changes**:
 
@@ -46,6 +48,10 @@
   - Black Tower of Arkhan now provides a more thematic garrison.
   - Arkhan's 'Rain of Souls' army ability now has a new visual.
   - 'Ethereal Reaping' technology now enables the passive ability 'Wayfarer' for Cairn Wraiths, Hexwraiths & Mortis Engine units.
+
+### Deprecated
+
+- `ardm` script object is deprecated and should be accessed via `arkhan_expanded` instead.
 
 ### Fixed
 

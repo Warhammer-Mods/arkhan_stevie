@@ -1,4 +1,4 @@
-local ae = ae;
+local arkhan_expanded = arkhan_expanded;
 
 local arkhan_ai_difficulty_modifiers = {
 	["easy"] = "arkhan_difficulty_AI_easy",
@@ -10,7 +10,7 @@ local arkhan_ai_difficulty_modifiers = {
 
 local faction_str = "wh2_dlc09_tmb_followers_of_nagash"
 
-function ae:setup_ai_arkhan_modifiers()
+function arkhan_expanded:setup_ai_arkhan_modifiers()
 
 	local faction = cm:model():world():faction_by_key(faction_str);
 	local difficulty_str = cm:get_difficulty(true);
@@ -33,7 +33,7 @@ end
 
 cm:add_first_tick_callback(
 	function()
-		ae:log( "Setting up Arkhan AI difficulty modifiers…" );
-		ae:setup_ai_arkhan_modifiers();
+		arkhan_expanded:log( "Setting up Arkhan AI difficulty modifiers…" );
+		arkhan_expanded:setup_ai_arkhan_modifiers();
 	end
 );

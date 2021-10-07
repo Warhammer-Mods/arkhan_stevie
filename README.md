@@ -153,7 +153,7 @@ TBA
 
 ### Public API
 
-- `ardm:register_table(table)`
+- `arkhan_expanded:register_table(table)`
   - `table`:
 
 ```lua
@@ -200,9 +200,9 @@ Other options are quite self-explanatory.
 `script/campaign/mod/my_example_submod.lua`:
 
 ```lua
-local ardm = ardm
+local arkhan_expanded = arkhan_expanded
 
-ardm:register_table({
+arkhan_expanded:register_table({
   name = "arkhans_pets",
   build_number = 1,
   deployment_mode = "default",
@@ -243,7 +243,7 @@ ardm:register_table({
     }
   })
 
-  ardm:register_table({
+  arkhan_expanded:register_table({
     name = "arkhans_pets",
     build_number = 1,
     deployment_mode = "own_provinces",

@@ -41,8 +41,7 @@ env:
   LUA_VERSION: "5.1"
   LUAROCKS_VERSION: "3.7.0"
   CUSTOM_LUA_GLOBALS: >-
-    ae
-    ardm
+    arkhan_expanded    
 
 jobs:
 

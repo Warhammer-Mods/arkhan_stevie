@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 CONFIG_FILE=${LUACHECK_CONFIG:-'.luacheckrc'}
-LUA_VENDOR_FILES=${VENDOR_PATH:-'.vscode/autocomplete'}
+LUA_VENDOR_FILES=${VENDOR_PATH:-'.github/autocomplete'}
+SHOW_GLOBALS_SCRIPT=${SHOW_GLOBALS_SCRIPT:-'.github/show_globals.lua'}
 
 CUSTOM_VARS=()
 if [[ "${CUSTOM_LUA_GLOBALS}" ]]; then
@@ -44,7 +45,7 @@ lua_globals=$(
   for f in $(
     find ${LUA_VENDOR_FILES} -type f -iname "*.lua"
   ); do 
-    lua .vscode/show_globals.lua W < $f | 
+    lua ${SHOW_GLOBALS_SCRIPT} W < $f | 
     awk -F"\t" '{printf "	\"%s\",\n", $2}'
   done
   
@@ -63,6 +64,12 @@ lua_globals=$(
 config="globals = {
 ${lua_globals}
 }"
-perl -0777pe 's/\n*globals\s*=\s*[^\\{}]*(?:\\.[\\{}]*)*(?<!\\)(\{(?>\\.|[^{}]|(?1))*})\n*/\n/g' ${CONFIG_FILE} \
-  > ${CONFIG_FILE}.tmp && mv ${CONFIG_FILE}.tmp ${CONFIG_FILE}
-printf '\n%s\n' "${config}" >> ${CONFIG_FILE}
+
+# matches multiline globals config
+regex='s/\n*globals\s*=\s*[^\\{}]*(?:\\.[\\{}]*)*(?<!\\)(\{(?>\\.|[^{}]|(?1))*})\n*/\n/g'
+
+for file in $CONFIG_FILE; do
+  perl -0777pe ${regex} ${file} \
+    > ${file}.tmp && mv ${file}.tmp ${file}
+  printf '\n%s\n' "${config}" >> ${file}
+done

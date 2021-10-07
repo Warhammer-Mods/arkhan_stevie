@@ -27,16 +27,18 @@ on:
   workflow_dispatch:
 
 env:
-  FILES_TO_CHECK: >-
-    script
+  # Include these files as regular expression
+  FILES_TO_CHECK: script/.*
   GIT_AUTHOR_NAME: "github-actions[bot]"
   GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GIT_COMMITTER_NAME: "github-actions[bot]"
   GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
-  VENDOR_PATH: .vscode/autocomplete
-  LUA_VERSION: "5.1"
-  LUAROCKS_VERSION: "3.7.0"
-  LUACHECK_CONFIG: .luacheckrc
+  VENDOR_PATH: .github/autocomplete
+  SHOW_GLOBALS_SCRIPT: .github/show_globals.lua
+  UPDATE_LUA_GLOBALS_SCRIPT: .github/update_lua_globals.sh
+  LUACHECK_CONFIG: >-
+    .luacheckrc
+    .github/linters/.luacheckrc
   CUSTOM_LUA_GLOBALS: >-
     ae
     ardm
@@ -54,17 +56,6 @@ jobs:
         persist-credentials: false
         fetch-depth: 0
 
-    - uses: leafo/gh-actions-lua@v8.0.0
-      with:
-        luaVersion: ${{ env.LUA_VERSION }}
-        
-    - uses: leafo/gh-actions-luarocks@v4.1.0
-      with:
-        luarocksVersion: ${{ env.LUAROCKS_VERSION }}
-        
-    - name: Install luacheck
-      run: luarocks install luacheck
-
     - name: Reset autocomplete
       run: rm -rfv ${{ env.VENDOR_PATH }}
 
@@ -75,13 +66,13 @@ jobs:
         path: ${{ env.VENDOR_PATH }}
 
     - name: Remove PJ-autocomplete meta files
-      run: rm -rf ${{ env.VENDOR_PATH }}/{.git,.github}
+      run: rm -rf ${{ env.VENDOR_PATH }}/{.git,.github,.vscode}
 
     - name: Set Lua globals from vendor path
       id: lua-globals
       run: |
-        chmod +x .vscode/update_lua_globals.sh
-        .vscode/update_lua_globals.sh
+        chmod +x ${{ env.UPDATE_LUA_GLOBALS_SCRIPT }}
+        ${{ env.UPDATE_LUA_GLOBALS_SCRIPT }}
 
     - name: Get file changes
       id: changes
@@ -102,22 +93,15 @@ jobs:
           echo "::set-output name=clean::false"
         fi
 
-    - name: Luacheck Lint
-      id: luacheck
-      shell: bash --noprofile --norc {0}
-      run: |
-        echo "::add-matcher::.github/luacheck-plain.json"
-        luacheck ${{ env.FILES_TO_CHECK }} \
-          --formatter plain \
-          --codes --ranges
-        exitcode=$?
-        echo "::remove-matcher owner=luacheck-plain_error::"
-        echo "::remove-matcher owner=luacheck-plain_warning::"
-        if [ "$exitcode" -gt 1 ]; then
-          exit $exitcode;
-        else
-          exit 0;
-        fi
+    - name: Lua Lint
+      uses: github/super-linter/slim@v4
+      env:
+        VALIDATE_ALL_CODEBASE: true
+        VALIDATE_LUA: true
+        DEFAULT_BRANCH: master
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        FILTER_REGEX_INCLUDE: ${{ env.FILES_TO_CHECK }}
+        USE_FIND_ALGORITHM: true
 
     - name: Upload updated files
       if: steps.changes.outputs.clean == 'false'

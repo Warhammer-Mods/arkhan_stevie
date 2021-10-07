@@ -14,9 +14,9 @@ local table_name = "vanilla"
 local table_build_number = 2
 
 --[[ Deployment mode of units. Following modes are supported:
-			"default": spawn units globally upon game start
-			"own_provinces": spawn units for own provinces only once fully conquered.
-				Note: units will stay even if the province is lost.
+		"default": spawn units globally upon game start
+		"own_provinces": spawn units for own provinces only once fully conquered.
+		Note: units will stay in the corresponding mercenary pool even if the province is lost.
 ]]
 local table_deployment_mode = "default"
 

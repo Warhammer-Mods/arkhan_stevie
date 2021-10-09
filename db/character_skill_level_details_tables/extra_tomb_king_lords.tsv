@@ -1,5 +1,5 @@
 level	skill_key	faction_key	campaign_key	subculture_key	image_path	unlocked_at_rank
-#character_skill_level_details_tables	0	db/character_skill_level_details_tables/extra_tomb_king_lords
+#character_skill_level_details_tables;0;db/character_skill_level_details_tables/extra_tomb_king_lords						
 1	stephen_skill_tmb_tomb_king_mount_warsphinx				x	17
 1	stephen_skill_tmb_tomb_king_mount_steed				x	3
 1	stephen_skill_tmb_tomb_king_mount_chariot				x	13

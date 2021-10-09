@@ -1,5 +1,5 @@
 key	character_skill_node_set_key	character_skill_key	faction_key	campaign_key	tier	indent	subculture	points_on_creation	required_num_parents	visible_in_ui
-#character_skill_nodes_tables	5	db/character_skill_nodes_tables/extra_tomb_king_lords
+#character_skill_nodes_tables;5;db/character_skill_nodes_tables/extra_tomb_king_lords										
 stephen_skill_tmb_tomb_king_army_0	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc09_skill_tmb_lord_army_base			0.0	4.0		0	0	true
 stephen_skill_tmb_tomb_king_army_1	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc09_skill_tmb_army_buff_basic_archers			1.0	4.0		0	0	true
 stephen_skill_tmb_tomb_king_army_10	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc09_skill_tmb_army_buff_vet_infantry			10.0	4.0		0	0	true
@@ -29,7 +29,7 @@ stephen_skill_tmb_tomb_king_mount_skeletal_steed	stephen_skill_node_set_tmb_tomb
 stephen_skill_tmb_tomb_king_mount_skeleton_chariot	stephen_skill_node_set_tmb_tomb_king_vampire	stephen_skill_tmb_tomb_king_mount_chariot			2.0	0.0		0	0	true
 stephen_skill_tmb_tomb_king_personal_0	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc09_skill_tmb_personal_base			0.0	2.0		0	0	true
 stephen_skill_tmb_tomb_king_personal_1	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc09_skill_tmb_personal_conqueror			1.0	2.0		0	0	true
-stephen_skill_tmb_tomb_king_personal_10	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc09_skill_tmb_personal_10_arkhan			10.0	2.0		0	4	true
+stephen_skill_tmb_tomb_king_personal_10	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc09_skill_tmb_personal_10			10.0	2.0		0	4	true
 stephen_skill_tmb_tomb_king_personal_2	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc11_skill_all_lord_self_blade_master			2.0	2.0		0	0	true
 stephen_skill_tmb_tomb_king_personal_3	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc11_skill_all_lord_self_hard_to_hit			3.0	2.0		0	0	true
 stephen_skill_tmb_tomb_king_personal_4	stephen_skill_node_set_tmb_tomb_king_vampire	wh2_dlc11_skill_all_lord_self_self_indomitable			4.0	2.0		0	0	true

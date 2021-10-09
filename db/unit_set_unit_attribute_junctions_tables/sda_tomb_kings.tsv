@@ -1,5 +1,5 @@
 key	unit_set	unit_attribute
-#unit_set_unit_attribute_junctions_tables	0	db/unit_set_unit_attribute_junctions_tables/sda_tomb_kings
+#unit_set_unit_attribute_junctions_tables;0;db/unit_set_unit_attribute_junctions_tables/sda_tomb_kings		
 crypt_ghoul_stalk	wh2_dlc09_tmb_inf_crypt_ghouls	stalk
 dire_wolf_strider	wh2_dlc09_tmb_mon_dire_wolves	stalk
 hexwraith_strider	wh2_dlc09_tmb_cav_hexwraiths	strider

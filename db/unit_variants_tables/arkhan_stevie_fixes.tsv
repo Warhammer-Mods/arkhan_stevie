@@ -1,5 +1,5 @@
 name	faction	unit	variant	unit_card
-#unit_variants_tables	5	db/unit_variants_tables/arkhan_stevie_fixes
+#unit_variants_tables;5;db/unit_variants_tables/arkhan_stevie_fixes				
 wh2_dlc09_tmb_inf_crypt_ghouls		wh2_dlc09_tmb_inf_crypt_ghouls	wh_vmp_ghoul	wh2_dlc09_tmb_crypt_ghouls
 wh2_dlc09_tmb_mon_fell_bats		wh2_dlc09_tmb_mon_fell_bats	wh_vmp_bat	wh2_dlc09_tmb_fell_bats
 wh2_dlc09_tmb_mon_dire_wolves		wh2_dlc09_tmb_mon_dire_wolves	wh_vmp_dire_wolves	wh2_dlc09_tmb_dire_wolves

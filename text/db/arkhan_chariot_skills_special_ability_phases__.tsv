@@ -1,3 +1,6 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/arkhan_chariot_skills_special_ability_phases__.loc
+#Loc PackedFile;1;text/db/arkhan_chariot_skills_special_ability_phases__.loc		
 special_ability_phases_onscreen_name_arkhan_unit_passive_devastating_charge		true
+special_ability_phases_onscreen_name_skill_arkhan_lord_passive_aoe_drain		true
+special_ability_phases_onscreen_name_skill_arkhan_lord_passive_aoe_debuff		true
+special_ability_phases_onscreen_name_skill_arkhan_lord_passive_aoe_rampage		true

@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/arkhan_attrition_campaign_map_attritions__.loc
+#Loc PackedFile;1;text/db/arkhan_attrition_campaign_map_attritions__.loc		
 campaign_map_attritions_campaign_map_tooltip_taint_of_nagash	This army is suffering [[img:icon_attrition]][[/img]]attrition due to the lingering Taint of Nagash on the land.	true
 campaign_map_attritions_unit_card_tooltip_taint_of_nagash	Foul necromantic energy besets the enemy!	true
 campaign_map_attritions_unit_immunity_text_taint_of_nagash	Taint of Nagash	true

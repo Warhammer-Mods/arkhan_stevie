@@ -1,5 +1,5 @@
 attrition	unit
-#campaign_map_attrition_unit_immunities_tables	0	db/campaign_map_attrition_unit_immunities_tables/sda_tomb_kings
+#campaign_map_attrition_unit_immunities_tables;0;db/campaign_map_attrition_unit_immunities_tables/sda_tomb_kings	
 desert	steve_ark_zmb
 non_vampire_territory	steve_ark_zmb
 vampire_territory	steve_ark_zmb

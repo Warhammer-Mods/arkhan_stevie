@@ -1,0 +1,3 @@
+effect_key	bonus_value_id	battle_context_key
+#effect_bonus_value_battle_context_junctions_tables;0;db/effect_bonus_value_battle_context_junctions_tables/sda_tomb_kings		
+stephen_physical_defence	unit_damage_resistance_physical_mod	fighting_force_status_yours_defending

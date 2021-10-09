@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/sda_tomb_kings_core_land_units__.loc
+#Loc PackedFile;1;text/db/sda_tomb_kings_core_land_units__.loc		
 land_units_onscreen_name_steve_ark_zmb	Zombies	true
 land_units_onscreen_name_steve_ark_zmb_summon	Zombies	true
 land_units_onscreen_name_steve_ark_grave_guard	Grave Guard	true
@@ -25,3 +25,6 @@ land_units_onscreen_name_steve_ark_skeleton_archers	Skeleton Archers	true
 land_units_onscreen_name_steve_ark_zombie_dragon	Zombie Dragon	true
 land_units_onscreen_name_steve_ark_tmb_mon_ushabti	Ushabti	true
 land_units_onscreen_name_steve_ark_tmb_mon_ushabti_great	Ushabti (Great Bow)	true
+land_units_onscreen_name_stephen_tmb_inf_tomb_guard	Tomb Guard	true
+land_units_onscreen_name_stephen_tmb_inf_tomb_guard_halberd	Tomb Guard (Halberds)	true
+land_units_onscreen_name_stephen_tmb_art_screaming_skull_catapult	Screaming Skull Catapult	true

@@ -1,14 +1,23 @@
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
-#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/arkhan_technology
+#unit_set_to_unit_junctions_tables;0;db/unit_set_to_unit_junctions_tables/arkhan_technology					
 skeleton_set	steve_ark_skeleton_spearmen				false
 skeleton_set	steve_ark_skeleton_warriors				false
 skeleton_set	steve_ark_skeleton_archers				false
+skeleton_set	steve_ark_grave_guard				false
+skeleton_set	steve_ark_grave_guard_great				false
+skeleton_set	steve_ark_nagashizzar_guard				false
+skeleton_set	stephen_tmb_inf_tomb_guard				false
+skeleton_set	stephen_tmb_inf_tomb_guard_halberd				false
 grave_guard_set	steve_ark_grave_guard				false
 grave_guard_set	steve_ark_grave_guard_great				false
 grave_guard_set	steve_ark_nagashizzar_guard				false
+grave_guard_set	stephen_tmb_inf_tomb_guard				false
+grave_guard_set	stephen_tmb_inf_tomb_guard_halberd				false
 ethereal_set	steve_ark_cairn_wraith				false
 ethereal_set	wh2_dlc09_tmb_cav_hexwraiths				false
 ethereal_set	steve_ark_mortis_engine				false
+ushabti_set	steve_ark_tmb_mon_ushabti				false
+ushabti_set	steve_ark_tmb_mon_ushabti_great				false
 arkhan_vampires_all	steve_ark_crypt_horror				false
 arkhan_vampires_all	steve_ark_grave_guard				false
 arkhan_vampires_all	steve_ark_grave_guard_great				false
@@ -32,6 +41,8 @@ arkhan_vampires_all	steve_ark_zombie_dragon				false
 tomb_kings_all	steve_ark_crypt_horror				false
 tomb_kings_all	steve_ark_grave_guard				false
 tomb_kings_all	steve_ark_grave_guard_great				false
+tomb_kings_all	stephen_tmb_inf_tomb_guard				false
+tomb_kings_all	stephen_tmb_inf_tomb_guard_halberd				false
 tomb_kings_all	steve_ark_mourngul				false
 tomb_kings_all	steve_ark_terrorgheist				false
 tomb_kings_all	steve_ark_vargheist				false
@@ -86,6 +97,10 @@ ghoul_set	steve_ark_crypt_horror				false
 ghoul_set	wh2_dlc09_tmb_inf_crypt_ghouls				false
 wolves_bats_set	wh2_dlc09_tmb_mon_fell_bats				false
 wolves_bats_set	wh2_dlc09_tmb_mon_dire_wolves				false
+wolves_bats_set	wh2_dlc09_tmb_inf_crypt_ghouls				false
+wolves_bats_set	steve_ark_cairn_wraith				false
+wolves_bats_set	wh2_dlc09_tmb_cav_hexwraiths				false
+wolves_bats_set	steve_ark_mortis_engine				false
 arkhan_vampires_all_rank_7	steve_ark_nagashizzar_guard				false
 arkhan_vampires_all_rank_7	steve_ark_crypt_horror				false
 arkhan_vampires_all_rank_7	steve_ark_grave_guard				false
@@ -106,3 +121,6 @@ arkhan_vampires_all_rank_7	steve_ark_mortis_engine				false
 arkhan_vampires_all_rank_7	steve_ark_zmb_gunner_mob				false
 arkhan_vampires_all_rank_7	steve_ark_zmb_handgunner_mob				false
 arkhan_vampires_all_rank_7	steve_ark_prometheans_gunnery_mob				false
+arkhan_vampires_all_rank_7	stephen_tmb_inf_tomb_guard				false
+arkhan_vampires_all_rank_7	stephen_tmb_inf_tomb_guard_halberd				false
+arkhan_vampires_all_rank_7	stephen_tmb_art_screaming_skull_catapult				false

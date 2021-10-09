@@ -1,3 +1,3 @@
 key	faction_key	campaign_key	agent_key	subculture	for_army	for_navy	agent_subtype_key
-#character_skill_node_sets_tables	2	db/character_skill_node_sets_tables/sda_tomb_kings
+#character_skill_node_sets_tables;2;db/character_skill_node_sets_tables/sda_tomb_kings							
 sda_skill_node_set_steve_ark_tmb_liche_priest_vampire			wizard		false	false	steve_ark_tmb_liche_priest_vampire

@@ -1,3 +1,3 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/province_commandment_levels
+#effects_tables;3;db/effects_tables/province_commandment_levels					
 arkhan_necromantic_dummy	necromantic_web.png	1	necromantic_web.png	campaign	true

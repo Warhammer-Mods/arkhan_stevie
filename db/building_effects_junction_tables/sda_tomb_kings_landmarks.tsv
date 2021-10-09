@@ -1,5 +1,5 @@
 building	effect	value	effect_scope	value_damaged	value_ruined
-#building_effects_junction_tables	3	db/building_effects_junction_tables/sda_tomb_kings_landmarks
+#building_effects_junction_tables;3;db/building_effects_junction_tables/sda_tomb_kings_landmarks					
 wh2_dlc09_special_black_tower_of_arkhan	wh_main_effect_military_force_winds_of_magic_depletion_mod_other	20.0	faction_to_force_own	10.0	0.0
 wh2_dlc09_special_black_tower_of_arkhan	wh_main_effect_religion_conversion_undeath	5.0	faction_to_region_own	3.0	0.0
 wh2_dlc09_special_black_tower_of_arkhan	wh_main_effect_character_stat_mod_ward_save_magic	5.0	faction_to_force_own	5.0	0.0

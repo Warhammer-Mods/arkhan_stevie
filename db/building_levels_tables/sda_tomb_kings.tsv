@@ -1,5 +1,5 @@
 level_name	chain	level	only_in_capital	create_time	create_cost	upkeep_cost	commodity	military_prestige	naval_prestige	economic_prestige	enlightenment_prestige	faction_unique	religion_requirement	first_in_world_bundle	resource_requirement	can_convert	building_instance_key	audio_building_type	should_show_building_level_in_ui_for_technology	health_override	development_point_cost	can_be_damaged	primary_slot_building_building_level_requirement	visible_in_ui	food_cost	slave_cap_contribution
-#building_levels_tables	16	db/building_levels_tables/sda_tomb_kings
+#building_levels_tables;16;db/building_levels_tables/sda_tomb_kings																										
 arkhan_minor_walls_1	arkhan_minor_walls	0	false	3	1500	0		0	0	0	0	false				true	wh2_dlc09_tmb_garrison		false	0.0	0	true	2	true	0	0
 arkhan_minor_walls_2	arkhan_minor_walls	1	false	4	3000	0		0	0	0	0	false				true	wh2_dlc09_tmb_garrison		false	0.0	0	true	3	true	0	0
 arkhan_major_walls_1	arkhan_major_walls	0	false	3	2500	0		0	0	0	0	false				true	wh2_dlc09_tmb_walls		false	0.0	0	true	2	true	0	0
@@ -19,9 +19,9 @@ arkhan_vmp_guns_powder_4	arkhan_vmp_guns_powder	3	false	4	10000	0		0	0	0	0	false
 arkhan_vmp_balefire_1	arkhan_vmp_balefire	0	false	2	750	0		0	0	0	0	false				true	arkhan_vmp_balefire		false	0.0	0	true	1	true	0	0
 arkhan_vmp_balefire_2	arkhan_vmp_balefire	1	false	3	1500	0		0	0	0	0	false				true	arkhan_vmp_balefire		false	0.0	0	true	2	true	0	0
 arkhan_vmp_balefire_3	arkhan_vmp_balefire	2	false	4	3000	0		0	0	0	0	false				true	arkhan_vmp_balefire		false	0.0	0	true	3	true	0	0
-arkhan_vmp_great_necropolis_1	arkhan_vmp_great_necropolis	0	false	3	5000	0		0	0	0	0	false				true	arkhan_vmp_great_necropolis		false	0.0	0	true	1	true	0	0
-arkhan_vmp_great_necropolis_2	arkhan_vmp_great_necropolis	1	false	4	7000	0		0	0	0	0	false				true	arkhan_vmp_great_necropolis		false	0.0	0	true	3	true	0	0
-arkhan_vmp_great_necropolis_3	arkhan_vmp_great_necropolis	2	false	5	10000	0		0	0	0	0	false				true	arkhan_vmp_great_necropolis		false	0.0	0	true	5	true	0	0
+arkhan_vmp_great_necropolis_1	arkhan_vmp_great_necropolis	0	false	2	1000	0		0	0	0	0	false				true	arkhan_vmp_great_necropolis		false	0.0	0	true	1	true	0	0
+arkhan_vmp_great_necropolis_2	arkhan_vmp_great_necropolis	1	false	4	6000	0		0	0	0	0	false				true	arkhan_vmp_great_necropolis		false	0.0	0	true	3	true	0	0
+arkhan_vmp_great_necropolis_3	arkhan_vmp_great_necropolis	2	false	5	12000	0		0	0	0	0	false				true	arkhan_vmp_great_necropolis		false	0.0	0	true	5	true	0	0
 wh2_dlc09_tmb_arkhan_burial_mound_2	wh2_dlc09_tmb_arkhan_burial_mound	1	false	3	5000	0		0	0	0	0	false				true	wh2_dlc09_tmb_arkhan_burial_mound		false	0.0	0	true	3	true	0	0
 arkhan_vmp_ushabti_1	arkhan_vmp_ushabti	0	false	3	3000	0		0	0	0	0	false				true	arkhan_vmp_ushabti		false	0.0	0	true	3	true	0	0
 arkhan_vmp_ushabti_2	arkhan_vmp_ushabti	1	false	4	6000	0		0	0	0	0	false				true	arkhan_vmp_ushabti		false	0.0	0	true	4	true	0	0

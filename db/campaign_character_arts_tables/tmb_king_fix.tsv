@@ -1,5 +1,5 @@
 art_set_id	level	season	age	portrait	uniform	card	info	sea_uniform	navy_uniform	land_animation	sea_animation	navy_animation	id	religion	land_animation_vfx_filter	sea_animation_vfx_filter	navy_animation_vfx_filter
-#campaign_character_arts_tables	7	db/campaign_character_arts_tables/tmb_king_fix
+#campaign_character_arts_tables;7;db/campaign_character_arts_tables/tmb_king_fix																	
 stephen_art_set_tmb_tomb_king_01	0	none	0		wh2_dlc09_uniform_tmb_tomb_king_01			wh2_dlc09_campaign_tmb_ship_transport	wh2_dlc09_campaign_tmb_ship_transport	cam_hu1_empire_sword_and_shield	cam_transport_ship_06	cam_transport_ship_06	1279683		0	0	0
 stephen_art_set_tmb_tomb_king_02	0	none	0		wh2_dlc09_uniform_tmb_tomb_king_02			wh2_dlc09_campaign_tmb_ship_transport	wh2_dlc09_campaign_tmb_ship_transport	cam_hu1_empire_sword_and_shield	cam_transport_ship_06	cam_transport_ship_06	1279684		0	0	0
 stephen_art_set_tmb_tomb_king_03	0	none	0		wh2_dlc09_uniform_tmb_tomb_king_03			wh2_dlc09_campaign_tmb_ship_transport	wh2_dlc09_campaign_tmb_ship_transport	cam_hu1_empire_sword_and_shield	cam_transport_ship_06	cam_transport_ship_06	1279685		0	0	0

@@ -604,14 +604,14 @@ if core:is_campaign() then
 
 	cm:add_saving_game_callback(
 		function(context)
-			cm:save_named_value(tostring(mod) .. "state", mod.state, context);
+			cm:save_named_value(tostring(mod) .. "_state", mod.state, context);
 		end
 	);
 
 	cm:add_loading_game_callback(
 		function(context)
 			if cm:is_new_game() == false then
-				mod.state = cm:load_named_value(tostring(mod) .. "state", mod.state, context);
+				mod.state = cm:load_named_value(tostring(mod) .. "_state", mod.state, context);
 			end
 		end
 	);

@@ -23,7 +23,7 @@ function arkhan_expanded:setup_ai_arkhan_modifiers()
 			local difficulty_effect = arkhan_ai_difficulty_modifiers[difficulty_str];
 			if faction:is_quest_battle_faction() == false and faction:has_effect_bundle(difficulty_effect) == false then
 				cm:apply_effect_bundle(difficulty_effect, faction:name(), 0);
-				self:log( "Permanently applied [",  difficulty_effect, "] to [", faction:name(), "]" );
+				self.log( "Permanently applied [",  difficulty_effect, "] to [", faction:name(), "]" );
 				return true;
 			end
 		end
@@ -33,7 +33,7 @@ end
 
 cm:add_first_tick_callback(
 	function()
-		arkhan_expanded:log( "Setting up Arkhan AI difficulty modifiers…" );
+		arkhan_expanded.log( "Setting up Arkhan AI difficulty modifiers…" );
 		arkhan_expanded:setup_ai_arkhan_modifiers();
 	end
 );

@@ -1,0 +1,3 @@
+key	type	damage	message_event_association	is_snow
+#campaign_map_attritions_tables;3;db/campaign_map_attritions_tables/arkhan_attrition				
+taint_of_nagash	bonus_value_enabled	attrition_awakened_forest		false

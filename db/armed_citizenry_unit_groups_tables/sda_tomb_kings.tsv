@@ -1,11 +1,13 @@
 unit_group
-#armed_citizenry_unit_groups_tables	0	db/armed_citizenry_unit_groups_tables/sda_tomb_kings
+#armed_citizenry_unit_groups_tables;0;db/armed_citizenry_unit_groups_tables/sda_tomb_kings
 wh2_dlc09_tmb_inf_crypt_ghouls
 steve_ark_cairn_wraith
 steve_ark_grave_guard
 wh2_dlc09_tmb_cav_hexwraiths
 wh2_dlc09_tmb_mon_fell_bats
 steve_ark_crypt_horror
+steve_ark_terrorgheist
+steve_ark_zombie_dragon
 arkhan_garrison_1
 arkhan_garrison_2
 arkhan_walls_1
@@ -14,3 +16,4 @@ arkhan_walls_3
 arkhan_great_necropolis_1
 arkhan_great_necropolis_2
 arkhan_great_necropolis_3
+stephen_tmb_inf_tomb_guard_halberd

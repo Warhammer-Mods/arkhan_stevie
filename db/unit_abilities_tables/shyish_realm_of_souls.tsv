@@ -1,5 +1,5 @@
 key	superseded_abilities_set	requires_effect_enabling	icon_name	overpower_option	type	video	uniqueness	is_unit_upgrade	is_hidden_in_ui	source_type	is_hidden_in_ui_for_enemy
-#unit_abilities_tables	16	db/unit_abilities_tables/shyish_realm_of_souls
+#unit_abilities_tables;16;db/unit_abilities_tables/shyish_realm_of_souls											
 followers_of_nagash_realm_of_souls_1		false	followers_of_nagash_passive_realm_of_souls_tier_1		wh_type_augment		wh_main_anc_group_common	true	false	faction	false
 followers_of_nagash_realm_of_souls_2		false	followers_of_nagash_passive_realm_of_souls_tier_2		wh_type_augment		wh_main_anc_group_uncommon	true	false	faction	false
 followers_of_nagash_realm_of_souls_3		false	followers_of_nagash_passive_realm_of_souls_tier_3		wh_type_augment		wh_main_anc_group_rare	true	false	faction	false

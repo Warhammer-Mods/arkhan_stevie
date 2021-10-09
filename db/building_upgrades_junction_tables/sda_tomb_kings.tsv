@@ -1,5 +1,5 @@
 from	to
-#building_upgrades_junction_tables	0	db/building_upgrades_junction_tables/sda_tomb_kings
+#building_upgrades_junction_tables;0;db/building_upgrades_junction_tables/sda_tomb_kings	
 arkhan_minor_walls_1	arkhan_minor_walls_2
 arkhan_major_walls_1	arkhan_major_walls_2
 arkhan_major_walls_2	arkhan_major_walls_3
@@ -14,3 +14,4 @@ arkhan_vmp_balefire_1	arkhan_vmp_balefire_2
 arkhan_vmp_balefire_2	arkhan_vmp_balefire_3
 arkhan_vmp_great_necropolis_1	arkhan_vmp_great_necropolis_2
 arkhan_vmp_great_necropolis_2	arkhan_vmp_great_necropolis_3
+arkhan_vmp_ushabti_1	arkhan_vmp_ushabti_2

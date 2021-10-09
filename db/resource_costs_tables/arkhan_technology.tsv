@@ -1,4 +1,4 @@
 id	treasury_cost	expenditure_type	income_type
-#resource_costs_tables	2	db/resource_costs_tables/arkhan_technology
+#resource_costs_tables;2;db/resource_costs_tables/arkhan_technology			
 tech_rank_7_unlock	0	TECHNOLOGY	TECHNOLOGY
 tech_army_ability_unlock	0	TECHNOLOGY	TECHNOLOGY

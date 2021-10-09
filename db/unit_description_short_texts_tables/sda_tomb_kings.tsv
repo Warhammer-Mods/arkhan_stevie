@@ -1,5 +1,5 @@
 key
-#unit_description_short_texts_tables	0	db/unit_description_short_texts_tables/sda_tomb_kings
+#unit_description_short_texts_tables;0;db/unit_description_short_texts_tables/sda_tomb_kings
 steve_ark_zmb
 steve_ark_zmb_summon
 steve_ark_grave_guard
@@ -20,3 +20,9 @@ steve_ark_zmb_handgunner_mob
 steve_ark_prometheans_gunnery_mob
 steve_ark_nagashizzar_guard
 steve_ark_skeleton_archers
+steve_ark_zombie_dragon
+steve_ark_tmb_mon_ushabti
+steve_ark_tmb_mon_ushabti_great
+stephen_tmb_inf_tomb_guard
+stephen_tmb_inf_tomb_guard_halberd
+stephen_tmb_art_screaming_skull_catapult

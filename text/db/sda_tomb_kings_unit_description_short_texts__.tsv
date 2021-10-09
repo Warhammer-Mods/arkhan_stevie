@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/sda_tomb_kings_unit_description_short_texts__.loc
+#Loc PackedFile;1;text/db/sda_tomb_kings_unit_description_short_texts__.loc		
 unit_description_short_texts_text_steve_ark_zmb	Zombies	true
 unit_description_short_texts_text_steve_ark_zmb_summon	Zombies	true
 unit_description_short_texts_text_steve_ark_grave_guard	Grave Guard	true
@@ -21,3 +21,4 @@ unit_description_short_texts_text_steve_ark_zmb_gunner_mob	Zombies (Pistols)	tru
 unit_description_short_texts_text_steve_ark_zmb_handgunner_mob	Zombies (Handgunners)	true
 unit_description_short_texts_text_steve_ark_prometheans_gunnery_mob	Gunnery Promethians 	true
 unit_description_short_texts_text_steve_ark_nagashizzar_guard	This massive formation was the black armoured might of the fortress of Nagash. Arkhan ended their silent guardianship of Nagashizzar, ordering them out to form the centre of his army.	true
+unit_description_short_texts_text_steve_ark_zombie_dragon	Zombie Dragons are the reanimated corpses of long-dead Dragons that were raised from their resting place within the Plain of Bones by the use of powerful Dark Magic.	true

@@ -1,4 +1,4 @@
 key	display_model	launch_fx	trail_fx	stationary_fx	impact	airborne_anim	landing_anim	tip_offset	trail_spin	launch_camera_shake	impact_bounce	impact_penetrate	impact_blood	impact_bounce_blood	impact_penetrate_blood
-#projectile_displays_tables	10	db/projectile_displays_tables/arkhan_technology
-arkhan_army_ability_rain_of_souls			wh2_dlc09_machine_casket_of_souls_trail		wh2_dlc09_casket_of_souls			0.0	true	wh_main_unit_launch_medium	wh2_dlc09_casket_of_souls	wh2_dlc09_casket_of_souls			
+#projectile_displays_tables;10;db/projectile_displays_tables/arkhan_technology															
+arkhan_army_ability_rain_of_souls			wh2_main_dark_doombolt_bomb_trail		wh2_main_spell_dark_magic_doombolt			0.0	true	wh_main_unit_launch_medium	wh2_dlc09_casket_of_souls	wh2_dlc09_casket_of_souls			
 steve_ark_archer_projectile	projectiles\wh_lzd_blowpipe_dart_01.rigid_model_v2		wh2_dlc12_machine_warp_lightning_rifle_trail_purple		wh_main_impact_very_small			-0.05	false		wh_main_bounce_impact	wh_main_entity_impact			

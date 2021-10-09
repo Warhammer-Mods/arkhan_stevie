@@ -1,4 +1,12 @@
 key	officer_1	officer_2	standard_bearer_1	standard_bearer_2	musician_1	musician_2	personality_location	additional_personalities
-#land_units_officers_tables	4	db/land_units_officers_tables/extra_tomb_king_lords
+#land_units_officers_tables;4;db/land_units_officers_tables/extra_tomb_king_lords								
 stephen_tmb_tomb_king_chariot_officer								stephen_tmb_tomb_king_chariot_rider
 stephen_tmb_tomb_king_warsphinx_officer	stephen_tmb_tomb_king_warsphinx						front	
+stephen_tmb_tomb_king_grief_chariot_officer								stephen_tmb_tomb_king_grief_chariot_rider
+stephen_tmb_tomb_king_grief_warsphinx_officer	stephen_tmb_tomb_king_grief_warsphinx						front	
+stephen_tmb_tomb_king_terror_chariot_officer								stephen_tmb_tomb_king_terror_chariot_rider
+stephen_tmb_tomb_king_terror_warsphinx_officer	stephen_tmb_tomb_king_terror_warsphinx						front	
+stephen_tmb_tomb_king_madness_chariot_officer								stephen_tmb_tomb_king_madness_chariot_rider
+stephen_tmb_tomb_king_madness_warsphinx_officer	stephen_tmb_tomb_king_madness_warsphinx						front	
+stephen_tmb_tomb_king_sacrament_chariot_officer								stephen_tmb_tomb_king_sacrament_chariot_rider
+stephen_tmb_tomb_king_sacrament_warsphinx_officer	stephen_tmb_tomb_king_sacrament_warsphinx						front	

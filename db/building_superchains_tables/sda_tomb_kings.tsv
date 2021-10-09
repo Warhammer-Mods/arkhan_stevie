@@ -1,5 +1,5 @@
 key
-#building_superchains_tables	1	db/building_superchains_tables/sda_tomb_kings
+#building_superchains_tables;1;db/building_superchains_tables/sda_tomb_kings
 arkhan_awaken_battlefield
 arkhan_vmp_fell_tree
 arkhan_vmp_halls_dead
@@ -8,3 +8,4 @@ arkhan_major_walls
 arkhan_vmp_guns_powder
 arkhan_vmp_balefire
 arkhan_vmp_great_necropolis
+arkhan_vmp_ushabti

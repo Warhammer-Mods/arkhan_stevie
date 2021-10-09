@@ -1,15 +1,19 @@
 key	image_path	localised_name	localised_description	unlocked_at_rank	is_background_skill	is_female_only_background_skill	is_male_only_background_skill	background_weighting	influence_cost
-#character_skills_tables	5	db/character_skills_tables/extra_tomb_king_lords
+#character_skills_tables;5;db/character_skills_tables/extra_tomb_king_lords									
 stephen_skill_tmb_tomb_king_mount_steed	mount_skeletal_steed_tmb.png	Skeletal Steed	Long-dead destriers, awakened to serve their Unliving masters far beyond death.	3	false	false	false	0.0	0
-stephen_skill_tmb_tomb_king_mount_warsphinx	mount_warsphinx.png	Khemrian Warsphinx	Giant leonine statues, almost impervious to harm; they wade through foes, crushing them like bothersome insects.	13	false	false	false	0.0	0
-stephen_skill_tmb_tomb_king_mount_chariot	mount_chariot_of_the_gods.png	Chariot of the Gods	Its wheels ablaze with a mystical flame, the blessings of the gods are carried by this mighty chariot.	17	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_mount_chariot	mount_skeleton_chariot.png	Skeleton Chariot	The pride of Nehekharan armies, impacting enemy lines with bone-shattering force and grinding the corpses beneath their heavy wheels.	13	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_mount_warsphinx	mount_warsphinx.png	Khemrian Warsphinx	Giant leonine statues, almost impervious to harm; they wade through foes, crushing them like bothersome insects.	17	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_grief_mount_chariot	mount_chariot_of_the_gods.png	Chariot of the Gods	Its wheels ablaze with a mystical flame, the blessings of the gods are carried by this mighty chariot.	17	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_terror_mount_chariot	mount_chariot_of_the_gods.png	Chariot of the Gods	Its wheels ablaze with a mystical flame, the blessings of the gods are carried by this mighty chariot.	17	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_madness_mount_chariot	mount_chariot_of_the_gods.png	Chariot of the Gods	Its wheels ablaze with a mystical flame, the blessings of the gods are carried by this mighty chariot.	17	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_sacrament_mount_chariot	mount_chariot_of_the_gods.png	Chariot of the Gods	Its wheels ablaze with a mystical flame, the blessings of the gods are carried by this mighty chariot.	17	false	false	false	0.0	0
 stephen_skill_tmb_taint_of_nagash	skill_taint_of_nagash.png	Taint of Nagash	The taint of Nagash lingers. There's no escape.....	6	false	false	false	0.0	0
 stephen_skill_tmb_tomb_king_title	HIDDEN			0	false	false	false	0.0	0
-stephen_skill_tmb_tomb_king_blessed_blades	character_attack.png	Blessed Blades	This blessed blade channels the will of its master, carving a deadly swathe of terror and destruction.	9	false	false	false	0.0	0
-stephen_skill_tmb_tomb_king_desert_crown	character_influence.png	Crown of the Desert	Tomb Kings have ever reigned from their necropolis as they had always done, attempting to imitate the life they once knew and loved.	9	false	false	false	0.0	0
-stephen_skill_tmb_tomb_king_ancient_shields	character_defence.png	Royal Tomb Shield	These unliving Kings march into battle, forever protected by magical wards and incantations.	9	false	false	false	0.0	0
-stephen_skill_tmb_tomb_king_hunger_power	wh_main_lord_passive_the_hunger.png	Hunger for Power	The lust for power strives this Lord onward. Greater power is promised...... for a price.	9	false	false	false	0.0	0
-stephen_skill_tmb_tmb_king_innate_trait_1	trait_tomb_kings.png	Desert King		0	true	false	false	1.0	0
-stephen_skill_tmb_tmb_king_innate_trait_2	trait_tomb_kings.png	Undying Ruler		0	true	false	false	1.0	0
-stephen_skill_tmb_tmb_king_innate_trait_3	trait_dlc13_hertwig_driven_by_vengeance.png	Enraged		0	true	false	false	1.0	0
-stephen_skill_tmb_tmb_king_innate_trait_4	trait_vampire_counts.png	Lingering Taint		0	true	false	false	1.0	0
+stephen_skill_tmb_tomb_king_blessed_blades	character_attack.png	Blessed Blades	This blessed blade channels the will of its master, carving a deadly swathe of terror and destruction.	11	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_desert_crown	character_influence.png	Crown of the Desert	Tomb Kings have ever reigned from their necropolis as they had always done, attempting to imitate the life they once knew and loved.	11	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_ancient_shields	character_defence.png	Royal Tomb Shield	These unliving Kings march into battle, forever protected by magical wards and incantations.	11	false	false	false	0.0	0
+stephen_skill_tmb_tomb_king_hunger_power	wh_main_lord_passive_the_hunger.png	Hunger for Power	The lust for power strives this Lord onward. Greater power is promised...... for a price.	11	false	false	false	0.0	0
+stephen_skill_tmb_tmb_king_innate_trait_1	bloodline_necrarch.png	King of Grief		0	true	false	false	1.0	0
+stephen_skill_tmb_tmb_king_innate_trait_2	attribute_causes_terror.png	King of Terror		0	true	false	false	1.0	0
+stephen_skill_tmb_tmb_king_innate_trait_3	fractured_mind.png	King of Madness		0	true	false	false	1.0	0
+stephen_skill_tmb_tmb_king_innate_trait_4	books_of_nagash.png	King of Sacrament		0	true	false	false	1.0	0

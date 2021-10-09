@@ -1,7 +1,7 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/arkhan_technology_character_skills__.loc
-character_skills_localised_name_arkhan_skill_tmb_crypt_ghouls_crypt_horrors	Fiendish Ghouls	true
-character_skills_localised_description_arkhan_skill_tmb_crypt_ghouls_crypt_horrors	Though not truly Undead, Crypt Ghouls unconsciously feel the Dark Magic that surrounds the most powerful Undead lords and are drawn inexorably towards it. Incantations bring out latent power.	true
+#Loc PackedFile;1;text/db/arkhan_technology_character_skills__.loc		
+character_skills_localised_name_arkhan_skill_tmb_crypt_ghouls_crypt_horrors	Tainted Constructs	true
+character_skills_localised_description_arkhan_skill_tmb_crypt_ghouls_crypt_horrors	The faces of the gods gaze down from their daises, imposing monuments to Nehekhara's former prestige, but Nagash will consume them all in time.	true
 character_skills_localised_name_arkhan_skill_tmb_fell_bats_dire_wolves	Dark Creatures	true
 character_skills_localised_description_arkhan_skill_tmb_fell_bats_dire_wolves	Dire Wolves are the hunting hounds of the Vampires and their senses are as keen as they were in life. With a body as long as a grown man, Fell Bats are a fearsome sight. Foul magic only makes these creatures stronger.	true
 character_skills_localised_name_arkhan_skill_tmb_grave_guard	Grave Legions	true

@@ -1,5 +1,5 @@
 key	use_unit_exp_level_range	min_unit_exp_level_inclusive	max_unit_exp_level_inclusive	special_category
-#unit_sets_tables	2	db/unit_sets_tables/sda_tomb_kings
+#unit_sets_tables;2;db/unit_sets_tables/sda_tomb_kings				
 steve_ark_grave_guard	false	-1	-1	
 steve_ark_terrorgheist	false	-1	-1	
 steve_ark_vargheist	false	-1	-1	
@@ -28,3 +28,9 @@ steve_ark_nagashizzar_guard	false	-1	-1
 steve_ark_skeleton_spearmen	false	-1	-1	
 steve_ark_skeleton_warriors	false	-1	-1	
 steve_ark_skeleton_archers	false	-1	-1	
+steve_ark_zombie_dragon	false	-1	-1	
+steve_ark_tmb_mon_ushabti	false	-1	-1	
+steve_ark_tmb_mon_ushabti_great	false	-1	-1	
+stephen_tmb_inf_tomb_guard	false	-1	-1	
+stephen_tmb_inf_tomb_guard_halberd	false	-1	-1	
+stephen_tmb_art_screaming_skull_catapult	false	-1	-1	

@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/arkhan_technology_technologies__.loc
+#Loc PackedFile;1;text/db/arkhan_technology_technologies__.loc		
 technologies_long_description_tech_arkhan_army_unlock_left		true
 technologies_onscreen_name_tech_arkhan_army_unlock_left	Legions of Nagash	true
 technologies_short_description_tech_arkhan_army_unlock_left	The incantations of Nagash are the darkest of fell rituals, not to be used lightly if at all. For while they may ease the burden of Unlife, they can also act as a siren call to their original author. Nagash has been gone long from this world, but should he ever return then doom awaits us all! 	true
@@ -17,10 +17,10 @@ technologies_onscreen_name_tech_arkhan_nagash_army_ability_3	Black Pyramid	true
 technologies_short_description_tech_arkhan_nagash_army_ability_3	The first of Nagash's great and powerful edifices. Even millennia later it is still surrounded by fell magic.	true
 technologies_long_description_tech_arkhan_nagash_rank_7_defence		true
 technologies_onscreen_name_tech_arkhan_nagash_rank_7_defence	Cursed Relics	true
-technologies_short_description_tech_arkhan_nagash_rank_7_defence	Now bolstered, Arkhan's legions will be unstoppable! 	true
+technologies_short_description_tech_arkhan_nagash_rank_7_defence	Arkhan's legions will be unstoppable! 	true
 technologies_long_description_tech_arkhan_nagash_rank_7_attack		true
 technologies_onscreen_name_tech_arkhan_nagash_rank_7_attack	Unnatural Strength	true
-technologies_short_description_tech_arkhan_nagash_rank_7_attack	With enough magic and jars, Arkhan's forces will swell in power!	true
+technologies_short_description_tech_arkhan_nagash_rank_7_attack	Arkhan's forces will swell in power!	true
 technologies_long_description_tech_arkhan_lord_top_left		true
 technologies_onscreen_name_tech_arkhan_lord_top_left	Priest King of Grief	true
 technologies_short_description_tech_arkhan_lord_top_left	Grief and Pain are tools to be used without question.	true

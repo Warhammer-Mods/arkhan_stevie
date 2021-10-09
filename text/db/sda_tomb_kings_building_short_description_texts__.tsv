@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/sda_tomb_kings_building_short_description_texts__.loc
+#Loc PackedFile;1;text/db/sda_tomb_kings_building_short_description_texts__.loc		
 building_short_description_texts_short_description_arkhan_minor_walls_1	The lookouts are dark blotches on a horizon of sand; vigilant hawks against the horrors of the desert.	true
 building_short_description_texts_short_description_arkhan_minor_walls_2	A column of gleaming bone holds a stern and ominous watch over the shifting and treacherous Nehekharan sands.	true
 building_short_description_texts_short_description_arkhan_major_walls_1	The heat-bleached bone warriors of grim countenance watch over the battlements, watching for foes through hollowed sockets.	true
@@ -22,3 +22,5 @@ building_short_description_texts_short_description_arkhan_vmp_balefire_3	The lan
 building_short_description_texts_short_description_arkhan_vmp_great_necropolis_1	Ancient and vengeful guardians patrol these dark corridors.	true
 building_short_description_texts_short_description_arkhan_vmp_great_necropolis_2	Reeking and infused with Vampiric magic, the Necropolis swells with power.	true
 building_short_description_texts_short_description_arkhan_vmp_great_necropolis_3	Behold, my Master's power!	true
+building_short_description_texts_short_description_arkhan_vmp_ushabti_1	The City of Kings is an eternal monument to the sovereigns of the desert.	true
+building_short_description_texts_short_description_arkhan_vmp_ushabti_2	May the God of the Skies bless the warriors that stride forth in his name.	true

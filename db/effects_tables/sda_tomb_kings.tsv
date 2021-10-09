@@ -1,5 +1,5 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/sda_tomb_kings
+#effects_tables;3;db/effects_tables/sda_tomb_kings					
 arkhan_minor_walls	edict_cst_bat_swarms.png	99	edict_cst_bat_swarms.png	campaign	true
 sda_skill_liber_mortis_add	wh2_dlc09_lord_abilities_the_liber_mortis.png	99	wh2_dlc09_lord_abilities_the_liber_mortis.png	battle	true
 sda_skill_necropolis_blast_add	general_ability.png	99	general_ability.png	battle	true
@@ -10,3 +10,6 @@ wh2_dlc09_effect_magic_enable_wh2_dlc09_spell_vampires_raise_dead_upgraded	spell
 wh2_dlc09_effect_magic_miscast_percentage_mod_wh2_dlc09_spell_vampires_raise_dead_upgraded	spell_ability.png	10	spell_ability.png	battle	false
 wh2_dlc09_effect_magic_wom_cost_wh2_dlc09_spell_vampires_raise_dead	spell_ability.png	10	spell_ability.png	battle	false
 wh2_dlc09_effect_magic_wom_cost_wh2_dlc09_spell_vampires_raise_dead_upgraded	spell_ability.png	10	spell_ability.png	battle	false
+stephen_physical_defence	resistance_physical.png	1000	resistance_physical.png	battle	true
+stephen_soulblight_enable	spell_ability.png	100	spell_ability.png	battle	true
+stephen_ethereal_contact_dampen_enable	resistance_magic.png	100	resistance_magic.png	battle	true

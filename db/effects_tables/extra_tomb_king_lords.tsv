@@ -1,7 +1,11 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/extra_tomb_king_lords
+#effects_tables;3;db/effects_tables/extra_tomb_king_lords					
 stephen_tomb_king_enable_name_tomb_king		0		campaign	true
 stephen_tomb_king_dummy_trait_1	trait_tomb_kings.png	1	trait_vampire_counts.png	campaign	true
 stephen_tomb_king_dummy_trait_2	general_ability.png	1	general_ability.png	campaign	true
-stephen_tomb_king_unlock_1	army.png	99	army.png	campaign	true
-stephen_tomb_king_unlock_2	army.png	99	army.png	campaign	true
+stephen_tomb_king_unlock_1	army.png	2	army.png	campaign	true
+stephen_tomb_king_unlock_2	army.png	2	army.png	campaign	true
+skill_arkhan_lord_passive_aoe_drain_enable	general_ability.png	3	general_ability.png	battle	true
+skill_arkhan_lord_passive_aoe_debuff_enable	general_ability.png	3	general_ability.png	battle	true
+skill_arkhan_lord_passive_aoe_rampage_enable	general_ability.png	3	general_ability.png	battle	true
+skill_arkhan_lord_sacrament_bound_spells	spell_ability.png	3	spell_ability.png	battle	true

@@ -1,5 +1,5 @@
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
-#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/sda_tomb_kings
+#unit_set_to_unit_junctions_tables;0;db/unit_set_to_unit_junctions_tables/sda_tomb_kings					
 steve_ark_crypt_horror	steve_ark_crypt_horror				false
 steve_ark_grave_guard	steve_ark_grave_guard				false
 steve_ark_grave_guard_great	steve_ark_grave_guard_great				false
@@ -35,3 +35,8 @@ maggie_unit_cap	steve_ark_mourngul				false
 maggie_unit_cap	steve_ark_rotting_leviathan				false
 steve_ark_nagashizzar_guard	steve_ark_nagashizzar_guard				false
 steve_ark_skeleton_archers	steve_ark_skeleton_archers				false
+steve_ark_tmb_mon_ushabti	steve_ark_tmb_mon_ushabti				false
+steve_ark_tmb_mon_ushabti_great	steve_ark_tmb_mon_ushabti_great				false
+stephen_tmb_inf_tomb_guard	stephen_tmb_inf_tomb_guard				false
+stephen_tmb_inf_tomb_guard_halberd	stephen_tmb_inf_tomb_guard_halberd				false
+stephen_tmb_art_screaming_skull_catapult	stephen_tmb_art_screaming_skull_catapult				false

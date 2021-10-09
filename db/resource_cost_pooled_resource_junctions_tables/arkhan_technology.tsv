@@ -1,4 +1,4 @@
 resource_cost	pooled_resource_factor	amount
-#resource_cost_pooled_resource_junctions_tables	0	db/resource_cost_pooled_resource_junctions_tables/arkhan_technology
+#resource_cost_pooled_resource_junctions_tables;0;db/resource_cost_pooled_resource_junctions_tables/arkhan_technology		
 tech_rank_7_unlock	canopic_jars_technology	-500
 tech_army_ability_unlock	canopic_jars_technology	-350

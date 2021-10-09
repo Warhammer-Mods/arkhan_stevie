@@ -1,10 +1,8 @@
 campaign	faction	sub_culture	culture	building_or_building_range_start_inclusive	building_range_end_inclusive	building_instance	building_chain	building_super_chain	cai_construction_system_category	cai_construction_system_category_group	score_or_score_start_inclusive	score_end_inclusive	per_province_building_limit_start	per_province_building_minimum_discount_when_exceeding_limit_start	per_province_building_maximum_discount_when_exceeding_limit_start	per_province_per_building_discount_increment_when_exceeding_limit_start	per_province_building_limit_end	per_province_building_minimum_discount_when_exceeding_limit_end	per_province_building_maximum_discount_when_exceeding_limit_end	per_province_per_building_discount_increment_when_exceeding_limit_end	per_faction_building_limit_start	per_faction_building_minimum_discount_when_exceeding_limit_start	per_faction_building_maximum_discount_when_exceeding_limit_start	per_faction_per_building_discount_increment_when_exceeding_limit_start	per_faction_building_limit_end	per_faction_building_minimum_discount_when_exceeding_limit_end	per_faction_building_maximum_discount_when_exceeding_limit_end	per_faction_per_building_discount_increment_when_exceeding_limit_end
 #cai_construction_system_building_values_tables;0;db/cai_construction_system_building_values_tables/sda_tomb_kings																												
-				wh2_dlc09_tmb_arkhan_burial_mound	wh2_dlc09_tmb_arkhan_burial_mound_2					cai_military_group	800	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
-				arkhan_minor_walls_1	arkhan_minor_walls_2			arkhan_minor_walls		cai_military_group	800	800	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
-				arkhan_major_walls_1	arkhan_major_walls_3			arkhan_major_walls		cai_military_group	800	800	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
-				arkhan_vmp_halls_dead_0	arkhan_vmp_halls_dead_2			arkhan_vmp_halls_dead		cai_military_group	800	800	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
-				arkhan_vmp_great_necropolis_1	arkhan_vmp_great_necropolis_3			arkhan_vmp_great_necropolis		cai_military_group	800	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
-				arkhan_vmp_fell_tree_1	arkhan_vmp_fell_tree_3			arkhan_vmp_fell_tree		cai_military_group	800	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
-				arkhan_vmp_balefire_1	arkhan_vmp_balefire_3			arkhan_vmp_balefire		cai_military_group	800	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
-				arkhan_vmp_ushabti_1	arkhan_vmp_ushabti_2			arkhan_vmp_ushabti		cai_military_group	800	800	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc09_tmb_arkhan_burial_mound	wh2_dlc09_tmb_arkhan_burial_mound_2					cai_military_group	1000	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				arkhan_minor_walls_1	arkhan_minor_walls_2			arkhan_minor_walls		cai_military_group	1000	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				arkhan_major_walls_1	arkhan_major_walls_3			arkhan_major_walls		cai_military_group	1000	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				arkhan_vmp_halls_dead_0	arkhan_vmp_halls_dead_2			arkhan_vmp_halls_dead		cai_military_group	900	800	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				arkhan_vmp_great_necropolis_1	arkhan_vmp_great_necropolis_3			arkhan_vmp_great_necropolis		cai_military_group	1000	1000	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				arkhan_vmp_ushabti_1	arkhan_vmp_ushabti_2			arkhan_vmp_ushabti		cai_military_group	900	900	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0

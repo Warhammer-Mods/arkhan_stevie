@@ -2,3 +2,6 @@ id	duration	effect_type	requested_stance	unbreakable	cant_move	freeze_fatigue	fa
 #special_ability_phases_tables;35;db/special_ability_phases_tables/arkhan_technology																													
 skill_arkhan_passive_endless_hordes	-1.0	positive		false	false	false	0.0	0.0	0.0	0.5	2	true	2	0.0	0	0	0.0	0.0	false	0		wh_main_generic_hp_regen_passive		-1.0	false	true	true	0.0	
 arkhan_unit_passive_devastating_charge	30.0	positive		false	false	false	0.0	0.0	0.0	0.0	0	false	0	0.0	0	-1	0.0	0.0	false	0		wh2_main_generic_buff_speed_passive		-1.0	false	true	true	0.0	
+skill_arkhan_lord_passive_aoe_drain	-1.0	negative		false	false	false	0.0	0.0	0.0	1.0	0	false	0	1.0	4	4	0.0	0.0	false	0		wh_main_generic_hp_damage_passive		-1.0	false	true	true	0.0	
+skill_arkhan_lord_passive_aoe_debuff	-1.0	negative		false	false	false	0.0	0.0	0.0	0.0	0	false	0	0.0	0	-1	0.0	0.0	false	0				-1.0	false	true	true	0.0	
+skill_arkhan_lord_passive_aoe_rampage	-1.0	negative		false	false	false	0.0	0.0	0.0	0.0	0	false	0	0.0	0	-1	0.0	0.0	false	0				-1.0	false	true	true	0.0	

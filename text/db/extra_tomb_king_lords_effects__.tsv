@@ -1,6 +1,10 @@
 key	text	tooltip
 #Loc PackedFile;1;text/db/extra_tomb_king_lords_effects__.loc		
-effects_description_stephen_tomb_king_dummy_trait_1	This lord will be assigned a random trait once recruited	true
+effects_description_stephen_tomb_king_dummy_trait_1	This lord will be assigned a specific trait once recruited	true
 effects_description_stephen_tomb_king_dummy_trait_2		true
 effects_description_stephen_tomb_king_unlock_1	Adds a unique Tomb King to your faction's [[img:icon_general]][[/img]]Lord pool	true
 effects_description_stephen_tomb_king_unlock_2	Adds a unique Tomb King to your faction's [[img:icon_general]][[/img]]Lord pool	true
+effects_description_skill_arkhan_lord_passive_aoe_drain_enable	Enables the passive ability 'Deathly Aura'	true
+effects_description_skill_arkhan_lord_passive_aoe_debuff_enable	Enables the passive ability 'Overwhelming Terror'	true
+effects_description_skill_arkhan_lord_passive_aoe_rampage_enable	Enables the passive ability 'Rampage'	true
+effects_description_skill_arkhan_lord_sacrament_bound_spells	Enables a selection of bound spells	true

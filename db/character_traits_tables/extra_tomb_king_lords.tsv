@@ -1,3 +1,6 @@
 key	no_going_back_level	hidden	precedence	icon	pre_battle_speech_parameter	ui_priority
 #character_traits_tables;2;db/character_traits_tables/extra_tomb_king_lords						
-stephen_tmb_tomb_king_dummy_trait_1	1	false	1	vampire_counts		0
+stephen_tmb_tomb_king_dummy_trait_1	1	false	1	vampire_counts		1
+stephen_tmb_tomb_king_dummy_trait_2	1	false	1	vampire_counts		1
+stephen_tmb_tomb_king_dummy_trait_3	1	false	1	vampire_counts		1
+stephen_tmb_tomb_king_dummy_trait_4	1	false	1	vampire_counts		1

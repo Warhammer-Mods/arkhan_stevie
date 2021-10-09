@@ -24,3 +24,5 @@ steve_ark_skeleton_archers		steve_ark_skeleton_archers	1.0	0.05	hu1\tmb\tmb_skel
 steve_ark_zombie_dragon		steve_ark_zombie_dragon	1.0	0.0		1.0	
 steve_ark_tmb_mon_ushabti		steve_ark_tmb_mon_ushabti	1.0	0.0	hu6e/tmb/tmb_ushabti/imposter/tmb_ushabti_imposter	1.0	
 steve_ark_tmb_mon_ushabti_great		steve_ark_tmb_mon_ushabti_great	1.0	0.0	hu6e/tmb/tmb_ushabti/imposter/tmb_ushabti_great_bow_imposter	1.0	
+stephen_tmb_inf_tomb_guard		stephen_tmb_inf_tomb_guard	1.0	0.05	hu1/tmb/tmb_tomb_guard/imposter/tmb_tomb_guard_imposter	1.0	hu1\imposter\humanoid_imposter
+stephen_tmb_inf_tomb_guard_halberd		stephen_tmb_inf_tomb_guard_halberd	1.0	0.05	hu1/tmb/tmb_tomb_guard/imposter/tmb_tomb_guard_halberd_shield_imposter	1.0	hu1\imposter\humanoid_imposter

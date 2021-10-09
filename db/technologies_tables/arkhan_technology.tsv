@@ -3,13 +3,13 @@ key	building_level	position_index	icon_name	military_prestige	naval_prestige	eco
 tech_arkhan_nagash_monsters_1_1	wh_main_chs_port	1	wh_main_vmp_cannibalistic_rituals	0	0	0	0	false	false	"placeholder.tga"	33557788	false	false	true
 tech_arkhan_nagash_monsters_1_2	wh_main_chs_port	1	wh_main_vmp_master_of_the_swarm	0	0	0	0	false	false	"placeholder.tga"	33557789	false	false	true
 tech_arkhan_nagash_monsters_1_3	wh_main_chs_port	1	wh_main_vmp_leader_of_the_pack	0	0	0	0	false	false	"placeholder.tga"	33557790	false	false	true
-tech_arkhan_nagash_monsters_1_4	wh_main_chs_port	1	wh_main_vmp_unearth_cursed_wightblades	0	0	0	0	false	false	"placeholder.tga"	33557791	false	false	true
+tech_arkhan_nagash_monsters_1_4	wh_main_chs_port	1	wh_main_vmp_risen_champions	0	0	0	0	false	false	"placeholder.tga"	33557791	false	false	true
 tech_arkhan_nagash_monsters_2_1	wh_main_chs_port	1	wh_main_vmp_nightmarish_reaping	0	0	0	0	false	false	"placeholder.tga"	33557792	false	false	true
 tech_arkhan_nagash_monsters_2_2	wh_main_chs_port	1	wh_main_vmp_invoke_animalistic_hunger	0	0	0	0	false	false	"placeholder.tga"	33557793	false	false	true
 tech_arkhan_nagash_monsters_2_3	wh_main_chs_port	1	wh_main_vmp_strigoi_legacy	0	0	0	0	false	false	"placeholder.tga"	33557794	false	false	true
 tech_arkhan_nagash_monsters_2_4	wh_main_chs_port	1	wh_main_vmp_fuelled_by_fear	0	0	0	0	false	false	"placeholder.tga"	33557795	false	false	true
-tech_arkhan_nagash_rank_7_defence	wh_main_chs_port	1	wh2_dlc11_discipline_of_aborash	0	0	0	0	false	false	"placeholder.tga"	33557796	false	false	true
-tech_arkhan_nagash_rank_7_attack	wh_main_chs_port	1	wh2_dlc11_strength_of_steel	0	0	0	0	false	false	"placeholder.tga"	33557797	false	false	true
+tech_arkhan_nagash_rank_7_defence	wh_main_chs_port	1	tech_arkhan_nagash_rank_7_defence	0	0	0	0	false	false	"placeholder.tga"	33557796	false	false	true
+tech_arkhan_nagash_rank_7_attack	wh_main_chs_port	1	tech_arkhan_nagash_rank_7_attack	0	0	0	0	false	false	"placeholder.tga"	33557797	false	false	true
 tech_arkhan_nagash_army_ability_1	wh_main_chs_port	1	tech_arkhan_nagash_army_ability_1	0	0	0	0	false	false	"placeholder.tga"	33557798	false	false	true
 tech_arkhan_nagash_army_ability_2	wh_main_chs_port	1	tech_arkhan_nagash_army_ability_2	0	0	0	0	false	false	"placeholder.tga"	33557799	false	false	true
 tech_arkhan_nagash_army_ability_3	wh_main_chs_port	1	tech_arkhan_nagash_army_ability_3	0	0	0	0	false	false	"placeholder.tga"	33557800	false	false	true

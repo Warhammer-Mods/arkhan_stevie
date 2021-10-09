@@ -1,0 +1,18 @@
+effect	icon	priority	icon_negative	category	is_positive_value_good
+#effects_tables;3;db/effects_tables/arkhan_skills					
+skill_arkhan_crypt_ghouls_crypt_horrors_bonus_1	melee.png	100	melee.png	battle	true
+skill_arkhan_crypt_ghouls_crypt_horrors_bonus_2	defence.png	100	defence.png	battle	true
+skill_arkhan_crypt_ghouls_crypt_horrors_bonus_3	ranged_damage.png	100	ranged_damage.png	battle	true
+skill_arkhan_skull_catapult_bonus_1	ranged_damage.png	100	ranged_damage.png	battle	true
+skill_arkhan_skull_catapult_bonus_2	ammo.png	100	ammo.png	battle	true
+skill_arkhan_fell_bats_dire_wolves_bonus_1	battle_movement.png	100	battle_movement.png	battle	true
+skill_arkhan_fell_bats_dire_wolves_bonus_2	weapon_damage.png	100	weapon_damage.png	battle	true
+skill_arkhan_vargheists_terrorgheists_bonus_1	charge.png	100	charge.png	battle	true
+skill_arkhan_vargheists_terrorgheists_bonus_2	melee.png	100	melee.png	battle	true
+skill_arkhan_tomb_skeleton_bonus_1	armour.png	100	armour.png	battle	true
+skill_arkhan_tomb_skeleton_bonus_2	defence.png	100	defence.png	battle	true
+skill_arkhan_tomb_skeleton_bonus_4	ammo.png	101	ammo.png	battle	true
+skill_arkhan_tomb_skeleton_bonus_5	ranged_damage.png	102	ranged_damage.png	battle	true
+skill_arkhan_passive_endless_hordes	general_ability.png	600	general_ability.png	battle	true
+skill_arkhan_passive_devastating_charge_enable	general_ability.png	1	general_ability.png	battle	true
+skill_arkhan_passive_blasphemous_tome_enable	general_ability.png	1	general_ability.png	battle	true

@@ -1,0 +1,3 @@
+key	unit_set	special_ability_phase
+#unit_set_special_ability_phase_junctions_tables;0;db/unit_set_special_ability_phase_junctions_tables/sda_tomb_kings		
+ethereal_dampen_attacks	ethereal_set	wh2_pro08_unit_contact_dampen

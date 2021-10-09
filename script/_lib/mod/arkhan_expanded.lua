@@ -531,11 +531,11 @@ function mod:init()
 end
 
 ---@diagnostic disable-next-line: lowercase-global
-function arkhan_expanded()
+function get_arkhan_expanded()
 	return core:get_static_object("arkhan_expanded");
 end
 core:add_static_object( "arkhan_expanded", mod, false );
-_G.arkhan_expanded = arkhan_expanded();
+_G.arkhan_expanded = get_arkhan_expanded();
 
 --legacy `ardm` object
 --TODO: Depreciated

@@ -121,27 +121,25 @@ jobs:
       shell: bash --noprofile --norc {0}
       run: |
         checkTSV () {
-          echo "File: ${file}"
-          csvlint ${{ env.CVSLINT_PARAMS }} "${file}"
+          echo "File: $@"
+          csvlint ${{ env.CVSLINT_PARAMS }} "$@"
           exit_code=$?
           echo "::debug::Check finished with exit code: ${exit_code}"
           return ${exit_code}
         }
+        export -f checkTSV
 
         exit_code=0
         echo "::add-matcher::.github/csvlint.json"
         for path in ${{ env.FILES_TO_CHECK }}; do
-          
           if [[ -d ${path} ]]; then
-            for file in $(find ${path} -type f -iname "*.tsv"); do
-              checkTSV "${file}"
-              last_exit_code=$?
-              (( $last_exit_code > $exit_code )) && exit_code=${last_exit_code}
-            done
+            find ${path} -type f -iname "*.tsv" -print0 | xargs -0 -I {} bash -c 'checkTSV "$@"' _ {}
+            last_exit_code=$?
+            (( last_exit_code > exit_code )) && exit_code=${last_exit_code}
           elif [[ -f ${path} ]]; then
             checkTSV "${path}"
             last_exit_code=$?
-            (( $last_exit_code > $exit_code )) && exit_code=${last_exit_code}
+            (( last_exit_code > exit_code )) && exit_code=${last_exit_code}
           fi
         done
         echo "::remove-matcher owner=csvlint_error::"

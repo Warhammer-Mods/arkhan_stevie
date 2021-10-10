@@ -120,13 +120,12 @@ jobs:
       id: check_syntax
       shell: bash --noprofile --norc {0}
       run: |
-        exit_code=0
         checkTSV () {
           echo "File: ${file}"
           csvlint ${{ env.CVSLINT_PARAMS }} "${file}"
-          exitstatus=$?
-          echo "::debug::Check finished with exit code: ${exitstatus}"
-          return $exitstatus
+          exit_code=$?
+          echo "::debug::Check finished with exit code: ${exit_code}"
+          return ${exit_code}
         }
 
         exit_code=0
@@ -135,15 +134,15 @@ jobs:
           
           if [[ -d ${path} ]]; then
             for file in $(find ${path} -type f -iname "*.tsv"); do
-              checkTSV "$file"
-              exitstatus=$?
+              checkTSV "${file}"
+              last_exit_code=$?
             done
           elif [[ -f ${path} ]]; then
             checkTSV "${path}"
-            exitstatus=$?
+            last_exit_code=$?
           fi
           
-          (( $exit_code < $exitstatus )) && exit_code=$exitstatus
+          (( $last_exit_code > $exit_code )) && exit_code=${last_exit_code}
         done
         echo "::remove-matcher owner=csvlint_error::"
         echo "::remove-matcher owner=csvlint_warning::"

@@ -1,6 +1,6 @@
 # Arkhan the Black: Expanded
 
-![Arlhan the Black: Expanded – Logo](https://github.com/Warhammer-Mods/assets/blob/master/mods/arkhan_stevie/steam_workshop.png?raw=1)
+![Arkhan the Black: Expanded – Logo](https://github.com/Warhammer-Mods/assets/blob/master/mods/arkhan_stevie/steam_workshop.png?raw=1)
 
 By **[Mortarch of Sacrament](https://github.com/Zalbardeon)** ([Steam Workshop page](https://steamcommunity.com/id/Zalbardeon/myworkshopfiles/))
 

@@ -4,7 +4,7 @@
 			"path": ".."
 		},
 		{
-			"path": "../../PJ-autocomplete"
+			"path": "../../tw-lua-autocomplete"
 		}
 	],
 	"settings": {
@@ -21,6 +21,7 @@
 		"Lua.telemetry.enable": false,
 		"Lua.workspace.ignoreDir": [],
 		"Lua.workspace.preloadFileSize": 10000,
+		"Lua.workspace.useGitIgnore": false,
 		"markdownlint.config": {
 			"default": true,
 			"MD024": { "siblings_only": true }

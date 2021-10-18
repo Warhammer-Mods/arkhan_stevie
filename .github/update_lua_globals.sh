@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CONFIG_FILE=${LUACHECK_CONFIG:-'.luacheckrc'}
-LUA_VENDOR_FILES=${VENDOR_PATH:-'.github/autocomplete'}
+LUA_VENDOR_FILES=${VENDOR_PATH:-'.luarocks/share/lua'}
 SHOW_GLOBALS_SCRIPT=${SHOW_GLOBALS_SCRIPT:-'.github/show_globals.lua'}
 
 CUSTOM_VARS=()

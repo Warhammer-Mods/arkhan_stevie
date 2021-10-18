@@ -33,7 +33,7 @@ env:
   GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GIT_COMMITTER_NAME: "github-actions[bot]"
   GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
-  VENDOR_PATH: .github/autocomplete
+  VENDOR_PATH: .luarocks
   SHOW_GLOBALS_SCRIPT: .github/show_globals.lua
   UPDATE_LUA_GLOBALS_SCRIPT: .github/update_lua_globals.sh
   LUACHECK_CONFIG: >-
@@ -67,39 +67,49 @@ jobs:
     - name: Install luacheck
       run: luarocks install luacheck
 
-    - name: Reset autocomplete
-      run: rm -rfv ${{ env.VENDOR_PATH }}
-
-    - name: Checkout PJ-autocomplete
-      uses: actions/checkout@v2
-      with:
-        repository: Warhammer-Mods/PJ-autocomplete
-        path: ${{ env.VENDOR_PATH }}
-
-    - name: Remove PJ-autocomplete meta files
-      run: rm -rf ${{ env.VENDOR_PATH }}/{.git,.github,.vscode}
+    - name: Install
+      run: luarocks install --tree ${{ env.VENDOR_PATH }} --only-deps *.rockspec
 
     - name: Set Lua globals from vendor path
       id: lua-globals
       run: |
         chmod +x ${{ env.UPDATE_LUA_GLOBALS_SCRIPT }}
-        ${{ env.UPDATE_LUA_GLOBALS_SCRIPT }}
+        ./${{ env.UPDATE_LUA_GLOBALS_SCRIPT }}
 
     - name: Get file changes
       id: changes
       run: |
-        changes="$(git status --porcelain=1 ${VENDOR_PATH} ${LUACHECK_CONFIG})"
+        files_to_commit="${LUACHECK_CONFIG}"
+        changes="$(git status --porcelain=1 ${files_to_commit})"
         echo "::debug::${changes}"
         if [ -z "${changes}" ]; then
           echo "::set-output name=clean::true"
         else
           files=()
-          while IFS= read -r line; do
-            file=$(cut -d" " -f3 <<< ${line})
-            files+=("${file}")
-            echo "::notice file=${file}::File changed: ${line}"
+          changes_tracked="$(git status --porcelain=1 --untracked-files=no ${files_to_commit})"
+          og_IFS=$IFS
+          IFS='\n'
+          [[ -z $changes_tracked ]] || \
+          for line in "${changes_tracked}"; do
+            file=$(cut -d" " -f2 <<< ${line})
+            files+=("${{ env.REPO_PATH }}/${file}")
+            echo "::notice file=${file}::File changed: ${file}"
             echo "::debug::$(git diff ${file})"
-          done <<< ${changes}
+          done
+          changes_untracked="$(git ls-files --others --exclude-standard ${files_to_commit})"
+          [[ -z $changes_untracked ]] || \
+          for file in "${changes_untracked}"; do
+            files+=("${{ env.REPO_PATH }}/${file}")
+            echo "::notice file=${file}::New file: ${file}"
+            echo "::debug::$(git diff ${file})"
+          done
+          IFS=$og_IFS
+          echo "::group::Total files changed"
+          for file in ${files[@]}; do
+            echo "${file}"
+          done
+          echo "::endgroup::"
+          echo "::notice::clean: false"
           echo "::set-output name=files::${files[@]}"
           echo "::set-output name=clean::false"
         fi
@@ -139,18 +149,6 @@ jobs:
         persist-credentials: false
         fetch-depth: 0
 
-    - name: Reset autocomplete
-      run: rm -rfv ${{ env.VENDOR_PATH }}
-
-    - name: Checkout PJ-autocomplete
-      uses: actions/checkout@v2
-      with:
-        repository: Warhammer-Mods/PJ-autocomplete
-        path: ${{ env.VENDOR_PATH }}
-
-    - name: Remove PJ-autocomplete meta files
-      run: rm -rf ${{ env.VENDOR_PATH }}/{.git,.github,.vscode}
-
     - name: Download updated files
       uses: actions/download-artifact@v2
       with:
@@ -161,11 +159,8 @@ jobs:
       run: |
         git config --local user.email ${{ env.GIT_AUTHOR_EMAIL }}
         git config --local user.name ${{ env.GIT_AUTHOR_NAME }}
-        git add ${VENDOR_PATH} ${LUACHECK_CONFIG}
+        git add ${{ needs.changes.outputs.files }}
         git commit -m "[Luacheck] Update config and autocomplete"
-        if ${{ startsWith(github.ref, 'refs/tags/') }}; then
-          git tag -fa ${{ github.ref }}
-        fi
 
     - name: Create a PR
       id: pr
@@ -181,7 +176,6 @@ jobs:
         title: "[Luacheck] Update config and autocomplete"
         body: |
           **Update**:
-            - Total War Lua autocompletion
             - Luacheck globals list
         labels: |
           automation

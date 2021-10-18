@@ -49,6 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       clean: ${{ steps.changes.outputs.clean }}
+      files: ${{ steps.changes.outputs.files }}
 
     steps:
     - uses: actions/checkout@v2
@@ -91,15 +92,15 @@ jobs:
           IFS='\n'
           [[ -z $changes_tracked ]] || \
           for line in "${changes_tracked}"; do
-            file=$(cut -d" " -f2 <<< ${line})
-            files+=("${{ env.REPO_PATH }}/${file}")
+            file=$(cut -d" " -f3 <<< ${line})
+            files+=("${file}")
             echo "::notice file=${file}::File changed: ${file}"
             echo "::debug::$(git diff ${file})"
           done
           changes_untracked="$(git ls-files --others --exclude-standard ${files_to_commit})"
           [[ -z $changes_untracked ]] || \
           for file in "${changes_untracked}"; do
-            files+=("${{ env.REPO_PATH }}/${file}")
+            files+=("${file}")
             echo "::notice file=${file}::New file: ${file}"
             echo "::debug::$(git diff ${file})"
           done
@@ -136,7 +137,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: luacheckrc
-        path: ${{ env.LUACHECK_CONFIG }}
+        path: ${{ steps.changes.outputs.files }}
 
   create-pr:
     runs-on: ubuntu-latest
@@ -159,7 +160,7 @@ jobs:
       run: |
         git config --local user.email ${{ env.GIT_AUTHOR_EMAIL }}
         git config --local user.name ${{ env.GIT_AUTHOR_NAME }}
-        git add ${{ needs.changes.outputs.files }}
+        git add ${{ needs.lint.outputs.files }}
         git commit -m "[Luacheck] Update config and autocomplete"
 
     - name: Create a PR

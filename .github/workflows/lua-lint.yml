@@ -27,15 +27,12 @@ on:
   workflow_dispatch:
 
 env:
-  FILES_TO_CHECK: >-
-    script/
   GIT_AUTHOR_NAME: "github-actions[bot]"
   GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GIT_COMMITTER_NAME: "github-actions[bot]"
   GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   VENDOR_PATH: .luarocks
-  SHOW_GLOBALS_SCRIPT: .github/show_globals.lua
-  UPDATE_LUA_GLOBALS_SCRIPT: .github/update_lua_globals.sh
+  UPDATE_LUA_GLOBALS_SCRIPT: update_lua_globals.sh
   LUACHECK_CONFIG: >-
     .luacheckrc
   LUA_VERSION: "5.1"
@@ -120,7 +117,7 @@ jobs:
       shell: bash --noprofile --norc {0}
       run: |
         echo "::add-matcher::.github/luacheck-plain.json"
-        luacheck ${{ env.FILES_TO_CHECK }} \
+        luacheck *.rockspec \
           --formatter plain \
           --codes --ranges
         exitcode=$?

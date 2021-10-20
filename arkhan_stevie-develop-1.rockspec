@@ -1,14 +1,16 @@
 package = "arkhan_stevie"
-version = "scm-1"
+version = "develop-1"
 source = {
-   url = "git+https://github.com/Warhammer-Mods/arkhan_stevie.git"
+   url = "git+https://github.com/Warhammer-Mods/arkhan_stevie.git",
+   tag = "develop"
 }
 description = {
-   detailed = "![Arkhan the Black: Expanded – Logo](https://github.com/Warhammer-Mods/assets/blob/master/mods/arkhan_stevie/steam_workshop.png?raw=1)",
+   detailed = "This mod for Total War™ Warhammer II® makes changes to Arkhan's faction by giving him access to The Lore of Vampires, Raise Dead campaign mechanic, and much more. It also adds additional units with unique unit cards, over 20 new technologies and access to Bloodline Lords & Scrap Upgrades via the submods.",
    homepage = "https://github.com/Warhammer-Mods/arkhan_stevie"
 }
 dependencies = {
    "lua ~> 5.1",
+   "lua-globals",
    "tw-lua-autocomplete"
 }
 build = {

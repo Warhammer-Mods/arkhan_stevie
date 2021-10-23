@@ -1,6 +1,8 @@
+-- local inspect = require "inspect"
+
 ---Arkhan Raise Dead mechanic
 ---@author Mortarch of Sacrement <83952869+Zalbardeon@users.noreply.github.com>, im-mortal <im.mortal@me.com>
----@version 0.5.3-dev
+---@version 0.5.4-dev
 ---@class STEPHEN_ARKHAN_EXPANDED
 ---@alias arkhan_expanded STEPHEN_ARKHAN_EXPANDED
 ---Legacy alias
@@ -115,31 +117,6 @@ function mod.log(e, ...)
 	else
 		out(message);
 	end
-end
-
----Recursive table logger
----@param e any
----@return nil
-function mod:deepPrint(e)
-
-	if e == nil then
-		self.log( 1, "passed nil to deepPrint()" );
-		return false;
-	end
-
-	local function recurse(input, indent)
-		indent = indent or "";
-		if is_table(input) then
-			indent = indent .. "\t";
-			for key, value in pairs(input) do
-				self.log(indent, key);
-				recurse(value, indent);
-			end
-		else
-			self.log(indent, tostring(input))
-		end
-	end
-	recurse(e);
 end
 
 ---Helper function to check if an element present in a set.

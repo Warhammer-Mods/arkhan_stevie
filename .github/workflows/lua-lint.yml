@@ -27,18 +27,24 @@ on:
   workflow_dispatch:
 
 env:
+  # Set up git commits authorship as seen in git log
   GIT_AUTHOR_NAME: "github-actions[bot]"
   GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GIT_COMMITTER_NAME: "github-actions[bot]"
   GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+  # Change if you need to use a personal access token (use secrets to pass sensitive information!)
+  TOKEN: ${{ secrets.BOT_TOKEN }}
+  # Folder where Luarocks will store project dependencies
   VENDOR_PATH: .luarocks
+  # Folder containing mod script files
+  LUA_SCRIPT_FILES: script
   UPDATE_LUA_GLOBALS_SCRIPT: update_lua_globals.sh
   LUACHECK_CONFIG: >-
     .luacheckrc
   LUA_VERSION: "5.1"
   LUAROCKS_VERSION: "3.7.0"
   CUSTOM_LUA_GLOBALS: >-
-    arkhan_expanded
+    
 
 jobs:
 
@@ -66,7 +72,12 @@ jobs:
       run: luarocks install luacheck
 
     - name: Install
-      run: luarocks install --tree ${{ env.VENDOR_PATH }} --only-deps *.rockspec
+      run: |
+        luarocks install --tree ${{ env.VENDOR_PATH }} --only-deps *.rockspec
+        
+        lr_path=$(  luarocks path --tree .luarocks --lr-path ); echo "LUA_PATH=${lr_path/;/:}:${LUA_PATH}"     >> $GITHUB_ENV
+        lr_cpath=$( luarocks path --tree .luarocks --lr-cpath); echo "LUA_CPATH=${lr_cpath/;/:}:${LUA_CPATH}"  >> $GITHUB_ENV
+        lr_bin=$(   luarocks path --tree .luarocks --lr-bin);   echo "${lr_bin/;/:}"                           >> $GITHUB_PATH
 
     - name: Set Lua globals from vendor path
       id: lua-globals
@@ -91,14 +102,14 @@ jobs:
           for line in "${changes_tracked}"; do
             file=$(cut -d" " -f3 <<< ${line})
             files+=("${file}")
-            echo "::notice file=${file}::File changed: ${file}"
+            echo "::debug::File changed: ${file}"
             echo "::debug::$(git diff ${file})"
           done
           changes_untracked="$(git ls-files --others --exclude-standard ${files_to_commit})"
           [[ -z $changes_untracked ]] || \
           for file in "${changes_untracked}"; do
             files+=("${file}")
-            echo "::notice file=${file}::New file: ${file}"
+            echo "::debug::New file: ${file}"
             echo "::debug::$(git diff ${file})"
           done
           IFS=$og_IFS
@@ -142,6 +153,9 @@ jobs:
     if: needs.lint.outputs.clean == 'false'
 
     steps:
+
+    - run: echo "::add-mask::${{ env.TOKEN }}"
+
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
@@ -164,7 +178,7 @@ jobs:
       id: pr
       uses: peter-evans/create-pull-request@v3
       with:
-        token: ${{ secrets.BOT_TOKEN }}
+        token: ${{ env.TOKEN }}
         committer: ${{ format( '{0} <{1}>', env.GIT_COMMITTER_NAME, env.GIT_COMMITTER_EMAIL) }}
         author: ${{ format( '{0} <{1}>', env.GIT_AUTHOR_NAME, env.GIT_AUTHOR_EMAIL) }}
         branch: bot/autocomplete-patch
@@ -187,3 +201,15 @@ jobs:
           steps.pr.outputs.pull-request-operation,
           steps.pr.outputs.pull-request-url
         ) }}"
+
+# Uncomment if you've set up branch protection rules to enable PR auto-merge:
+# https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule
+# Learn more about auto-merge: https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request 
+
+#    - name: Enable Pull Request Automerge
+#      if: endsWith( 'main', github.ref ) && steps.pr.outputs.pull-request-operation == 'created'
+#      uses: peter-evans/enable-pull-request-automerge@v1
+#      with:
+#        token: ${{ env.TOKEN }}
+#        pull-request-number: ${{ steps.pr.outputs.pull-request-number }}
+#        merge-method: squash

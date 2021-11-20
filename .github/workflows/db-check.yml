@@ -14,7 +14,6 @@ on:
       - 'db/**'
       - 'text/**'
       - '.github/workflows/**'
-      - '.vscode/**'
   pull_request:
     branches:
       - main
@@ -34,4 +33,4 @@ jobs:
       vscode_workspace_file: .vscode/arkhan_stevie.code-workspace
       pr_enabled: true
     secrets:
-      token: ${{ github.token }}
+      token: ${{ secrets.BOT_TOKEN }}

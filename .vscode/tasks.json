@@ -6,25 +6,41 @@
     {
       "label": "install",
       "type": "shell",
-      "command": "luarocks install --tree .luarocks --only-deps *.rockspec",
-      "problemMatcher": []
-    },
-    {
-      "label": "install-macos",
-      "type": "shell",
-      "command": "luarocks install --lua-dir=$(brew --prefix)/opt/lua@5.1 --tree .luarocks  --only-deps *.rockspec",
+      "windows": {
+        "command": "luarocks install --tree .luarocks --only-deps *.rockspec"
+      },
+      "osx": {
+        "command": [
+          "luarocks",
+          "install",
+          "--lua-dir=$(brew --prefix)/opt/lua@5.1",
+          "--tree=.luarocks",
+          "--only-deps",
+          "*.rockspec"
+        ]
+      },
       "problemMatcher": []
     },
     {
       "label": "write_rockspec",
       "type": "shell",
-      "command": [
-        "luarocks",
-        "write_rockspec",
-        "--license=\"MIT\"",
-        "--tag=\"develop\"",
-        "--lua-versions=\"5.1\""
-      ],
+      "windows": {
+        "command": [
+          "luarocks",
+          "write_rockspec",
+          "--license=\"MIT\"",
+          "--lua-versions=\"5.1\""
+        ]
+      },
+      "osx": {
+        "command": [
+          "luarocks",
+          "write_rockspec",
+          "--lua-dir=$(brew --prefix)/opt/lua@5.1",
+          "--license=\"MIT\"",
+          "--lua-versions=\"5.1\""
+        ]
+      },
       "problemMatcher": []
     }
   ]

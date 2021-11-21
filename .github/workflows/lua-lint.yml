@@ -28,7 +28,7 @@ on:
 
 jobs:
   db-check:
-    uses: Warhammer-Mods/workflows/.github/workflows/lua-lint.yml@main
+    uses: Warhammer-Mods/workflows/.github/workflows/lua-lint.yml@v1
     with:
       paths: script
       config_file: .luacheckrc

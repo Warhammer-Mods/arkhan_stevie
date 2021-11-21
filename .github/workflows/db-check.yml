@@ -27,7 +27,7 @@ on:
 
 jobs:
   db-check:
-    uses: Warhammer-Mods/workflows/.github/workflows/db-check.yml@main
+    uses: Warhammer-Mods/workflows/.github/workflows/db-check.yml@v1
     with:
       paths: db text
       vscode_workspace_file: .vscode/arkhan_stevie.code-workspace

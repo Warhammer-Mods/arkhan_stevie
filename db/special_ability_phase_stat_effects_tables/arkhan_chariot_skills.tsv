@@ -7,4 +7,3 @@ arkhan_unit_passive_devastating_charge	0.02	scalar_dealt_collision_knocked_flyin
 arkhan_unit_passive_devastating_charge	1.24	scalar_speed	mult
 arkhan_unit_passive_devastating_charge	1.18	stat_charge_bonus	mult
 skill_arkhan_lord_passive_aoe_debuff	-6.0	stat_morale	add
-skill_arkhan_lord_passive_aoe_debuff	0.75	scalar_speed	mult

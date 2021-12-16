@@ -8,8 +8,8 @@ tech_arkhan_nagash_monsters_2_1	wh_main_chs_port	1	wh_main_vmp_nightmarish_reapi
 tech_arkhan_nagash_monsters_2_2	wh_main_chs_port	1	wh_main_vmp_invoke_animalistic_hunger	0	0	0	0	false	false	"placeholder.tga"	33557793	false	false	true
 tech_arkhan_nagash_monsters_2_3	wh_main_chs_port	1	wh_main_vmp_strigoi_legacy	0	0	0	0	false	false	"placeholder.tga"	33557794	false	false	true
 tech_arkhan_nagash_monsters_2_4	wh_main_chs_port	1	wh_main_vmp_fuelled_by_fear	0	0	0	0	false	false	"placeholder.tga"	33557795	false	false	true
-tech_arkhan_nagash_rank_7_defence	wh_main_chs_port	1	tech_arkhan_nagash_rank_7_defence	0	0	0	0	false	false	"placeholder.tga"	33557796	false	false	true
-tech_arkhan_nagash_rank_7_attack	wh_main_chs_port	1	tech_arkhan_nagash_rank_7_attack	0	0	0	0	false	false	"placeholder.tga"	33557797	false	false	true
+tech_arkhan_nagash_rank_7_defence	wh_main_chs_port	1	tech_dlc08_nor_secrets_of_necromancy	0	0	0	0	false	false	"placeholder.tga"	33557796	false	false	true
+tech_arkhan_nagash_rank_7_attack	wh_main_chs_port	1	tech_dlc08_nor_secrets_of_past_dynasties	0	0	0	0	false	false	"placeholder.tga"	33557797	false	false	true
 tech_arkhan_nagash_army_ability_1	wh_main_chs_port	1	tech_arkhan_nagash_army_ability_1	0	0	0	0	false	false	"placeholder.tga"	33557798	false	false	true
 tech_arkhan_nagash_army_ability_2	wh_main_chs_port	1	tech_arkhan_nagash_army_ability_2	0	0	0	0	false	false	"placeholder.tga"	33557799	false	false	true
 tech_arkhan_nagash_army_ability_3	wh_main_chs_port	1	tech_arkhan_nagash_army_ability_3	0	0	0	0	false	false	"placeholder.tga"	33557800	false	false	true

@@ -1,6 +1,6 @@
 key	text	tooltip
 #Loc PackedFile;1;text/db/sda_tomb_kings_unit_abilities__.loc		
-unit_abilities_onscreen_name_arkhan_zombie_raise_dead	Summon Zombies	true
+unit_abilities_onscreen_name_arkhan_zombie_raise_dead	Raise Zombies	true
 unit_abilities_tooltip_text_arkhan_zombie_raise_dead	"Let the splintered bones burrow from the grave pall. Let cold fingers grip tomb-worn blades, and unseeing eyes survey the fields of slaughter. For your time has come once more."	true
 unit_abilities_onscreen_name_arkhan_necropolis_blast	Eldritch Blast	true
 unit_abilities_tooltip_text_arkhan_necropolis_blast	Arkhan calls forth a blast of Shyish energy to blast nearby foes!	true
@@ -9,4 +9,4 @@ unit_abilities_tooltip_text_wh2_dlc09_spell_vampires_raise_dead_upgraded	The Nec
 unit_abilities_onscreen_name_wh2_dlc09_spell_vampires_raise_dead	Raise Dead	true
 unit_abilities_tooltip_text_wh2_dlc09_spell_vampires_raise_dead	Necromancers can awaken mortal remains to reinforce their Undead legions.	true
 unit_abilities_onscreen_name_arkhan_unit_passive_devastating_charge	Devastating Charge	true
-unit_abilities_tooltip_text_arkhan_unit_passive_devastating_charge	Placeholder	true
+unit_abilities_tooltip_text_arkhan_unit_passive_devastating_charge	Death and destruction.	true

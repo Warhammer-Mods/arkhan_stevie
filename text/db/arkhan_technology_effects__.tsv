@@ -23,10 +23,10 @@ effects_description_tech_arkhan_crypt_horror_speed	Speed: %+n% for Crypt Horrors
 effects_description_tech_arkhan_vargheist_weapon_strength	Weapon strength: %+n% for Vargheists	true
 effects_description_tech_arkhan_vargheist_speed	Speed: %+n% for Vargheists	true
 effects_description_tech_arkhan_vargheist_charge_bonus	Charge bonus: %+n for Vargheists	true
-effects_description_tech_arkhan_terrorgheist_melee_attack	Melee attack: %+n for Terrorgheists	true
-effects_description_tech_arkhan_terrorgheist_weapon_strength	Weapon strength: %+n% for Terrorgheists	true
-effects_description_tech_arkhan_terrorgheist_charge_bonus	Charge bonus: %+n for Terrorgheists	true
-effects_description_tech_arkhan_rank_7_defence_armour	Armour: %+n for Arkhan's Vampiric units {{tr:rank7}}	true
+effects_description_tech_arkhan_terrorgheist_melee_attack	Melee attack: %+n for Terrorgheists & Zombie Dragons	true
+effects_description_tech_arkhan_terrorgheist_weapon_strength	Weapon strength: %+n% for Terrorgheists & Zombie Dragons	true
+effects_description_tech_arkhan_terrorgheist_charge_bonus	Charge bonus: %+n for Terrorgheists & Zombie Dragons	true
+effects_description_tech_arkhan_rank_7_defence_armour	Armour: %+n for all units	true
 effects_description_tech_arkhan_rank_7_defence_melee_defence	Melee defence: %+n for Arkhan's Vampiric units {{tr:rank7}}	true
 effects_description_tech_arkhan_rank_7_offence_weapon_strength	Weapon strength: %+n% for Arkhan's Vampiric units {{tr:rank7}}	true
 effects_description_tech_arkhan_rank_7_offence_missile_strength	Missile strength: %+n% for all units {{tr:rank7}}	true
@@ -36,7 +36,8 @@ effects_description_tech_arkhan_army_2_magic_resistance	Magical resistance: %n% 
 effects_description_tech_arkhan_army_3_physical_resistance	Physical resistance: %n% for Arkhan's Vampiric units	true
 effects_description_tech_arkhan_enable_army_abilty_raise_skeletons	Army ability: "Raise Skeleton Warriors"	true
 effects_description_tech_arkhan_enable_army_abilty_raise_skeletons_uses	Army ability number of uses: %+n for "Raise Skeleton Warriors"	true
-effects_description_tech_arkhan_enable_army_ability_rain_of_souls	Army ability: "Rain of Souls"	true
+effects_description_tech_arkhan_enable_army_ability_rain_of_souls	Army ability: "Rain of Desecration"	true
+effects_description_tech_arkhan_enable_garrison_ability_skullstorm	Army ability: "Skullstorm"	true
 effects_description_tech_arkhan_global_recruitment_duration_arkhan_vampiric_units	Global recruitment duration: %+n turn for Arkhan's Vampiric units	true
 effects_description_skill_arkhan_crypt_ghouls_crypt_horrors_bonus_1	Melee attack: %+n for Ushabti & Ushabti (Great Bows)	true
 effects_description_skill_arkhan_crypt_ghouls_crypt_horrors_bonus_2	Melee defence: %+n for Ushabti & Ushabti (Great Bows)	true

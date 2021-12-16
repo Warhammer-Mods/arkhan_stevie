@@ -4,7 +4,7 @@ technologies_long_description_tech_arkhan_army_unlock_left		true
 technologies_onscreen_name_tech_arkhan_army_unlock_left	Legions of Nagash	true
 technologies_short_description_tech_arkhan_army_unlock_left	The incantations of Nagash are the darkest of fell rituals, not to be used lightly if at all. For while they may ease the burden of Unlife, they can also act as a siren call to their original author. Nagash has been gone long from this world, but should he ever return then doom awaits us all! 	true
 technologies_long_description_tech_arkhan_army_unlock_right		true
-technologies_onscreen_name_tech_arkhan_army_unlock_right	Legions of Sacrement	true
+technologies_onscreen_name_tech_arkhan_army_unlock_right	Legions of Sacrament	true
 technologies_short_description_tech_arkhan_army_unlock_right	In the forsaken lands of Sylvania, the Undead battalions of the Vampire Counts gather. Upon fen and moor, creatures of darkness that have haunted the nightmares of Men for millennia break free from ancient cairns and age worn mausoleums, thundering the ground beneath them and eclipsing the moon as they spread their tattered wings and take to the skies.	true
 technologies_long_description_tech_arkhan_nagash_army_ability_1		true
 technologies_onscreen_name_tech_arkhan_nagash_army_ability_1	Dark Creatures	true
@@ -16,11 +16,11 @@ technologies_long_description_tech_arkhan_nagash_army_ability_3		true
 technologies_onscreen_name_tech_arkhan_nagash_army_ability_3	Black Pyramid	true
 technologies_short_description_tech_arkhan_nagash_army_ability_3	The first of Nagash's great and powerful edifices. Even millennia later it is still surrounded by fell magic.	true
 technologies_long_description_tech_arkhan_nagash_rank_7_defence		true
-technologies_onscreen_name_tech_arkhan_nagash_rank_7_defence	Cursed Relics	true
-technologies_short_description_tech_arkhan_nagash_rank_7_defence	Arkhan's legions will be unstoppable! 	true
+technologies_onscreen_name_tech_arkhan_nagash_rank_7_defence	Necromantic Energies	true
+technologies_short_description_tech_arkhan_nagash_rank_7_defence	The Followers of Nagash bristle with Necromantic energy; the Winds of Shyish empowering and invigorating.	true
 technologies_long_description_tech_arkhan_nagash_rank_7_attack		true
-technologies_onscreen_name_tech_arkhan_nagash_rank_7_attack	Unnatural Strength	true
-technologies_short_description_tech_arkhan_nagash_rank_7_attack	Arkhan's forces will swell in power!	true
+technologies_onscreen_name_tech_arkhan_nagash_rank_7_attack	Undead Legions	true
+technologies_short_description_tech_arkhan_nagash_rank_7_attack	There's no stopping an endless tide of Undeath.	true
 technologies_long_description_tech_arkhan_lord_top_left		true
 technologies_onscreen_name_tech_arkhan_lord_top_left	Priest King of Grief	true
 technologies_short_description_tech_arkhan_lord_top_left	Grief and Pain are tools to be used without question.	true
@@ -31,7 +31,7 @@ technologies_long_description_tech_arkhan_lord_bottom_left		true
 technologies_onscreen_name_tech_arkhan_lord_bottom_left	Proclamation of Befoulment	true
 technologies_short_description_tech_arkhan_lord_bottom_left	All will succumb to Death.	true
 technologies_long_description_tech_arkhan_lord_top_right		true
-technologies_onscreen_name_tech_arkhan_lord_top_right	Priest King of Sacrement	true
+technologies_onscreen_name_tech_arkhan_lord_top_right	Priest King of Sacrament	true
 technologies_short_description_tech_arkhan_lord_top_right	Save Nagash, none have mastered the art of necromancy to the extent that Arkhan has.	true
 technologies_long_description_tech_arkhan_lord_right_centre		true
 technologies_onscreen_name_tech_arkhan_lord_right_centre	Desecrated Dynasty	true

@@ -1,3 +1,3 @@
 key	detonator_type	detonation_type	detonation_radius	detonation_duration	detonation_speed	detonation_damage	shrapnel	explosion_particle_effect	fuse_distance_from_target	explosion_particle_effect_on_ground	explosion_audio	contact_phase_effect	ignition_amount	is_magical	detonation_damage_ap	camera_shake	detonation_force	fuse_fixed_time	affects_allies
 #projectiles_explosions_tables;18;db/projectiles_explosions_tables/arkhan_technology																			
-arkhan_army_ability_rain_of_souls	percussive	shockwave	3.0	1.0	12.0	0.0		wh2_dlc09_machine_casket_of_souls_explosion	0.0		wh2_main_ability_soul_torrent		0.0	true	50.0	wh_main_unit_explosion_light	400.0	-1.0	true
+arkhan_army_ability_rain_of_souls	percussive	shockwave	3.0	1.0	12.0	0.0		wh2_dlc09_machine_casket_of_souls_explosion	0.0		wh2_screamingskull_catapult		0.0	true	50.0	wh_main_unit_explosion_light	400.0	-1.0	true

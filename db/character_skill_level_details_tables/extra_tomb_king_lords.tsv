@@ -4,7 +4,13 @@ level	skill_key	faction_key	campaign_key	subculture_key	image_path	unlocked_at_r
 1	stephen_skill_tmb_tomb_king_mount_steed				x	3
 1	stephen_skill_tmb_tomb_king_mount_chariot				x	13
 1	stephen_skill_tmb_tomb_king_grief_mount_chariot				x	17
+1	stephen_skill_tmb_tomb_king_terror_mount_chariot				x	17
+1	stephen_skill_tmb_tomb_king_madness_mount_chariot				x	17
+1	stephen_skill_tmb_tomb_king_sacrament_mount_chariot				x	17
 1	stephen_skill_tmb_taint_of_nagash				x	9
 1	stephen_skill_tmb_tomb_king_blessed_blades				x	9
 1	stephen_skill_tmb_tomb_king_desert_crown				x	9
 1	stephen_skill_tmb_tomb_king_ancient_shields				x	9
+1	stephen_skill_tmb_unique_taint_of_nagash				x	9
+1	stephen_skill_tmb_tomb_king_unique_desecration				x	9
+1	stephen_skill_tmb_tomb_king_grave_guard_cap_increase				x	8

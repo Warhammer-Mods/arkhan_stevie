@@ -1,0 +1,3 @@
+key	agent	culture	associated_unit	season	level	agent_recruited_movie	gender	icon	small_icon	recruitable_in_ui
+#agent_culture_details_tables;9;db/agent_culture_details_tables/sda_tomb_kings										
+1975091537	dignitary	wh2_dlc09_tmb_tomb_kings	steve_ark_tmb_liche_priest_vampire		0		m		ui/campaign ui/agents/wh_main_wizard.png	true

@@ -9,3 +9,4 @@ skill_arkhan_lord_passive_aoe_drain_enable	general_ability.png	3	general_ability
 skill_arkhan_lord_passive_aoe_debuff_enable	general_ability.png	3	general_ability.png	battle	true
 skill_arkhan_lord_passive_aoe_rampage_enable	general_ability.png	3	general_ability.png	battle	true
 skill_arkhan_lord_sacrament_bound_spells	spell_ability.png	3	spell_ability.png	battle	true
+stephen_tomb_king_raise_dead_enable	spell_ability.png	5	spell_ability.png	battle	true

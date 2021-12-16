@@ -1,19 +1,11 @@
 parent_key	child_key	initial_descent_tiers	parent_link_position	child_link_position	parent_link_position_offset	child_link_position_offset	link_type
 #character_skill_node_links_tables;3;db/character_skill_node_links_tables/sda_tomb_kings							
-steve_ark_zmb_arkhan_vamp_magic_1	steve_ark_zmb_arkhan_vamp_magic_2	0	1	1	0.0	0.0	REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_1	steve_ark_zmb_arkhan_vamp_magic_3	0	1	1	0.0	0.0	REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_1	steve_ark_zmb_arkhan_vamp_magic_4	0	1	1	0.0	0.0	REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_1	steve_ark_zmb_arkhan_vamp_magic_5	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_2	steve_ark_zmb_arkhan_vamp_magic_6	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_2	steve_ark_zmb_arkhan_vamp_magic_7	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_3	steve_ark_zmb_arkhan_vamp_magic_6	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_3	steve_ark_zmb_arkhan_vamp_magic_7	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_4	steve_ark_zmb_arkhan_vamp_magic_6	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_4	steve_ark_zmb_arkhan_vamp_magic_7	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_5	steve_ark_zmb_arkhan_vamp_magic_6	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_5	steve_ark_zmb_arkhan_vamp_magic_7	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_6	steve_ark_zmb_arkhan_vamp_magic_8	0	1	1	0.0	0.0	SUBSET_REQUIRED
-steve_ark_zmb_arkhan_vamp_magic_7	steve_ark_zmb_arkhan_vamp_magic_8	0	1	1	0.0	0.0	SUBSET_REQUIRED
+xereus_tmb_inf_zmb_arkhan_vamp_magic_1	xereus_tmb_inf_zmb_arkhan_vamp_magic_2	0	1	1	0.0	0.0	REQUIRED
+xereus_tmb_inf_zmb_arkhan_vamp_magic_1	xereus_tmb_inf_zmb_arkhan_vamp_magic_3	0	1	1	0.0	0.0	REQUIRED
+xereus_tmb_inf_zmb_arkhan_vamp_magic_2	xereus_tmb_inf_zmb_arkhan_vamp_magic_6	0	1	1	0.0	0.0	SUBSET_REQUIRED
+xereus_tmb_inf_zmb_arkhan_vamp_magic_2	xereus_tmb_inf_zmb_arkhan_vamp_magic_7	0	1	1	0.0	0.0	SUBSET_REQUIRED
+xereus_tmb_inf_zmb_arkhan_vamp_magic_3	xereus_tmb_inf_zmb_arkhan_vamp_magic_6	0	1	1	0.0	0.0	SUBSET_REQUIRED
+xereus_tmb_inf_zmb_arkhan_vamp_magic_3	xereus_tmb_inf_zmb_arkhan_vamp_magic_7	0	1	1	0.0	0.0	SUBSET_REQUIRED
 steve_ark_tmb_liche_priest_vampire_magic_1	steve_ark_tmb_liche_priest_vampire_magic_2	0	1	1	0.0	0.0	REQUIRED
 steve_ark_tmb_liche_priest_vampire_magic_1	steve_ark_tmb_liche_priest_vampire_magic_3	0	1	1	0.0	0.0	REQUIRED
 steve_ark_tmb_liche_priest_vampire_magic_1	steve_ark_tmb_liche_priest_vampire_magic_4	0	1	1	0.0	0.0	REQUIRED

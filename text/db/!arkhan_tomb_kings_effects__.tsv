@@ -1,20 +1,20 @@
 key	text	tooltip
 #Loc PackedFile;1;text/db/!arkhan_tomb_kings_effects__.loc		
-effects_description_wh2_dlc09_effect_unit_cap_steve_ark_grave_guard	Unit capacity: %+n\\nGrave Guard	true
-effects_description_wh2_dlc09_effect_unit_cap_steve_ark_grave_guard_great	Unit capacity: %+n\\nGrave Guard (Great Weapons)	true
-effects_description_wh2_dlc09_effect_unit_cap_steve_ark_terrorgheist	Unit capacity: %+n\\nTerrorgheists	true
-effects_description_wh2_dlc09_effect_unit_cap_steve_ark_vargheist	Unit capacity: %+n\\nVargheists	true
-effects_description_sda_effect_unit_cap_steve_ark_cairn_wraith	Unit capacity: %+n\\nCairn Wraiths	true
-effects_description_sda_effect_unit_cap_steve_ark_grave_guard_halberd	Unit capacity: %+n\\nGrave Guard (Halberds)	true
-effects_description_sda_effect_unit_cap_steve_ark_mortis_engine	Unit capacity: %+n\\nMortis Engine	true
-effects_description_wh2_dlc09_effect_unit_cap_steve_ark_crypt_horror	Unit capacity: %+n\\nCrypt Horrors	true
+effects_description_wh2_dlc09_effect_unit_cap_xereus_tmb_inf_grave_guard	Unit capacity: %+n\\nGrave Guard	true
+effects_description_wh2_dlc09_effect_unit_cap_xereus_tmb_inf_grave_guard_great	Unit capacity: %+n\\nGrave Guard (Great Weapons)	true
+effects_description_wh2_dlc09_effect_unit_cap_xereus_tmb_mon_terrorgheist	Unit capacity: %+n\\nTerrorgheists	true
+effects_description_wh2_dlc09_effect_unit_cap_xereus_tmb_mon_vargheist	Unit capacity: %+n\\nVargheists	true
+effects_description_sda_effect_unit_cap_xereus_tmb_inf_cairn_wraith	Unit capacity: %+n\\nCairn Wraiths	true
+effects_description_sda_effect_unit_cap_xereus_tmb_inf_grave_guard_halberd	Unit capacity: %+n\\nGrave Guard (Halberds)	true
+effects_description_sda_effect_unit_cap_xereus_tmb_veh_mortis_engine	Unit capacity: %+n\\nMortis Engine	true
+effects_description_wh2_dlc09_effect_unit_cap_xereus_tmb_mon_crypt_horror	Unit capacity: %+n\\nCrypt Horrors	true
 effects_description_wh_main_effect_agent_enable_recruitment_wizard_steve_ark_tmb_liche_priest_vampire	Unlocks [[img:icon_hero]][[/img]]Hero recruitment: Liche Priests (Vampires)	true
 effects_description_wh_main_effect_agent_cap_increase_wizard_steve_ark_tmb_liche_priest_vampire	Hero capacity: %+n for Liche Priests (Vampires)	true
 effects_description_arkhan_minor_walls	Only one Garrison building can be constructed	true
-effects_description_sda_skill_liber_mortis_add	Ability number of uses: %+n for "The Liber Mortis"	true
-effects_description_sda_skill_necropolis_blast_add	Ability number of uses: %+n for "Eldritch Blast"	true
+effects_description_sda_skill_liber_mortis_add	Cooldown: %+n% to "The Liber Mortis"	true
+effects_description_sda_skill_necropolis_blast_add	Cooldown: %+n% to "Eldritch Blast"	true
 effects_description_sda_effect_arkhan_vampire_unit_increase	Unit capacity: %+n\\nVampiric Units	true
-effects_description_wh2_dlc10_effect_skill_rank_increase_fell_bats_crypt_ghoul_dire_wolves_hexwraiths	Recruit rank: %+n for Fell Bats, Dire Wolves, Crypt Ghouls, Grave Guard, Hexwraiths, Cairn Wraiths and Skeleton Warriors and Spearmen units	true
+effects_description_wh2_dlc10_effect_skill_rank_increase_fell_bats_crypt_ghoul_dire_wolves_hexwraiths	Recruit rank: %+n for Arkhan's Vampiric units	true
 effects_description_wh2_dlc09_effect_magic_cooldown_wh2_dlc09_spell_vampires_raise_dead	Cooldown: %+n% to "Raise Dead"	true
 effects_description_wh2_dlc09_effect_magic_uses_wh2_dlc09_spell_vampires_raise_dead	Spell number of uses: %+n for "Raise Dead" and "Raise Dead Upgraded"	true
 effects_description_wh2_dlc09_effect_magic_enable_wh2_dlc09_spell_vampires_raise_dead	Spell: "Raise Dead"	true
@@ -23,18 +23,18 @@ effects_description_wh2_dlc09_effect_magic_miscast_percentage_mod_wh2_dlc09_spel
 effects_description_wh2_dlc09_effect_magic_wom_cost_wh2_dlc09_spell_vampires_raise_dead	Winds of Magic cost: %n for "Raise Dead"	true
 effects_description_wh2_dlc09_effect_magic_wom_cost_wh2_dlc09_spell_vampires_raise_dead_upgraded	Winds of Magic cost: %n for "Raise Dead Upgraded"	true
 effects_description_wh2_dlc09_effect_unit_cap_tmb_cav_hexwraiths_replacement	Unit capacity: %+n\\nHexwraiths	true
-effects_description_sda_effect_unit_cap_steve_ark_nagashizzar_guard	Unit capacity: %+n\\nNagashizzar Guard	true
-effects_description_sda_effect_unit_cap_steve_ark_skeleton_archers	Unit capacity: %+n\\nSkeleton Archers	true
-effects_description_sda_effect_unit_cap_steve_ark_zombie_dragon	Unit capacity: %+n\\nZombie Dragon	true
-effects_description_sda_effect_unit_cap_steve_ark_tmb_mon_ushabti	Unit capacity: %+n\\nUshabti	true
-effects_description_sda_effect_unit_cap_steve_ark_tmb_mon_ushabti_great	Unit capacity: %+n\\nUshabti (Great Bows)	true
-effects_description_sda_effect_unit_cap_stephen_tmb_inf_tomb_guard	Unit capacity: %+n\\nTomb Guard	true
-effects_description_sda_effect_unit_cap_stephen_tmb_inf_tomb_guard_halberd	Unit capacity: %+n\\nTomb Guard (Halberds)	true
-effects_description_sda_effect_unit_cap_stephen_tmb_art_screaming_skull_catapult	Unit capacity: %+n\\nScreaming Skull Catapults	false
+effects_description_sda_effect_unit_cap_xereus_tmb_inf_nagashizzar_guard	Unit capacity: %+n\\nNagashizzar Guard	true
+effects_description_sda_effect_unit_cap_xereus_tmb_inf_skeleton_archers	Unit capacity: %+n\\nSkeleton Archers	true
+effects_description_sda_effect_unit_cap_xereus_tmb_mon_zombie_dragon	Unit capacity: %+n\\nZombie Dragon	true
+effects_description_sda_effect_unit_cap_xereus_tmb_mon_ushabti	Unit capacity: %+n\\nUshabti	true
+effects_description_sda_effect_unit_cap_xereus_tmb_mon_ushabti_great	Unit capacity: %+n\\nUshabti (Great Bows)	true
+effects_description_sda_effect_unit_cap_xereus_tmb_inf_tomb_guard	Unit capacity: %+n\\nTomb Guard	true
+effects_description_sda_effect_unit_cap_xereus_tmb_inf_tomb_guard_halberd	Unit capacity: %+n\\nTomb Guard (Halberds)	true
+effects_description_sda_effect_unit_cap_xereus_tmb_art_screaming_skull_catapult	Unit capacity: %+n\\nScreaming Skull Catapults	false
 effects_description_wh2_dlc09_effect_unit_cap_tmb_mon_fell_bats_replacement	Unit capacity: %+n\\nFell Bats	true
 effects_description_wh2_dlc09_effect_unit_cap_tmb_mon_dire_wolves_replacement	Unit capacity: %+n\\nDire Wolves	true
 effects_description_wh2_dlc09_effect_unit_cap_tmb_inf_crypt_ghouls_replacement	Unit capacity: %+n\\nCrypt Ghouls	true
 effects_description_sda_effect_campaign_enable_attrition_taint_of_nagash	Enables Taint of Nagash [[img:icon_attrition]][[/img]]attrition	true
 effects_description_stephen_physical_defence	Physical resistance: %+n% when defending	true
-effects_description_stephen_soulblight_enable	Spell: "Soulblight"	true
-effects_description_stephen_ethereal_contact_dampen_enable	Enables dampen attacks for Cairn Wraiths, Hexwraiths & Mortis Engine units	false
+effects_description_stephen_soulblight_enable	Bound spell: "Soulblight"	true
+effects_description_stephen_ethereal_contact_dampen_enable	Enables dampen attacks for Cairn Wraiths, Hexwraiths & Mortis Engine units	true

@@ -1,0 +1,7 @@
+key	localised_title	localised_description	ui_icon	bundle_target	priority	is_global_effect	show_in_3d_space	owner_only
+#effect_bundles_tables;4;db/effect_bundles_tables/arkhan_ai_difficulty								
+arkhan_difficulty_AI_easy	[HIDDEN]	[HIDDEN]	 	faction	0	true	false	true
+arkhan_difficulty_AI_normal	[HIDDEN]	[HIDDEN]	 	faction	0	true	false	true
+arkhan_difficulty_AI_hard	[HIDDEN]	[HIDDEN]	 	faction	0	true	false	true
+arkhan_difficulty_AI_very_hard	[HIDDEN]	[HIDDEN]	 	faction	0	true	false	true
+arkhan_difficulty_AI_legendary	[HIDDEN]	[HIDDEN]	 	faction	0	true	false	true

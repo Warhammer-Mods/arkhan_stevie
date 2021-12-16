@@ -68,20 +68,40 @@ ardm:register_table({
 			partial_replenishment = false,
 			regions = "global"
 		},
-		steve_ark_skeleton_warriors = {
+		xereus_tmb_inf_skeleton_warriors = {
 			count = 2,
 			replenishment_chance = 80,
-			max_count = 8,
+			max_count = 5,
 			max_replenishment = 1,
 			level = 0,
 			technology_required = "",
 			partial_replenishment = false,
 			regions = "global"
 		},	
-		steve_ark_skeleton_spearmen = {
+        xereus_tmb_inf_grave_guard = {
+			count = 2,
+			replenishment_chance = 100,
+			max_count = 3,
+			max_replenishment = 1,
+			level = 0,
+			technology_required = "",
+			partial_replenishment = false,
+			regions = "global"
+		},	
+        xereus_tmb_inf_grave_guard_great = {
+			count = 2,
+			replenishment_chance = 100,
+			max_count = 3,
+			max_replenishment = 1,
+			level = 0,
+			technology_required = "",
+			partial_replenishment = false,
+			regions = "global"
+		},	
+		xereus_tmb_inf_skeleton_spearmen = {
 			count = 2,
 			replenishment_chance = 80,
-			max_count = 8,
+			max_count = 5,
 			max_replenishment = 1,
 			level = 0,
 			technology_required = "",
@@ -101,8 +121,8 @@ ardm:register_table({
 	units = {
 		wh2_dlc09_tmb_mon_dire_wolves = {
 			count = 2,
-			replenishment_chance = 60,
-			max_count = 6,
+			replenishment_chance = 70,
+			max_count = 8,
 			max_replenishment = 1,
 			level = 1,
 			technology_required = "",
@@ -111,8 +131,8 @@ ardm:register_table({
 		},
 		wh2_dlc09_tmb_mon_fell_bats = {
 			count = 2,
-			replenishment_chance = 60,
-			max_count = 6,
+			replenishment_chance = 70,
+			max_count = 8,
 			max_replenishment = 1,
 			level = 1,
 			technology_required = "",
@@ -121,28 +141,58 @@ ardm:register_table({
 		},
 		wh2_dlc09_tmb_inf_crypt_ghouls = {
 			count = 2,
-			replenishment_chance = 60,
-			max_count = 6,
+			replenishment_chance = 70,
+			max_count = 8,
 			max_replenishment = 1,
 			level = 1,
 			technology_required = "",
 			partial_replenishment = false,
 			regions = "global"
 		},
-		steve_ark_skeleton_warriors = {
+		xereus_tmb_inf_skeleton_warriors = {
 			count = 3,
 			replenishment_chance = 90,
-			max_count = 10,
+			max_count = 7,
 			max_replenishment = 1,
 			level = 1,
 			technology_required = "",
 			partial_replenishment = false,
 			regions = "global"
 		},
-		steve_ark_skeleton_spearmen = {
+		xereus_tmb_inf_skeleton_spearmen = {
 			count = 3,
 			replenishment_chance = 90,
-			max_count = 10,
+			max_count = 7,
+			max_replenishment = 1,
+			level = 1,
+			technology_required = "",
+			partial_replenishment = false,
+			regions = "global"
+         },   	
+        xereus_tmb_inf_grave_guard = {
+			count = 2,
+			replenishment_chance = 100,
+			max_count = 5,
+			max_replenishment = 1,
+			level = 0,
+			technology_required = "",
+			partial_replenishment = false,
+			regions = "global"
+		},	
+        xereus_tmb_inf_grave_guard_great = {
+			count = 2,
+			replenishment_chance = 100,
+			max_count = 5,
+			max_replenishment = 1,
+			level = 0,
+			technology_required = "",
+			partial_replenishment = false,
+			regions = "global"
+		},	
+        xereus_tmb_inf_cairn_wraith = {
+			count = 2,
+			replenishment_chance = 70,
+			max_count = 4,
 			max_replenishment = 1,
 			level = 1,
 			technology_required = "",

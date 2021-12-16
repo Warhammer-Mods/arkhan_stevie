@@ -13,7 +13,7 @@ tech_arkhan_grave_guard_bonus_1	weapon_damage.png	99	weapon_damage.png	battle	tr
 tech_arkhan_grave_guard_bonus_2	defence.png	98	defence.png	battle	true
 tech_arkhan_grave_guard_bonus_3	melee.png	100	melee.png	battle	true
 tech_arkhan_grave_guard_bonus_4	armour.png	97	armour.png	battle	true
-tech_arkhan_cairn_hex_mortis_wayfarer_enable	general_ability.png	122	charge.png	battle	true
+tech_arkhan_cairn_hex_mortis_wayfarer_enable	general_ability.png	200	charge.png	battle	true
 tech_arkhan_ethereal_bonus_1	resistance_magic.png	100	resistance_magic.png	battle	true
 tech_arkhan_ethereal_bonus_2	weapon_damage.png	100	weapon_damage.png	battle	true
 tech_arkhan_ethereal_bonus_3	melee.png	100	melee.png	battle	true
@@ -37,4 +37,5 @@ tech_arkhan_army_3_physical_resistance	resistance_physical.png	100	resistance_ph
 tech_arkhan_enable_army_abilty_raise_skeletons	general_ability.png	500	general_ability.png	battle	true
 tech_arkhan_enable_army_abilty_raise_skeletons_uses	general_ability.png	500	general_ability.png	battle	true
 tech_arkhan_enable_army_ability_rain_of_souls	general_ability.png	500	general_ability.png	battle	true
+tech_arkhan_enable_garrison_ability_skullstorm	general_ability.png	500	general_ability.png	battle	true
 tech_arkhan_global_recruitment_duration_arkhan_vampiric_units	turns.png	130	turns.png	campaign	false

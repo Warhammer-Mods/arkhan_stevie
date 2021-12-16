@@ -5,7 +5,7 @@ ardm:register_table({
 	build_number = 2,
 	deployment_mode = "default",
 	units = {
-		steve_ark_grave_guard = {
+		xereus_tmb_inf_grave_guard = {
 			count = 2,
 			replenishment_chance = 80,
 			max_count = 4,
@@ -18,7 +18,7 @@ ardm:register_table({
 				"wh_main_eastern_sylvania_castle_drakenhof"
 			}
 		},
-		steve_ark_grave_guard_great = {
+		xereus_tmb_inf_grave_guard_great = {
 			count = 2,
 			replenishment_chance = 80,
 			max_count = 4,
@@ -31,7 +31,7 @@ ardm:register_table({
 				"wh_main_eastern_sylvania_castle_drakenhof"
 			}
 		},
-		steve_ark_crypt_horror = {
+		xereus_tmb_mon_crypt_horror = {
 			count = 2,
 			replenishment_chance = 50,
 			max_count = 2,
@@ -43,7 +43,7 @@ ardm:register_table({
 				"wh_main_southern_badlands_agrul_migdhal"
 			}
 		},
-		steve_ark_vargheist = {
+		xereus_tmb_mon_vargheist = {
 			count = 2,
 			replenishment_chance = 50,
 			max_count = 2,
@@ -55,7 +55,7 @@ ardm:register_table({
 				"wh_main_southern_badlands_agrul_migdhal"
 			}
 		},
-		steve_ark_terrorgheist = {
+		xereus_tmb_mon_terrorgheist = {
 			count = 2,
 			replenishment_chance = 25,
 			max_count = 2,
@@ -67,10 +67,10 @@ ardm:register_table({
 				"wh_main_southern_badlands_agrul_migdhal"
 			}
 		},
-		steve_ark_zmb_gunner_mob = {
+		xereus_tmb_inf_zmb_gunner_mob = {
 			count = 2,
 			replenishment_chance = 25,
-			max_count = 2,
+			max_count = 8,
 			max_replenishment = 1,
 			level = 0,
 			technology_required = "",
@@ -79,10 +79,10 @@ ardm:register_table({
 				"wh2_main_vampire_coast_the_awakening"
 			}
 		},
-		steve_ark_zmb_handgunner_mob = {
+		xereus_tmb_inf_zmb_handgunner_mob = {
 			count = 2,
 			replenishment_chance = 25,
-			max_count = 2,
+			max_count = 8,
 			max_replenishment = 1,
 			level = 0,
 			technology_required = "",
@@ -91,10 +91,10 @@ ardm:register_table({
 				"wh2_main_vampire_coast_the_awakening"
 			}
 		},
-		steve_ark_prometheans_gunnery_mob = {
+		xereus_tmb_mon_prometheans_gunnery_mob = {
 			count = 2,
 			replenishment_chance = 25,
-			max_count = 2,
+			max_count = 6,
 			max_replenishment = 1,
 			level = 0,
 			technology_required = "",
@@ -103,7 +103,7 @@ ardm:register_table({
 				"wh2_main_vampire_coast_the_awakening"
 			}
 		},
-		steve_ark_skeleton_warriors = {
+		xereus_tmb_inf_skeleton_warriors = {
 			count = 1,
 			replenishment_chance = 100,
 			max_count = 10,
@@ -116,7 +116,7 @@ ardm:register_table({
 				"wh_main_eastern_sylvania_castle_drakenhof"
 			}
 		},
-		steve_ark_skeleton_spearmen = {
+		xereus_tmb_inf_skeleton_spearmen = {
 			count = 0,
 			replenishment_chance = 100,
 			max_count = 10,

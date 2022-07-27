@@ -34,6 +34,7 @@ jobs:
       config_file: .luacheckrc
       vendor_path: .luarocks
       pr_enabled: true
+      lua_version: 5.1
       custom_lua_globals: >-
         arkhan_expanded
     secrets:

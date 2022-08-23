@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "sumneko.lua",
+    "davidanson.vscode-markdownlint",
+    "mechatroner.rainbow-csv"
+  ]
+}

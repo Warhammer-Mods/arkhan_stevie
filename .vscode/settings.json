@@ -1,0 +1,23 @@
+{
+	"Lua.runtime.version": "Lua 5.1",
+	"Lua.telemetry.enable": false,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"gitlens.codeLens.scopes": ["document"]
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"markdownlint.config": {
+		"MD024": { "siblings_only": true },
+		"default": true
+	},
+	"prettier.useTabs": true,
+	"rainbow_csv.comment_prefix": "#",
+	"rainbow_csv.rbql_with_headers_by_default": true,
+	"window.title": "${rootName}: ${activeEditorMedium} ${dirty}"
+}

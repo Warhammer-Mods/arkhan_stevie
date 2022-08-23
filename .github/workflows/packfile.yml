@@ -1,0 +1,29 @@
+name: Build Packfile
+
+on: 
+  push:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+      - 'hotfix/**'
+      - 'bugfix/**'
+      - 'support/**'
+      - 'update/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+      - 'hotfix/**'
+      - 'bugfix/**'
+      - 'support/**'
+      - 'update/**'
+  workflow_dispatch:
+
+jobs:
+  db-check:
+    uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
+    with:
+      paths: .
+      game: warhammer_2

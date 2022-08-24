@@ -40,6 +40,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     with:
       paths: ${{ inputs.paths }}
+      paths_separator: " "
       game: warhammer_2
       debug_enabled: ${{ inputs.debug_enabled }}
   build-packfile:

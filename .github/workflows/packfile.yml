@@ -20,10 +20,42 @@ on:
       - 'support/**'
       - 'update/**'
   workflow_dispatch:
+    inputs:
+      paths:
+        required: false
+        type: string
+        default: .
+        description: |
+          A list of space-delimited paths to include in the packfile.
+          '.' means add whole repository.
+      exclude:
+        required: false
+        type: string
+        default: |
+          ./.git/*
+          ./.vscode/*
+          */.*
+          */*.json
+          */*.rockspec
+        description: A list of space-delimited excluded paths. Only works if paths is set to '.'
+      debug_enabled:
+        description: Enable debug logging
+        required: false
+        type: boolean
+        default: false
 
 jobs:
-  db-check:
+  build-packfile-manual:
     uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
+    if: github.event_name == 'workflow_dispatch'
+    with:
+      paths: ${{ inputs.paths }}
+      exclude: ${{ inputs.exclude }}
+      game: warhammer_2
+      debug_enabled: ${{ inputs.debug_enabled }}
+  build-packfile:
+    uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
+    if: github.event_name != 'workflow_dispatch'
     with:
       paths: .
       game: warhammer_2

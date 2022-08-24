@@ -32,11 +32,7 @@ on:
         required: false
         type: string
         default: |
-          ./.git/*
-          ./.vscode/*
-          */.*
-          */*.json
-          */*.rockspec
+          ./.git/* ./.vscode/* */.* */*.json */*.rockspec
         description: A list of space-delimited excluded paths. Only works if paths is set to '.'
       debug_enabled:
         description: Enable debug logging

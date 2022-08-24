@@ -24,16 +24,10 @@ on:
       paths:
         required: false
         type: string
-        default: .
-        description: |
-          A list of space-delimited paths to include in the packfile.
-          '.' means add whole repository.
-      exclude:
-        required: false
-        type: string
         default: |
-          ./.git/* ./.vscode/* */.* */*.json */*.rockspec
-        description: A list of space-delimited excluded paths. Only works if paths is set to '.'
+          * !.git/** !.vscode/** !**/.* !**/*.rockspec
+        description: |
+          A list of space-delimited glob patterns to include in the packfile.
       debug_enabled:
         description: Enable debug logging
         required: false
@@ -46,12 +40,16 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     with:
       paths: ${{ inputs.paths }}
-      exclude: ${{ inputs.exclude }}
       game: warhammer_2
       debug_enabled: ${{ inputs.debug_enabled }}
   build-packfile:
     uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
     if: github.event_name != 'workflow_dispatch'
     with:
-      paths: .
+      paths: |
+        *
+        !.git/**
+        !.vscode/**
+        !**/.*
+        !**/*.rockspec
       game: warhammer_2

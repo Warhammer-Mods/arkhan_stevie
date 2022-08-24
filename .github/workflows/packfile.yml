@@ -38,6 +38,8 @@ jobs:
   build-packfile-manual:
     uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
     if: github.event_name == 'workflow_dispatch'
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
     with:
       paths: ${{ inputs.paths }}
       paths_separator: " "
@@ -46,6 +48,8 @@ jobs:
   build-packfile:
     uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
     if: github.event_name != 'workflow_dispatch'
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
     with:
       paths: |
         *

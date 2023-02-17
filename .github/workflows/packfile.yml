@@ -36,7 +36,7 @@ on:
 
 jobs:
   build-packfile-manual:
-    uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
+    uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@v2
     if: github.event_name == 'workflow_dispatch'
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
@@ -46,7 +46,7 @@ jobs:
       game: warhammer_2
       debug_enabled: ${{ inputs.debug_enabled }}
   build-packfile:
-    uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@main
+    uses: Warhammer-Mods/workflows/.github/workflows/packfile.yml@v2
     if: github.event_name != 'workflow_dispatch'
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
